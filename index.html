@@ -3,28 +3,62 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kingston City Run 2025 - Pirate's Run Di City</title>
+  <title>Kingston City Run 2025 – Pirates Run Di City</title>
   <meta name="description" content="Join Kingston’s iconic charity running event during Pirate’s Week 2025. Four race events: competitive 10K run & community 5K Walk/Run/Wheel—support homeless charities in Kingston."/>
-  <!-- Tailwind for prototyping -->
+  <!-- 1) Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Favicon -->
+  <!-- 2) Your custom CSS -->
+  <link href="assets/css/style.css" rel="stylesheet"/>
+  <!-- 3) Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- 4) Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- 5) Favicon -->
   <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon"/>
   <style>
-    body { font-family: 'Poppins', Arial, sans-serif; }
-    h1,h2,h3,h4 { font-family: 'Montserrat', 'Poppins', Arial, sans-serif; }
-    /* Gradient text helper */
+    /* Utilities for headline split, button & icon effects */
     .text-gradient {
-      background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
+      background: linear-gradient(90deg,#319427 0%,#F1BA07 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
+    }
+    .text-gray-900 { color:#202d24; } /* UI-friendly black */
+    .btn-primary {
+      display:inline-block;
+      font-family:'Montserrat',sans-serif;
+      font-weight:700;
+      font-size:1.25rem;
+      padding:1rem 2.5rem;
+      border-radius:9999px;
+      background:linear-gradient(90deg,#319427 0%,#F1BA07 100%);
+      background-size:200% auto;
+      color:#fff;
+      text-decoration:none;
+      box-shadow:0 4px 20px rgba(0,0,0,0.1);
+      transition:background-position 0.4s ease,transform 0.2s ease,box-shadow 0.2s ease;
+    }
+    .btn-primary:hover {
+      background-position:right center;
+      transform:translateY(-4px);
+      box-shadow:0 8px 32px rgba(0,0,0,0.15);
+    }
+    .feature-icon {
+      --s:4rem; --b:4px; --g:8px; --c:#EA7317;
+      width:var(--s); height:var(--s);
+      border:var(--b) solid transparent;
+      border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      transition:border 0.3s ease,outline-offset 0.3s ease,transform 0.3s ease;
+    }
+    .feature-icon:hover {
+      border-color:var(--c);
+      outline:var(--b) solid var(--c);
+      outline-offset:var(--g);
+      transform:scale(1.1);
     }
   </style>
 </head>
@@ -32,59 +66,42 @@
 
   <!-- Top Navigation Bar -->
   <header class="bg-white shadow">
-    <nav>
-  <ul class="menu-bar">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="race-info.html">Race Info</a></li>
-    <li><a href="charity.html">Charity</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="register.html">Register</a></li>
-    <li><a href="sponsors.html">Sponsors</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="faqs.html">FAQs</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+      <a href="index.html">
+        <img src="assets/images/logo-w.png" alt="Kingston City Run logo" class="h-12 md:h-16"/>
+      </a>
+      <ul class="menu-bar flex space-x-4">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="race-info.html">Race Info</a></li>
+        <li><a href="charity.html">Charity</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="relative w-full min-h-screen flex flex-col items-center justify-center px-4 py-16"
-           style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+           style="background:linear-gradient(90deg,#319427 0%,#F1BA07 100%)">
     <div class="max-w-6xl mx-auto text-center space-y-8">
-      <!-- White logo -->
-      <img src="assets/images/logo-w.png"
-           alt="Kingston City Run 2025 Logo"
-           class="mx-auto w-48 md:w-80 lg:w-96 mb-8"/>
-
-      <!-- Headline -->
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-2xl">
-        Kingston City Run 2025
+      <img src="assets/images/logo-w.png" alt="Kingston City Run logo" class="mx-auto w-48 md:w-80 lg:w-96 mb-8"/>
+      <h1 class="mb-2 text-4xl md:text-6xl lg:text-7xl font-extrabold">
+        <span class="text-gray-900 drop-shadow-xl">Kingston City Run</span>
+        <span class="text-gradient">2025</span>
       </h1>
-
-      <!-- Tagline -->
-      <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white drop-shadow-md">
-        Pirate's Run Di City
-      </h2>
-
-      <!-- Details -->
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white drop-shadow-md">Pirate's Run Di City</h2>
       <p class="text-lg md:text-xl text-white/90 font-medium drop-shadow-sm">
         Part of Kingston's Pirate's Week • November 2, 2025 • Emancipation Park
       </p>
-
-      <!-- Description -->
       <p class="max-w-3xl mx-auto text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-sm">
         Hosted by the Jamaica Hotel & Tourist Association – Kingston Chapter, the ninth staging returns on November 2, 2025. Choose from a competitive 10K run or a community 5K Walk/Run/Wheel and help raise funds for homeless charities across Kingston.
       </p>
-
-      <!-- Register button with lift effect -->
-      <a href="register.html"
-         class="px-12 py-6 bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold rounded-full shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-        Register Now
-      </a>
-
-      <!-- Registration Dates -->
+      <a href="register.html" class="btn-primary">Register Now</a>
       <div class="mt-6 space-y-1 text-center">
         <p class="text-white font-semibold">Early-bird registration ends September 30!</p>
         <p class="text-white/90 font-medium">Last call: Registration closes October 18, 2025</p>
@@ -95,52 +112,30 @@
   <!-- Features Section -->
   <section class="py-20 px-4 bg-white">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient">
-        Why Join the Adventure?
-      </h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient">Why Join the Adventure?</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Feature 1 -->
         <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-8 text-center">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-               style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fas fa-map-pin text-white text-2xl"></i>
-          </div>
+          <div class="feature-icon mb-4"><i class="fas fa-map-pin text-2xl text-white"></i></div>
           <h3 class="text-xl font-bold mb-2">10K Run & 5K Walk/Run/Wheel</h3>
           <p>Choose from a competitive 10K run or a community 5K Walk/Run/Wheel.</p>
         </div>
-        <!-- Feature 2 -->
         <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-8 text-center">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-               style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fas fa-users text-white text-2xl"></i>
-          </div>
+          <div class="feature-icon mb-4"><i class="fas fa-users text-2xl text-white"></i></div>
           <h3 class="text-xl font-bold mb-2">Family & Corporate Challenges</h3>
           <p>Perfect for families, teams, and corporate groups seeking a fun challenge together.</p>
         </div>
-        <!-- Feature 3 -->
         <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-8 text-center">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-               style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fas fa-heart text-white text-2xl"></i>
-          </div>
+          <div class="feature-icon mb-4"><i class="fas fa-heart text-2xl text-white"></i></div>
           <h3 class="text-xl font-bold mb-2">J$21+M Raised for Charities</h3>
           <p>Supporting Open Arms, Marie Atkins Night Shelter, Food for the Poor & more.</p>
         </div>
-        <!-- Feature 4 -->
         <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-8 text-center">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-               style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fas fa-calendar text-white text-2xl"></i>
-          </div>
+          <div class="feature-icon mb-4"><i class="fas fa-calendar text-2xl text-white"></i></div>
           <h3 class="text-xl font-bold mb-2">Pirate's Week Festival</h3>
           <p>Experience Kingston's vibrant parade, music, costumes, and community spirit.</p>
         </div>
-        <!-- Feature 5 -->
         <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-8 text-center md:col-span-2 lg:col-span-1">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-               style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fas fa-trophy text-white text-2xl"></i>
-          </div>
+          <div class="feature-icon mb-4"><i class="fas fa-trophy text-2xl text-white"></i></div>
           <h3 class="text-xl font-bold mb-2">Dress Up & Win Prizes</h3>
           <p>Show off your best pirate costume and compete for prizes and recognition.</p>
         </div>
@@ -149,19 +144,15 @@
   </section>
 
   <!-- Callout Section -->
-  <section class="py-20 px-4 text-center"
-           style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+  <section class="py-20 px-4 text-center" style="background:linear-gradient(90deg,#319427 0%,#F1BA07 100%)">
     <div class="max-w-4xl mx-auto space-y-8">
       <h2 class="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Experience the Spirit of Kingston!</h2>
       <p class="text-xl md:text-2xl text-white/95 leading-relaxed drop-shadow-sm">
-        See <a href="gallery.html" class="underline">past highlights</a>
-        or <a href="about.html" class="underline">learn about our mission</a> and the causes you support.
+        See <a href="gallery.html" class="underline text-white">past highlights</a> or <a href="about.html" class="underline text-white">learn about our mission</a> and the causes you support.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="gallery.html"
-           class="px-8 py-4 bg-white text-gray-800 rounded-full font-semibold hover:bg-gray-100 transition">View Past Events</a>
-        <a href="about.html"
-           class="px-8 py-4 bg-white text-gray-800 rounded-full font-semibold hover:bg-gray-100 transition">Our Mission</a>
+        <a href="gallery.html" class="px-8 py-4 bg-white text-gray-800 rounded-full font-semibold hover:bg-gray-100 transition">View Past Events</a>
+        <a href="about.html" class="px-8 py-4 bg-white text-gray-800 rounded-full font-semibold hover:bg-gray-100 transition">Our Mission</a>
       </div>
     </div>
   </section>
@@ -182,15 +173,3 @@
 
 </body>
 </html>
-<script>
-  // Tailwind CSS configuration for custom styles
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: '#319427',
-          secondary: '#F1BA07',
-        },
-      },
-    },
-  };
