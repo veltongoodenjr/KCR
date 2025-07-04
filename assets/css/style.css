@@ -1,44 +1,104 @@
-/* Glassmorphic top nav */
+/* Sticky nav container */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Nav bar */
 .menu-bar {
-  border-radius: 30px;
   display: flex;
-  background: rgba(50, 65, 70, 0.4); /* translucent brand-dark */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   align-items: center;
-  padding: 0 16px;
-  margin: 2rem auto;
-  box-shadow: 0 2px 18px rgba(0,0,0,0.1);
-  max-width: 960px;
-}
-
-.menu-bar li {
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  margin: 0 auto 1rem;
   list-style: none;
-  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 12px 20px;
-  margin: 0 8px;
-  border-radius: 22px;
-  position: relative;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.2s, transform 0.12s, color 0.2s;
 }
 
-.menu-bar li a {
-  color: #fff;
-  text-decoration: none;
+/* Home logo (fixed) */
+.menu-bar .home-logo a {
   display: block;
 }
-
-.menu-bar li:hover,
-.menu-bar li:focus-within {
-  background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
-  transform: scale(1.08);
+.menu-bar .home-logo a:hover {
+  background: none;
+  transform: none;
 }
 
-.menu-bar li:hover a,
-.menu-bar li:focus-within a {
-  color: #202d24; /* a dark variant for contrast */
+/* Nav links */
+.menu-bar li a {
+  color: #202d24;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s, transform 0.12s, color 0.2s;
+}
+/* Nav links hover – restored to original green→yellow gradient */
+.menu-bar li a:hover,
+.menu-bar li:hover > a {
+  background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Hero description (white text) */
+.hero-description {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Primary button (larger & solid deep green) */
+.btn-primary {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 1.25rem 3rem;
+  border-radius: 9999px;
+  background: #267a1e;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+/* Secondary callout buttons */
+.btn-secondary {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  background: white;
+  color: #202d24;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-secondary:hover {
+  background: #f0f0f0;
+}
+
+/* Gradient text helper */
+.text-gradient {
+  background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.menu-bar li:hover > a,
+.menu-bar li > a:hover {
+  color: #fff !important;
 }
