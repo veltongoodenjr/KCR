@@ -5,9 +5,11 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="Official website for Kingston City Run, Jamaica's iconic charity run and wellness event." name="description"/>
   <title>Kingston City Run | Home</title>
+  <!-- Montserrat + Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon"/>
   <meta content="Kingston City Run | Home" property="og:title"/>
   <meta content="Join us for Jamaica's most vibrant charity run in 2025!" property="og:description"/>
@@ -16,91 +18,91 @@
   <meta content="website" property="og:type"/>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar">
-      <div class="container">
-        <a class="logo" href="index.html">
-          <img alt="Kingston City Run logo" src="assets/images/logo.png" />
-        </a>
-        <ul class="nav-links">
-          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-          <li><a href="race-info.html"><i class="fas fa-route"></i> Race Info</a></li>
-          <li><a href="charity.html"><i class="fas fa-heart"></i> Charity</a></li>
-          <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
-          <li><a href="register.html"><i class="fas fa-clipboard-list"></i> Register</a></li>
-          <li><a href="sponsors.html"><i class="fas fa-handshake"></i> Sponsors</a></li>
-          <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
-          <li><a href="faqs.html"><i class="fas fa-question-circle"></i> FAQs</a></li>
-          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="hero-modern">
-      <img src="assets/images/logo.png" alt="Kingston City Run logo" class="hero-logo-large" />
-      <h1 class="headline-gradient-modern">
-        Kingston City Run 2025
-      </h1>
-      <h2 class="hero-tagline">
-        Pirate's Run Di City <span class="pirate-emoji">🏴‍☠️</span>
-      </h2>
-      <div class="hero-details-modern">
-        <span>Part of Kingston's Pirate's Week &bull; March 2025 &bull; Emancipation Park</span>
-      </div>
+  <!-- Hero Section -->
+  <section class="hero-modern">
+    <div class="hero-content">
+      <img src="assets/images/logo.png" alt="Kingston City Run 2025 Logo" class="hero-logo" />
+      <h1 class="headline-gradient-modern">Kingston City Run 2025</h1>
+      <h2 class="hero-tagline">Pirate's Run Di City</h2>
+      <p class="hero-details-modern">Part of Kingston's Pirate's Week • March 2025 • Emancipation Park</p>
       <p class="hero-lead-modern">
-        Run, walk, or cheer—Pirate style!<br>
-        <strong>Pirate’s Week</strong> edition as Kingston’s iconic city race returns with 5K and 10K courses.<br>
-        Support charity, dress up, and let your pirate flag fly!
+        Run, walk, or cheer—Pirate style! Join us for a special Pirate's Week edition as Kingston's iconic city race returns with 5K and 10K courses. Support charity, dress up, and let your pirate flag fly!
       </p>
-      <a class="btn-primary-modern" href="register.html">Register Now</a>
+      <a href="register.html" class="btn-primary-modern">Register Now</a>
       <div class="hero-dates-modern">
-        <strong>Early-bird registration ends September 30!</strong><br/>
-        <span class="deadline-modern">Last call: Registration closes October 18, 2025.</span>
+        <p><strong>Early-bird registration ends September 30!</strong></p>
+        <p class="deadline-modern">Last call: Registration closes October 18, 2025</p>
       </div>
-    </section>
-    <section class="features-modern">
-      <div class="features-grid">
-        <div class="feature">
-          <i class="fas fa-person-running"></i>
-          <span>5K & 10K Pirate-themed routes</span>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-modern">
+    <h2 class="features-title-gradient">Why Join the Adventure?</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-map-pin"></i>
         </div>
-        <div class="feature">
+        <h3>5K & 10K Pirate-themed Routes</h3>
+        <p>Navigate through Kingston's historic streets with our specially designed pirate-themed courses</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
           <i class="fas fa-users"></i>
-          <span>Family-friendly & Corporate challenges</span>
         </div>
-        <div class="feature">
-          <i class="fas fa-donate"></i>
-          <span>J$15+ million raised for charities</span>
-        </div>
-        <div class="feature">
-          <i class="fas fa-flag"></i>
-          <span>Pirate’s Week festival energy</span>
-        </div>
-        <div class="feature">
-          <i class="fas fa-medal"></i>
-          <span>Dress up, win prizes, festival finish</span>
-        </div>
+        <h3>Family-friendly & Corporate Challenges</h3>
+        <p>Perfect for families, teams, and corporate groups looking for a fun challenge together</p>
       </div>
-    </section>
-    <section class="callout-modern">
-      <h4>Experience the Spirit of Kingston!</h4>
-      <p>
-        See <a href="gallery.html">past highlights</a> or <a href="about.html">learn about our mission</a> and the causes you support.
-      </p>
-    </section>
-  </main>
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>J$15+ Million Raised for Charities</h3>
+        <p>Join our mission to support local charities and make a real difference in Jamaica</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-calendar"></i>
+        </div>
+        <h3>Pirate's Week Festival Energy</h3>
+        <p>Experience the vibrant atmosphere of Kingston's famous Pirate's Week celebration</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <h3>Dress Up, Win Prizes, Festival Fun</h3>
+        <p>Show off your best pirate costume and compete for amazing prizes and recognition</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Callout Section -->
+  <section class="callout-modern">
+    <h2>Experience the Spirit of Kingston!</h2>
+    <p>See <a href="gallery.html">past highlights</a> or <a href="about.html">learn about our mission</a> and the causes you support.</p>
+    <div class="callout-btns">
+      <a href="gallery.html" class="btn-callout">View Past Events</a>
+      <a href="about.html" class="btn-callout">Our Mission</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-content">
-      <p>© 2025 Kingston City Run. All Rights Reserved.</p>
+      <img src="assets/images/logo.png" alt="Kingston City Run Logo" class="footer-logo" />
+      <p id="footer-copyright"></p>
+      <p class="footer-note">Part of Kingston's Pirate's Week Festival</p>
     </div>
   </footer>
-  <script src="/assets/js/script.js"></script>
+
+  <!-- Auto-updating year script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const currentYear = new Date().getFullYear();
+      document.getElementById("footer-copyright").textContent = `© ${currentYear} Kingston City Run. All rights reserved.`;
+    });
+  </script>
 </body>
 </html>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const currentYear = new Date().getFullYear();
-    document.querySelector(".site-footer p").textContent = `© ${currentYear} Kingston City Run. All Rights Reserved.`;
-  });
