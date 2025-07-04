@@ -1,78 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Official website for Kingston City Run, Jamaica's iconic charity run and wellness event." />
-  <title>Kingston City Run | Home</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Kingston City Run | Home">
-  <meta property="og:description" content="Join us for Jamaica's most vibrant charity run in 2025!">
-  <meta property="og:image" content="assets/images/og-image.jpg">
-  <meta property="og:url" content="https://kingstoncityrun.com">
-  <meta property="og:type" content="website">
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header style="background:var(--secondary, #1a1a1a); padding:0.5rem 0;">
-    <nav style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-      <img src="assets/images/logo.png" alt="Kingston City Run logo" style="max-height:50px;margin-left:16px;">
-      <ul style="display:flex;gap:1rem;list-style:none;margin:0;padding:0;">
-        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-        <li><a href="race-info.html"><i class="fas fa-route"></i> Race Info</a></li>
-        <li><a href="charity.html"><i class="fas fa-heart"></i> Charity</a></li>
-        <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
-        <li><a href="register.html"><i class="fas fa-clipboard-list"></i> Register</a></li>
-        <li><a href="sponsors.html"><i class="fas fa-handshake"></i> Sponsors</a></li>
-        <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
-        <li><a href="faqs.html"><i class="fas fa-question-circle"></i> FAQs</a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-      </ul>
-    </nav>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Official website for Kingston City Run, Jamaica's iconic charity run and wellness event." name="description"/>
+  <title>
+   Kingston City Run | Home
+  </title>
+  <link href="assets/css/style.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <meta content="Kingston City Run | Home" property="og:title"/>
+  <meta content="Join us for Jamaica's most vibrant charity run in 2025!" property="og:description"/>
+  <meta content="assets/images/og-image.jpg" property="og:image"/>
+  <meta content="https://kingstoncityrun.com" property="og:url"/>
+  <meta content="website" property="og:type"/>
+ </head>
+ <body>
+  <header class="site-header">
+   <nav class="navbar">
+    <div class="container">
+     <a class="logo" href="index.html">
+      <img alt="Kingston City Run logo" src="assets/images/logo.png"/>
+     </a>
+     <ul class="nav-links">
+      <li>
+       <a href="index.html">
+        <i class="fas fa-home">
+        </i>
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="about.html">
+        <i class="fas fa-info-circle">
+        </i>
+        About
+       </a>
+      </li>
+      <li>
+       <a href="race-info.html">
+        <i class="fas fa-route">
+        </i>
+        Race Info
+       </a>
+      </li>
+      <li>
+       <a href="charity.html">
+        <i class="fas fa-heart">
+        </i>
+        Charity
+       </a>
+      </li>
+      <li>
+       <a href="gallery.html">
+        <i class="fas fa-image">
+        </i>
+        Gallery
+       </a>
+      </li>
+      <li>
+       <a href="register.html">
+        <i class="fas fa-clipboard-list">
+        </i>
+        Register
+       </a>
+      </li>
+      <li>
+       <a href="sponsors.html">
+        <i class="fas fa-handshake">
+        </i>
+        Sponsors
+       </a>
+      </li>
+      <li>
+       <a href="news.html">
+        <i class="fas fa-newspaper">
+        </i>
+        News
+       </a>
+      </li>
+      <li>
+       <a href="faqs.html">
+        <i class="fas fa-question-circle">
+        </i>
+        FAQs
+       </a>
+      </li>
+      <li>
+       <a href="contact.html">
+        <i class="fas fa-envelope">
+        </i>
+        Contact
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
   </header>
-
-  <!-- MAIN CONTENT -->
-  <main style="font-family:var(--font-main, 'Roboto', Arial, sans-serif);">
-    <section class="hero-gradient" style="padding:3rem 1rem;text-align:center;border-radius:16px;margin:2rem auto 2rem auto;max-width:900px;background:linear-gradient(90deg,#FFD600 0%,#0093DD 100%);color:#1a1a1a;">
-      <img src="assets/images/logo.png" alt="Kingston City Run logo" style="max-height:80px;margin-bottom:20px;display:block;margin-left:auto;margin-right:auto;padding:20px 0;">
-      <h1 style="font-size:2.5rem;margin-bottom:0.5rem;background:linear-gradient(90deg,#FFD600,#0093DD);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Kingston City Run 2025</h1>
-      <h2 style="font-weight:normal;font-size:1.5rem;margin-bottom:1.2rem;">Pirate's Run Di City <span style="font-size:1.2rem;">🏴‍☠️</span></h2>
-      <div style="font-size:1.1rem;margin-bottom:1rem;">Part of Kingston's Pirate's Week • March 2025 • Emancipation Park</div>
-      <p style="max-width:500px;margin:0 auto 1.5rem;">
-        Run, walk, or cheer—Pirate style! Join us for a special <strong>Pirate’s Week</strong> edition as Kingston’s iconic city race returns with 5K and 10K courses. Support charity, dress up, and let your pirate flag fly!
-      </p>
-      <a href="register.html" class="btn-primary" style="background:#1a1a1a;color:#FFD600;padding:0.9rem 2.7rem;border-radius:30px;text-decoration:none;font-size:1.2rem;font-weight:bold;display:inline-block;margin-bottom:1.2rem;transition:background 0.2s;">Register Now</a>
-      <div style="margin-top:1.6rem;font-size:1.1rem;">
-        <strong>Early-bird registration ends September 30!</strong><br>
-        <span style="color:#c0392b;">Last call: Registration closes October 18, 2025.</span>
-      </div>
-    </section>
-    <section style="margin-top:2.5rem;text-align:center;max-width:800px;margin-left:auto;margin-right:auto;">
-      <h3 style="font-size:1.5rem;font-weight:700;">Why Join?</h3>
-      <ul style="display:inline-block;text-align:left;list-style:circle;font-size:1.1rem;">
-        <li><i class="fas fa-person-running"></i> 5K and 10K Pirate-themed routes</li>
-        <li><i class="fas fa-users"></i> Family-friendly & Corporate team challenges</li>
-        <li><i class="fas fa-donate"></i> Over J$15 million raised for Kingston charities</li>
-        <li><i class="fas fa-flag"></i> Part of Kingston’s Pirate’s Week festival</li>
-        <li><i class="fas fa-medal"></i> Dress up, win prizes, and enjoy a festival finish at Emancipation Park</li>
-      </ul>
-    </section>
+  <main class="main-content">
+   <section class="hero-section">
+    <div class="hero-container">
+     <img alt="Kingston City Run logo" class="hero-logo" src="assets/images/logo.png"/>
+     <h1>
+      Kingston City Run 2025
+     </h1>
+     <h2>
+      Pirate's Run Di City 🏴‍☠️
+     </h2>
+     <p>
+      Run, walk, or cheer—Pirate style! Join us for a special
+      <strong>
+       Pirate’s Week
+      </strong>
+      edition as Kingston’s iconic city race returns with 5K and 10K courses. Support charity, dress up, and let your pirate flag fly!
+     </p>
+     <a class="btn-primary" href="register.html">
+      Register Now
+     </a>
+     <div class="hero-dates">
+      <strong>
+       Early-bird registration ends September 30!
+      </strong>
+      <br/>
+      <span class="deadline">
+       Last call: Registration closes October 18, 2025.
+      </span>
+     </div>
+    </div>
+   </section>
   </main>
-
-  <!-- FOOTER -->
-  <footer style="background:#f3f3f3;padding:2rem 0;margin-top:2rem;text-align:center;">
-    <p style="color:#1a1a1a;font-size:1rem;">&copy; 2025 Kingston City Run. All Rights Reserved.</p>
+  <footer class="site-footer">
+   <div class="footer-content">
+    <p>
+     © 2025 Kingston City Run. All Rights Reserved.
+    </p>
+   </div>
   </footer>
-
-  <script src="/assets/js/script.js"></script>
-</body>
+  <script src="/assets/js/script.js">
+  </script>
+ </body>
 </html>
