@@ -3,3 +3,53 @@
 .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
 /* (Add any other custom overrides below if needed. Most will be handled by Tailwind's classes in your HTML.) */
+.menu-bar {
+  border-radius: 30px;
+  display: flex;
+  background: rgba(50, 65, 70, 0.4); /* translucent dark green */
+  backdrop-filter: blur(8px);
+  align-items: center;
+  padding: 0 16px;
+  margin: 2rem auto 1.5rem auto;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.10);
+  max-width: 980px;
+  min-height: 48px;
+}
+
+.menu-bar li {
+  list-style: none;
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.06rem;
+  letter-spacing: 0.04em;
+  padding: 12px 20px;
+  margin: 0 8px;
+  border-radius: 22px;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, transform 0.12s;
+  white-space: nowrap;
+}
+
+.menu-bar li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.18s;
+  display: block;
+}
+
+.menu-bar li:hover,
+.menu-bar li:focus-within {
+  background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
+  color: #202d24;
+  transform: scale(1.08);
+}
+
+.menu-bar li:hover a,
+.menu-bar li:focus-within a {
+  color: #202d24;
+}
+.menu-bar li.active {
+  background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
+  color: #202d24;
+}
