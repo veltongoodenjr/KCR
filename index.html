@@ -2,107 +2,229 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="Official website for Kingston City Run, Jamaica's iconic charity run and wellness event." name="description"/>
-  <title>Kingston City Run | Home</title>
-  <!-- Montserrat + Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet"/>
-  <!-- Font Awesome for icons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kingston City Run 2025 - Pirate's Run Di City</title>
+  <meta name="description" content="Join Kingston's iconic charity running event during Pirate's Week 2025. 5K and 10K courses through historic Kingston, Jamaica."/>
+  <!-- Tailwind for prototyping -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome (for icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon"/>
-  <meta content="Kingston City Run | Home" property="og:title"/>
-  <meta content="Join us for Jamaica's most vibrant charity run in 2025!" property="og:description"/>
-  <meta content="assets/images/og-image.jpg" property="og:image"/>
-  <meta content="https://kingstoncityrun.com" property="og:url"/>
-  <meta content="website" property="og:type"/>
+  <style>
+    body { font-family: 'Poppins', Arial, sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', 'Poppins', Arial, sans-serif; }
+    .font-poppins { font-family: 'Poppins', Arial, sans-serif; }
+    .font-montserrat { font-family: 'Montserrat', 'Poppins', Arial, sans-serif; }
+    /* Style gradient text */
+    .text-gradient {
+      background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-white text-gray-900">
+
   <!-- Hero Section -->
-  <section class="hero-modern">
-    <div class="hero-content">
-      <img src="assets/images/logo.png" alt="Kingston City Run 2025 Logo" class="hero-logo" />
-      <h1 class="headline-gradient-modern">Kingston City Run 2025</h1>
-      <h2 class="hero-tagline">Pirate's Run Di City</h2>
-      <p class="hero-details-modern">Part of Kingston's Pirate's Week • March 2025 • Emancipation Park</p>
-      <p class="hero-lead-modern">
-        Run, walk, or cheer—Pirate style! Join us for a special Pirate's Week edition as Kingston's iconic city race returns with 5K and 10K courses. Support charity, dress up, and let your pirate flag fly!
-      </p>
-      <a href="register.html" class="btn-primary-modern">Register Now</a>
-      <div class="hero-dates-modern">
-        <p><strong>Early-bird registration ends September 30!</strong></p>
-        <p class="deadline-modern">Last call: Registration closes October 18, 2025</p>
+  <section class="relative w-full min-h-screen flex flex-col items-center justify-center px-4 py-16" style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+    <div class="max-w-6xl mx-auto text-center space-y-8">
+      <!-- Logo -->
+      <div class="mb-8">
+        <img
+          src="assets/images/logo.png"
+          alt="Kingston City Run 2025 Logo"
+          class="mx-auto max-w-xs md:max-w-lg lg:max-w-xl w-48 md:w-80"
+          style="background: none;"
+        />
+      </div>
+
+      <!-- Main Headline -->
+      <div class="space-y-4">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gradient drop-shadow-lg font-montserrat">
+          Kingston City Run 2025
+        </h1>
+
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white drop-shadow-md font-poppins">
+          Pirate's Run Di City
+        </h2>
+
+        <p class="text-lg md:text-xl text-white/90 font-medium drop-shadow-sm font-poppins">
+          Part of Kingston's Pirate's Week &bull; November 2, 2025 &bull; Emancipation Park
+        </p>
+      </div>
+
+      <!-- Description -->
+      <div class="max-w-3xl mx-auto">
+        <p class="text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-sm font-poppins">
+          Run, walk, or cheer—Pirate style! Join us for a special Pirate's Week edition as Kingston's iconic city race returns with 10K and 5K courses. Support charity, dress up, and let your spirit shine!
+        </p>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="pt-6">
+        <a href="register.html"
+          class="text-xl px-12 py-6 rounded-full font-bold text-white shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 font-montserrat"
+          style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%); border: 3px solid white;">
+          Register Now
+        </a>
+      </div>
+
+      <!-- Registration Dates -->
+      <div class="pt-4 space-y-2">
+        <p class="text-white font-semibold text-lg drop-shadow-sm font-poppins">
+          Early-bird registration ends September 30!
+        </p>
+        <p class="text-white/90 font-medium drop-shadow-sm font-poppins">
+          Last call: Registration closes October 18, 2025
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Features Section -->
-  <section class="features-modern">
-    <h2 class="features-title-gradient">Why Join the Adventure?</h2>
-    <div class="features-grid">
-      <div class="feature">
-        <div class="feature-icon">
-          <i class="fas fa-map-pin"></i>
-        </div>
-        <h3>5K & 10K Pirate-themed Routes</h3>
-        <p>Navigate through Kingston's historic streets with our specially designed pirate-themed courses</p>
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient font-montserrat">
+          Why Join the Adventure?
+        </h2>
       </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <i class="fas fa-users"></i>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 rounded-2xl">
+          <div class="p-8 text-center space-y-4">
+            <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fas fa-map-pin w-8 h-8 text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 font-montserrat">
+              10K & 5K Pirate-themed Routes
+            </h3>
+            <p class="text-gray-600 font-poppins">
+              Navigate Kingston's streets with our special pirate-themed courses.
+            </p>
+          </div>
         </div>
-        <h3>Family-friendly & Corporate Challenges</h3>
-        <p>Perfect for families, teams, and corporate groups looking for a fun challenge together</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <i class="fas fa-heart"></i>
+
+        <!-- Feature 2 -->
+        <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 rounded-2xl">
+          <div class="p-8 text-center space-y-4">
+            <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fas fa-users w-8 h-8 text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 font-montserrat">
+              Family & Corporate Challenges
+            </h3>
+            <p class="text-gray-600 font-poppins">
+              Perfect for families, teams, and groups seeking a fun challenge together.
+            </p>
+          </div>
         </div>
-        <h3>J$15+ Million Raised for Charities</h3>
-        <p>Join our mission to support local charities and make a real difference in Jamaica</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <i class="fas fa-calendar"></i>
+
+        <!-- Feature 3 -->
+        <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 rounded-2xl">
+          <div class="p-8 text-center space-y-4">
+            <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fas fa-heart w-8 h-8 text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 font-montserrat">
+              J$21+ Million Raised for Charities
+            </h3>
+            <p class="text-gray-600 font-poppins">
+              Join our legacy—over JA$21 Million raised since 2013 for Kingston's homeless charities.
+            </p>
+          </div>
         </div>
-        <h3>Pirate's Week Festival Energy</h3>
-        <p>Experience the vibrant atmosphere of Kingston's famous Pirate's Week celebration</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <i class="fas fa-trophy"></i>
+
+        <!-- Feature 4 -->
+        <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 rounded-2xl">
+          <div class="p-8 text-center space-y-4">
+            <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fas fa-calendar w-8 h-8 text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 font-montserrat">
+              Pirate's Week Festival Energy
+            </h3>
+            <p class="text-gray-600 font-poppins">
+              Experience the vibrant celebration of Kingston's Pirate's Week—parade, costumes, and more.
+            </p>
+          </div>
         </div>
-        <h3>Dress Up, Win Prizes, Festival Fun</h3>
-        <p>Show off your best pirate costume and compete for amazing prizes and recognition</p>
+
+        <!-- Feature 5 -->
+        <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 rounded-2xl md:col-span-2 lg:col-span-1">
+          <div class="p-8 text-center space-y-4">
+            <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fas fa-trophy w-8 h-8 text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 font-montserrat">
+              Dress Up, Win Prizes, Festival Fun
+            </h3>
+            <p class="text-gray-600 font-poppins">
+              Show off your best pirate costume and compete for prizes and recognition.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Callout Section -->
-  <section class="callout-modern">
-    <h2>Experience the Spirit of Kingston!</h2>
-    <p>See <a href="gallery.html">past highlights</a> or <a href="about.html">learn about our mission</a> and the causes you support.</p>
-    <div class="callout-btns">
-      <a href="gallery.html" class="btn-callout">View Past Events</a>
-      <a href="about.html" class="btn-callout">Our Mission</a>
+  <section class="py-20 px-4 text-center" style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+    <div class="max-w-4xl mx-auto space-y-8">
+      <h2 class="text-4xl md:text-5xl font-bold text-white drop-shadow-lg font-montserrat">
+        Experience the Spirit of Kingston!
+      </h2>
+      <p class="text-xl md:text-2xl text-white/95 leading-relaxed drop-shadow-sm font-poppins">
+        See <a href="gallery.html" class="underline">past highlights</a> or <a href="about.html" class="underline">learn about our mission</a> and the causes you support.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+        <a href="gallery.html"
+           class="text-lg px-8 py-4 rounded-full font-semibold bg-white text-gray-800 border-2 border-white hover:bg-gray-100 transition-all duration-300 font-montserrat">
+          View Past Events
+        </a>
+        <a href="about.html"
+           class="text-lg px-8 py-4 rounded-full font-semibold bg-white text-gray-800 border-2 border-white hover:bg-gray-100 transition-all duration-300 font-montserrat">
+          Our Mission
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-content">
-      <img src="assets/images/logo.png" alt="Kingston City Run Logo" class="footer-logo" />
-      <p id="footer-copyright"></p>
-      <p class="footer-note">Part of Kingston's Pirate's Week Festival</p>
+  <footer class="bg-white py-12 px-4 border-t border-gray-200">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+        <div class="flex items-center space-x-4">
+          <img src="assets/images/logo.png" alt="Kingston City Run Logo" width="60" height="60" class="opacity-80" />
+          <div>
+            <p class="text-gray-600 text-sm font-poppins" id="copyright"></p>
+          </div>
+        </div>
+        <div class="text-center md:text-right">
+          <p class="text-gray-500 text-sm font-poppins">
+            Part of Kingston's Pirate's Week Festival
+          </p>
+        </div>
+      </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("copyright").textContent = `© ${new Date().getFullYear()} Kingston City Run. All rights reserved.`;
+      });
+    </script>
   </footer>
 
-  <!-- Auto-updating year script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const currentYear = new Date().getFullYear();
-      document.getElementById("footer-copyright").textContent = `© ${currentYear} Kingston City Run. All rights reserved.`;
-    });
-  </script>
 </body>
 </html>
