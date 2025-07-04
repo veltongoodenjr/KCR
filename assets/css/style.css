@@ -1,105 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kingston City Run 2025 - Pirate's Run Di City</title>
-  <meta name="description" content="Join Kingston’s iconic charity running event during Pirate’s Week 2025. Four race events: competitive 10K run & community 5K Walk/Run/Wheel—support homeless charities in Kingston."/>
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Favicon SVG -->
-  <link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml"/>
-  <style>
-    /* Force Montserrat on all headings */
-    h1,h2,h3,h4,h5,h6 { font-family: 'Montserrat', 'Poppins', Arial, sans-serif; }
-  </style>
-  <!-- Your custom CSS -->
-  <link href="assets/css/style.css" rel="stylesheet" />
-</head>
-<body class="bg-white text-gray-900">
+/* Glassmorphic top nav */
+.menu-bar {
+  border-radius: 30px;
+  display: flex;
+  background: rgba(50, 65, 70, 0.4); /* translucent brand-dark */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  align-items: center;
+  padding: 0 16px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.1);
+  max-width: 960px;
+}
 
-  <!-- Nav -->
-  <header>
-    <nav>
-      <ul class="menu-bar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="race-info.html">Race Info</a></li>
-        <li><a href="charity.html">Charity</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="sponsors.html">Sponsors</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="faqs.html">FAQs</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+.menu-bar li {
+  list-style: none;
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 20px;
+  margin: 0 8px;
+  border-radius: 22px;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.12s, color 0.2s;
+}
 
-  <!-- Hero -->
-  <section class="w-full min-h-screen flex flex-col items-center justify-center px-4 py-16"
-           style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-    <div class="max-w-6xl mx-auto text-center space-y-8">
+.menu-bar li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
 
-      <!-- White SVG logo -->
-      <img src="assets/images/logo-w.svg"
-           alt="Kingston City Run 2025 Logo"
-           class="mx-auto w-48 md:w-80 lg:w-96 mb-8"/>
+.menu-bar li:hover,
+.menu-bar li:focus-within {
+  background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
+  transform: scale(1.08);
+}
 
-      <!-- Solid white headline -->
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white">
-        Kingston City Run 2025
-      </h1>
-
-      <!-- Tagline -->
-      <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white">
-        Pirate's Run Di City
-      </h2>
-
-      <!-- Event details -->
-      <p class="text-lg md:text-xl text-white/90 font-medium">
-        Part of Kingston's Pirate's Week • November 2, 2025 • Emancipation Park
-      </p>
-
-      <!-- Description in a white box with dark text -->
-      <div class="bg-white bg-opacity-90 rounded-lg p-6 mx-auto max-w-3xl text-[#202d24]">
-        <p class="text-base md:text-lg leading-relaxed">
-          Hosted by the Jamaica Hotel & Tourist Association – Kingston Chapter, the ninth staging returns on November 2, 2025. Choose a competitive 10K run or a community 5K Walk/Run/Wheel and help raise funds for homeless charities across Kingston.
-        </p>
-      </div>
-
-      <!-- Register button -->
-      <a href="register.html"
-         class="relative z-10 mt-4 inline-block px-12 py-6 bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold rounded-full shadow-2xl
-                transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-        Register Now
-      </a>
-
-      <!-- Registration deadlines -->
-      <div class="mt-6 space-y-1 text-center">
-        <p class="text-white font-semibold">Early-bird registration ends September 30!</p>
-        <p class="text-white/90 font-medium">Last call: Registration closes October 18, 2025</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ... Features, Callout, Footer (use SVG logo.svg for footer) ... -->
-
-  <!-- Footer -->
-  <footer class="py-12 px-4 bg-white border-t">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
-      <img src="assets/images/logo.svg" alt="Kingston City Run Logo" class="h-12 opacity-80"/>
-      <p class="text-gray-600 text-sm">© <span id="year"></span> Kingston City Run. All rights reserved.</p>
-      <p class="text-gray-500 text-sm">Part of Kingston’s Pirate’s Week Festival</p>
-    </div>
-    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-  </footer>
-
-</body>
-</html>
+.menu-bar li:hover a,
+.menu-bar li:focus-within a {
+  color: #202d24; /* a dark variant for contrast */
+}
