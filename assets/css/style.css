@@ -2,15 +2,16 @@
 .font-poppins { font-family: 'Poppins', sans-serif; }
 .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
-/* (Add any other custom overrides below if needed. Most will be handled by Tailwind's classes in your HTML.) */
+/* Glassmorphic top nav */
 .menu-bar {
   border-radius: 30px;
   display: flex;
-  background: rgba(50, 65, 70, 0.4); /* translucent dark green */
+  background: rgba(50, 65, 70, 0.4);    /* translucent dark green */
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   align-items: center;
   padding: 0 16px;
-  margin: 2rem auto 1.5rem auto;
+  margin: 2rem auto 1.5rem auto;         /* vertical spacing */
   box-shadow: 0 2px 18px rgba(0,0,0,0.10);
   max-width: 980px;
   min-height: 48px;
@@ -27,21 +28,19 @@
   border-radius: 22px;
   position: relative;
   cursor: pointer;
-  transition: color 0.2s, background 0.2s, transform 0.12s;
   white-space: nowrap;
+  transition: transform 0.12s, color 0.2s;
 }
 
 .menu-bar li a {
   color: #fff;
   text-decoration: none;
-  transition: color 0.18s;
   display: block;
+  transition: color 0.18s;
 }
 
 .menu-bar li:hover,
 .menu-bar li:focus-within {
-  background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
-  color: #202d24;
   transform: scale(1.08);
 }
 
@@ -49,7 +48,31 @@
 .menu-bar li:focus-within a {
   color: #202d24;
 }
-.menu-bar li.active {
+
+/* Button gradient animation + lift */
+.btn-primary {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
   background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
-  color: #202d24;
+  background-size: 200% auto;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: 
+    background-position 0.4s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.btn-primary:hover {
+  background-position: right center;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
