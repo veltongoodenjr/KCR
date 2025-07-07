@@ -1,55 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Official website for Kingston City Run, Jamaica's iconic charity run and wellness event." />
-  <title>Kingston City Run | Race Info</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-     <!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Kingston City Run | Home">
-  <meta property="og:description" content="Join us for Jamaica's most vibrant charity run in 2025!">
-  <meta property="og:image" content="assets/images/og-image.jpg">
-  <meta property="og:url" content="https://kingstoncityrun.com">
-  <meta property="og:type" content="website">
-</head>
-<body>
 
-  <!-- HEADER -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="race-info.html">Race Info</a></li>
-        <li><a href="charity.html">Charity</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="sponsors.html">Sponsors</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="faqs.html">FAQs</a></li>
-        <li><a href="contact.html">Contact</a></li>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Race Info | Kingston City Run 2025 - Pirates Run Di City</title>
+  <meta name="description"
+    content="Course maps, schedules, and runner info for Kingston City Run 2025. All you need to know about race day, routes, and key stops." />
+  <!-- Tailwind for prototyping -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon -->
+  <link href="assets/images/favicon.svg" rel="icon" type="image/x-icon" />
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    }
+
+    .text-gradient {
+      background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+  <!-- Top Navigation Bar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6 relative">
+      <div class="flex items-center space-x-2">
+        <a href="index.html">
+          <img src="assets/images/favicon.svg" alt="Kingston City Run Favicon" class="h-12 md:h-16" />
+        </a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-2xl text-gray-800 focus:outline-none" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul id="navbar-links"
+        class="flex-col md:flex-row flex space-y-2 md:space-y-0 space-x-0 md:space-x-4 text-gray-700 font-medium items-center absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none z-50 md:flex hidden">
+        <li>
+          <a href="index.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            <i class="fa-solid fa-house"></i> Home
+          </a>
+        </li>
+        <li>
+          <a href="about.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            <i class="fa-solid fa-circle-info"></i> About
+          </a>
+        </li>
+        <li>
+          <a href="race-info.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold">
+            <i class="fa-solid fa-person-running"></i> Race Info
+          </a>
+        </li>
+        <li>
+          <a href="charity.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            <i class="fa-solid fa-hand-holding-heart"></i> Charity
+          </a>
+        </li>
+        <a href="gallery.html"
+          class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+          <i class="fa-solid fa-images"></i> Gallery
+        </a>
+        </li>
+        <li>
+          <a href="register.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            <i class="fa-solid fa-user-plus"></i> Register
+          </a>
+        </li>
+        <li>
+          <a href="sponsors.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            <i class="fa-solid fa-handshake-angle"></i> Sponsors
+          </a>
+        </li>
+        <li>
+          <a href="news.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            <i class="fa-solid fa-newspaper"></i> News
+          </a>
+        </li>
+        <li>
+          <a href="faqs.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            <i class="fa-solid fa-circle-question"></i> FAQs
+          </a>
+        </li>
+        <li>
+          <a href="contact.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            <i class="fa-solid fa-envelope"></i> Contact
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main>
-    <h1>Race Info</h1>
-    <p>Jamaica’s most vibrant charity run returns in 2025!</p>
+  <!-- Treasure Map Hero Section -->
+  <section class="w-full bg-gradient-to-r from-[#319427] to-[#F1BA07] py-20 flex flex-col items-center relative">
+    <div class="max-w-3xl mx-auto px-4 text-center space-y-6">
+      <!-- Replace with your treasure map illustration! -->
+      <img src="assets/images/race-treasure-map-demo.png" alt="Race Route Treasure Map"
+        class="mx-auto rounded-2xl shadow-lg mb-10 w-full max-w-2xl" style="object-fit: contain;" />
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-xl">Race Info & Course Map</h1>
+      <p class="text-2xl md:text-3xl text-white/90">Choose your challenge—10K Run or 5K Walk/Run/Wheel!</p>
+    </div>
+  </section>
+
+  <main class="max-w-4xl mx-auto px-4 md:px-8">
+    <!-- Event Details -->
+    <section class="py-16 border-b border-gray-200">
+      <div class="text-center space-y-3">
+        <div class="text-xl text-primary font-semibold uppercase">Event Details</div>
+        <div class="text-lg text-gray-700">Sunday, November 2, 2025 &bull; Emancipation Park, Kingston</div>
+        <div class="flex justify-center gap-4 mt-4">
+          <span class="bg-primary text-white rounded-full px-5 py-2 font-bold">10K Run</span>
+          <span class="bg-secondary text-white rounded-full px-5 py-2 font-bold">5K Walk/Run/Wheel</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Map Embed -->
+    <section class="py-16 border-b border-gray-200">
+      <h2 class="text-2xl font-bold text-gradient mb-6 text-center">Course Map (Interactive)</h2>
+      <div class="flex justify-center mb-6">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1y5cMoHuNfE2iZ9TOgLHTYFmjwqY&hl=en" width="100%"
+          height="400" class="rounded-xl shadow-md border" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <p class="text-center text-gray-600">The course starts and ends at Emancipation Park. The route passes through
+        [Key Landmarks] with water and cheer zones along the way.</p>
+    </section>
+
+    <!-- Route Details & Stops -->
+    <section class="py-16 border-b border-gray-200">
+      <h2 class="text-2xl font-bold text-gradient mb-8 text-center">Race Route & Stops</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <ul class="space-y-6 text-gray-700">
+            <li><i class="fa-solid fa-flag-checkered text-primary mr-3"></i><b>Start/Finish:</b> Emancipation Park</li>
+            <li><i class="fa-solid fa-water text-primary mr-3"></i><b>Water Stations:</b> Every 2.5km (look for the
+              pirate flags!)</li>
+            <li><i class="fa-solid fa-masks-theater text-primary mr-3"></i><b>Cheer Zones:</b> Parade Avenue, Devon
+              House, Knutsford Blvd</li>
+            <li><i class="fa-solid fa-restroom text-primary mr-3"></i><b>Restrooms:</b> Start/Finish & midway</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="space-y-6 text-gray-700">
+            <li><i class="fa-solid fa-hourglass-half text-primary mr-3"></i><b>Start Time:</b> 6:30 AM (10K), 7:00 AM
+              (5K)</li>
+            <li><i class="fa-solid fa-parking text-primary mr-3"></i><b>Parking:</b> New Kingston lots, Knutsford Blvd
+            </li>
+            <li><i class="fa-solid fa-user-shield text-primary mr-3"></i><b>Safety:</b> Route marshals & medical tents
+              on site</li>
+            <li><i class="fa-solid fa-medal text-primary mr-3"></i><b>Prizes:</b> Top finishers & best pirate costume!
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Race Day Schedule -->
+    <section class="py-16 border-b border-gray-200">
+      <h2 class="text-2xl font-bold text-gradient mb-6 text-center">Race Day Schedule</h2>
+      <div class="overflow-x-auto">
+        <table class="mx-auto w-full max-w-2xl text-left border rounded-xl shadow">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="py-3 px-4 font-semibold">Time</th>
+              <th class="py-3 px-4 font-semibold">Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="py-3 px-4">5:30 AM</td>
+              <td class="py-3 px-4">Packet Pickup Opens</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-3 px-4">6:30 AM</td>
+              <td class="py-3 px-4">10K Race Start</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-3 px-4">7:00 AM</td>
+              <td class="py-3 px-4">5K Race Start</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-3 px-4">8:30 AM</td>
+              <td class="py-3 px-4">Award Ceremony & Costume Contest</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4">9:30 AM</td>
+              <td class="py-3 px-4">Event Wrap-Up</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Runner Essentials -->
+    <section class="py-16 border-b border-gray-200">
+      <h2 class="text-2xl font-bold text-gradient mb-6 text-center">Runner Essentials</h2>
+      <div class="max-w-2xl mx-auto text-gray-700 space-y-4">
+        <ul class="list-disc list-inside">
+          <li>Bring your bib and ID for packet pickup.</li>
+          <li>Water and aid stations are available along the route.</li>
+          <li>Pirate costumes are encouraged (prizes for best dressed!).</li>
+          <li>Follow all marshal and safety instructions.</li>
+          <li>Contact race organizers for accessibility needs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="pt-8 pb-24 text-center">
+      <a href="register.html"
+        class="inline-block px-12 py-6 bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold text-2xl uppercase rounded-full shadow-xl transform hover:scale-105 transition-all duration-300">
+        Register Now
+      </a>
+    </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Kingston City Run. All Rights Reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-white py-12 px-4 border-t border-gray-200">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+      <div class="flex items-center space-x-4">
+        <img src="assets/images/logo-w.png" alt="Kingston City Run Logo" class="h-12 opacity-80" />
+        <p class="text-gray-600 text-sm">© <span id="currentYear"></span> Kingston City Run. All rights reserved.</p>
+      </div>
+      <p class="text-gray-500 text-sm">Part of Kingston’s Pirate’s Week Festival</p>
+    </div>
+    <script>
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
   </footer>
 
-  <script src="/assets/js/script.js"></script>
+  <!-- Navbar mobile menu toggle script -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const links = document.getElementById('navbar-links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('hidden');
+      links.classList.toggle('flex');
+    });
+    document.querySelectorAll('#navbar-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          links.classList.add('hidden');
+          links.classList.remove('flex');
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>

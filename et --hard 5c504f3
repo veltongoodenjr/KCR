@@ -1,0 +1,17 @@
+[33mb8c9740[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Force nav hover text to white with higher specificity
+[33m7efabc3[m Revert hero headline to white; apply Montserrat to headings; swap in SVG logos; transparent nav with hover-only pills
+[33m217c09d[m Revert hero headline to white; apply Montserrat to headings; swap in SVG logos; transparent nav with hover-only pills
+[33m603da6a[m Clean nav hover: remove glossy backdrop and shape-hover; refine button hover lift only
+[33m453520e[m Full homepage refresh: white logo, split headline, animated button, icon hover, updated content
+[33m5c504f3[m Update navigation bar style and colors
+[33mf1f7f1b[m Add white logo variant for hero section
+[33mcace82d[m Full homepage update: white logo, solid headline, button lift, top nav & content refresh
+[33m46b7418[m Enable Tailwind via CDN and update homepage markup
+[33m1720d89[m Apply latest homepage and CSS updates
+[33me18480e[m Modern homepage design and auto-updating footer year
+[33mfafd8e2[m Mobile refinements and stylistic improvements
+[33m0626c16[m Rebrand home page and update logo styling
+[33mf16eb59[m refreshed look
+[33m31479d8[m Full rebrand of index.html
+[33m326a53b[m Describe your latest updates
+[33m6c35166[m Update site for Pirate's Run Di City, 5K & 10K only
