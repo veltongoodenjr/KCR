@@ -5,24 +5,71 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Race Info | Kingston City Run 2025 - Pirates Run Di City</title>
-  <meta name="description" content="Official race info for Kingston City Run 2025. Course maps, schedule, and runner essentials for Jamaica’s most iconic city race." />
+  <meta name="description"
+    content="Official race info for Kingston City Run 2025. Course maps, schedule, and runner essentials for Jamaica’s most iconic city race." />
   <!-- Tailwind for prototyping -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="assets/images/favicon.svg" rel="icon" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
   <style>
-    body { font-family: 'Poppins', Arial, sans-serif; }
-    h1, h2, h3, h4 { font-family: 'Montserrat', 'Poppins', Arial, sans-serif; }
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    }
+
     .text-gradient {
       background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
+    }
+
+    .fa-icon-bg {
+      background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
+      color: #fff;
+      border-radius: 9999px;
+      width: 3.3rem;
+      height: 3.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem auto;
+      box-shadow: 0 3px 18px rgba(49, 148, 39, 0.10);
+    }
+
+    .fa-icon-bg i {
+      font-size: 2rem;
+      line-height: 1;
+      color: #fff;
+      /* Remove display:block if present */
+    }
+
+    .fa-icon-bg i.fa-solid {
+      font-weight: 900;
+    }
+
+    .fa-feature {
+      font-size: 1.4rem;
+      margin-right: 0.7rem;
+      color: #319427;
+      vertical-align: middle;
+    }
+
+    .fa-feature-yellow {
+      color: #F1BA07;
     }
   </style>
 </head>
@@ -40,35 +87,56 @@
       <button id="menu-toggle" class="md:hidden text-2xl text-gray-800 focus:outline-none" aria-label="Toggle menu">
         <i class="fa-solid fa-bars"></i>
       </button>
-      <ul id="navbar-links" class="flex-col md:flex-row flex space-y-2 md:space-y-0 space-x-0 md:space-x-4 text-gray-700 font-medium items-center absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none z-50 md:flex hidden">
+      <ul id="navbar-links"
+        class="flex-col md:flex-row flex space-y-2 md:space-y-0 space-x-0 md:space-x-4 text-gray-700 font-medium items-center absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none z-50 md:flex hidden">
         <li>
-          <a href="index.html" class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i class="fa-solid fa-house"></i> Home</a>
+          <a href="index.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i
+              class="fa-solid fa-house"></i> Home</a>
         </li>
         <li>
-          <a href="about.html" class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i class="fa-solid fa-circle-info"></i> About</a>
+          <a href="about.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i
+              class="fa-solid fa-circle-info"></i> About</a>
         </li>
         <li>
-          <a href="race-info.html" class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold"><i class="fa-solid fa-person-running"></i> Race Info</a>
+          <a href="race-info.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold"><i
+              class="fa-solid fa-person-running"></i> Race Info</a>
         </li>
         <li>
-          <a href="charity.html" class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i class="fa-solid fa-hand-holding-heart"></i> Charity</a>
+          <a href="charity.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i
+              class="fa-solid fa-hand-holding-heart"></i> Charity</a>
         </li>
-        <a href="gallery.html" class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i class="fa-solid fa-images"></i> Gallery</a>
-        </li>
-        <li>
-          <a href="register.html" class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i class="fa-solid fa-user-plus"></i> Register</a>
-        </li>
-        <li>
-          <a href="sponsors.html" class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i class="fa-solid fa-handshake-angle"></i> Sponsors</a>
+        <a href="gallery.html"
+          class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i
+            class="fa-solid fa-images"></i> Gallery</a>
         </li>
         <li>
-          <a href="news.html" class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i class="fa-solid fa-newspaper"></i> News</a>
+          <a href="register.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i
+              class="fa-solid fa-user-plus"></i> Register</a>
         </li>
         <li>
-          <a href="faqs.html" class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i class="fa-solid fa-circle-question"></i> FAQs</a>
+          <a href="sponsors.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i
+              class="fa-solid fa-handshake-angle"></i> Sponsors</a>
         </li>
         <li>
-          <a href="contact.html" class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i class="fa-solid fa-envelope"></i> Contact</a>
+          <a href="news.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i
+              class="fa-solid fa-newspaper"></i> News</a>
+        </li>
+        <li>
+          <a href="faqs.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i
+              class="fa-solid fa-circle-question"></i> FAQs</a>
+        </li>
+        <li>
+          <a href="contact.html"
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg"><i
+              class="fa-solid fa-envelope"></i> Contact</a>
         </li>
       </ul>
     </nav>
@@ -77,9 +145,13 @@
   <!-- Hero -->
   <section class="w-full bg-gradient-to-r from-[#319427] to-[#F1BA07] py-20 flex flex-col items-center relative">
     <div class="max-w-3xl mx-auto px-4 text-center space-y-6">
-      <img src="assets/images/race-treasure-map-demo.png" alt="Race Route Treasure Map" class="mx-auto rounded-2xl shadow-lg mb-10 w-full max-w-2xl" style="object-fit: contain;" />
-      <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-xl">Race Info & Course Map</h1>
-      <p class="text-2xl md:text-3xl text-white/90">10K Run &bull; 5K Walk/Run/Wheel<br>Sunday, November 2, 2025<br>Emancipation Park, Kingston</p>
+      <h1
+        class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-xl mb-4 flex justify-center items-center gap-4">
+        <span><i class="fa-solid fa-person-running"></i></span>
+        Race Info & Course Map
+      </h1>
+      <p class="text-2xl md:text-3xl text-white/90">10K Run &bull; 5K Walk/Run/Wheel<br>Sunday, November 2,
+        2025<br>Emancipation Park, Kingston</p>
       <div class="text-white font-semibold mt-6 text-lg">
         "Pirate’s Run di City" – Run Jamaica's most scenic, vibrant and musical city race!
       </div>
@@ -87,131 +159,398 @@
   </section>
 
   <main class="max-w-4xl mx-auto px-4 md:px-8">
-    <!-- Highlights -->
-    <section class="py-16 border-b border-gray-200">
-      <h2 class="text-2xl font-bold text-gradient mb-6 text-center">Race Highlights</h2>
-      <ul class="list-disc list-inside text-lg text-gray-700 space-y-4 max-w-2xl mx-auto">
-        <li>Experience Kingston’s scenic and iconic attractions, including Devon House, Kings House, Peter Tosh and Bob Marley Museums.</li>
-        <li>Choose your challenge: A competitive 10K or a 5K Walk/Run/Wheel—perfect for all ages, families, and teams.</li>
-        <li>Vibrant Pirate’s Week theme: Four fan zones (Fashion Zone, Devon House, Kings House, Reggae Zone) with music and exclusive costumes.</li>
-        <li>Cheer zones, aid stations, and finish line festivities for supporters and fans.</li>
-        <li>Support local charities: Open Arms Drop-in Centre, Marie Atkins Night Shelter, Alpha Boys School.</li>
-      </ul>
-    </section>
+    <div class="mt-8"></div> <!-- Spacer for hero separation -->
 
-    <!-- Route Details -->
-    <section class="py-16 border-b border-gray-200">
-      <h2 class="text-2xl font-bold text-gradient mb-8 text-center">Course Overview & Map</h2>
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <div class="flex-1">
-          <ul class="space-y-6 text-gray-700">
-            <li><b>Start/Finish:</b> Emancipation Park</li>
-            <li><b>5K Route:</b> Knutsford Blvd, Trafalgar Rd, Hope Rd, Kings House Rd, Lady Musgrave, Devon House, back to Knutsford.</li>
-            <li><b>10K Route:</b> All 5K route plus Barbican Beach City, Paddington, Lady Musgrave, Devon House, Knutsford.</li>
-            <li><b>Water & Aid Stations:</b> Every 2.5km, fully equipped medical support, cooling stations.</li>
-            <li><b>Start Times:</b> 10K: 6:30 AM &bull; 5K: 7:00 AM</li>
-            <li><b>Timing:</b> Chip timing (gun & chip results), event sanctioned by JAAA.</li>
-          </ul>
-        </div>
-        <div class="flex-1">
-          <!-- Google Map Embed (placeholder) -->
-          <iframe src="https://www.google.com/maps/d/embed?mid=1y5cMoHuNfE2iZ9TOgLHTYFmjwqY&hl=en" width="100%" height="280" class="rounded-xl shadow-md border" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Race Highlights Grid -->
+    <section class="pt-4 pb-12 px-4 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="mt-4 text-4xl md:text-5xl font-bold text-center mb-4 text-gradient leading-tight pb-2 overflow-visible">
+          Race Highlights
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-8 text-center
+               transition-all duration-200
+               hover:-translate-y-1 hover:shadow-2xl hover:border-[#319427]
+               hover:bg-gradient-to-r hover:from-white hover:to-[#f0f9f2]">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fa-solid fa-landmark text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Iconic Kingston Route</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Devon House, Kings House, Bob Marley & Peter Tosh Museums—all along the course.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-8 text-center
+               transition-all duration-200
+               hover:-translate-y-1 hover:shadow-2xl hover:border-[#F1BA07]
+               hover:bg-gradient-to-r hover:from-white hover:to-[#fffceb]">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fa-solid fa-users text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Choose Your Challenge</h3>
+            <p class="text-gray-700 leading-relaxed">
+              10K for competitive runners, 5K for all ages, walkers, wheelers, and families.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-8 text-center
+               transition-all duration-200
+               hover:-translate-y-1 hover:shadow-2xl hover:border-[#319427]
+               hover:bg-gradient-to-r hover:from-white hover:to-[#f0f9f2]">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fa-solid fa-masks-theater text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Pirate’s Week Theme</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Fan zones, music, exclusive pirate costumes, and festival vibes.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-8 text-center
+               transition-all duration-200
+               hover:-translate-y-1 hover:shadow-2xl hover:border-[#F1BA07]
+               hover:bg-gradient-to-r hover:from-white hover:to-[#fffceb]">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fa-solid fa-heart-circle-bolt text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Run for a Cause</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Support Open Arms, Marie Atkins, Alpha Boys School, and more local charities.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-8 text-center md:col-span-2 lg:col-span-1
+               transition-all duration-200
+               hover:-translate-y-1 hover:shadow-2xl hover:border-[#319427]
+               hover:bg-gradient-to-r hover:from-white hover:to-[#f0f9f2]">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fa-solid fa-star text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Weekend Celebration</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Parties, expo, cheer zones, awards, and a reggae party at the finish.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-8 text-center md:col-span-2 lg:col-span-1
+               transition-all duration-200
+               hover:-translate-y-1 hover:shadow-2xl hover:border-[#F1BA07]
+               hover:bg-gradient-to-r hover:from-white hover:to-[#fffceb]">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fa-solid fa-mug-hot text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Comfort & Support</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Multiple aid stations, cheer squads, and finish-line fun for all.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="text-center text-sm text-gray-500 mt-2">*Route subject to minor changes. See [Official Course Map] for latest updates.</div>
     </section>
+
+    <!-- Course Overview -->
+    <section class="pt-12 pb-16 px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 text-gradient leading-tight">
+          Course Overview
+        </h2>
+        <!-- card container -->
+        <div class="bg-white rounded-2xl p-8 mb-12 transition-all duration-300 ease-in-out hover:shadow-lg">
+          <div class="relative pl-16">
+            <!-- vertical line -->
+            <div class="absolute left-8 top-4 h-[calc(100%_-_1rem)] border-l-2 border-gray-200"></div>
+
+            <!-- Node 1 -->
+            <div
+              class="flex items-start mb-8 cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1">
+              <i class="fa-solid fa-flag-checkered text-gray-800 text-2xl"></i>
+              <div class="ml-6">
+                <h3 class="font-bold text-lg mb-1">Start/Finish</h3>
+                <p class="text-gray-700">Emancipation Park</p>
+              </div>
+            </div>
+
+            <!-- Node 2 -->
+            <div
+              class="flex items-start mb-8 cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1">
+              <i class="fa-solid fa-person-walking text-gray-800 text-2xl"></i>
+              <div class="ml-6">
+                <h3 class="font-bold text-lg mb-1">5K Route</h3>
+                <p class="text-gray-700">
+                  Knutsford Blvd → Trafalgar Rd → Hope Rd → Kings House Rd → Lady Musgrave → Devon House → Knutsford
+                </p>
+              </div>
+            </div>
+
+            <!-- Node 3 -->
+            <div
+              class="flex items-start mb-8 cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1">
+              <i class="fa-solid fa-person-running text-gray-800 text-2xl"></i>
+              <div class="ml-6">
+                <h3 class="font-bold text-lg mb-1">10K Route</h3>
+                <p class="text-gray-700">
+                  All 5K + Barbican Beach City → Paddington → Lady Musgrave → Devon House → Knutsford
+                </p>
+              </div>
+            </div>
+
+            <!-- Node 4 -->
+            <div
+              class="flex items-start mb-8 cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1">
+              <i class="fa-solid fa-hand-holding-droplet text-gray-800 text-2xl"></i>
+              <div class="ml-6">
+                <h3 class="font-bold text-lg mb-1">Water & Aid Stations</h3>
+                <p class="text-gray-700">Every 2.5 km, with medical & cooling support throughout.</p>
+              </div>
+            </div>
+
+            <!-- Node 5 -->
+            <div
+              class="flex items-start mb-8 cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1">
+              <i class="fa-solid fa-clock text-gray-800 text-2xl"></i>
+              <div class="ml-6">
+                <h3 class="font-bold text-lg mb-1">Start Times</h3>
+                <p class="text-gray-700">10K: 6:30 AM • 5K: 7:00 AM</p>
+              </div>
+            </div>
+
+            <!-- Node 6 -->
+            <div class="flex items-start cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1">
+              <i class="fa-solid fa-stopwatch text-gray-800 text-2xl"></i>
+              <div class="ml-6">
+                <h3 class="font-bold text-lg mb-1">Timing Method</h3>
+                <p class="text-gray-700">Gun & chip results, sanctioned by JAAA.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 text-center text-gray-700 text-sm">
+          *Route subject to minor changes.
+        </div>
+      </div>
+    </section>
+
 
     <!-- Schedule -->
-    <section class="py-16 border-b border-gray-200">
-      <h2 class="text-2xl font-bold text-gradient mb-6 text-center">Race Weekend Schedule</h2>
-      <div class="overflow-x-auto">
-        <table class="mx-auto w-full max-w-2xl text-left border rounded-xl shadow">
-          <thead class="bg-gray-50">
-            <tr>
-              <th class="py-3 px-4 font-semibold">Day</th>
-              <th class="py-3 px-4 font-semibold">Event</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b">
-              <td class="py-3 px-4">Friday, Oct 31</td>
-              <td class="py-3 px-4">Welcome Party (TBA)</td>
-            </tr>
-            <tr class="border-b">
-              <td class="py-3 px-4">Saturday, Nov 1</td>
-              <td class="py-3 px-4">Lifestyle & Fitness Expo, Jamaica Pegasus (TBA)</td>
-            </tr>
-            <tr class="border-b">
-              <td class="py-3 px-4">Sunday, Nov 2</td>
-              <td class="py-3 px-4">
-                5:30 AM – Packet Pickup Opens<br>
-                6:30 AM – 10K Race Start<br>
-                7:00 AM – 5K Race Start<br>
-                8:30 AM – Awards Ceremony & Costume Contest<br>
-                9:30 AM – Finish Line Pirate’s Reggae Party
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="mt-6 text-center text-gray-700">
-        <b>Optional Tours:</b> City Tours, Blue Mountains, Coffee Plantation, Dunn’s River Falls, Mystic Ridge & more!
+    <section class="pt-12 pb-16 px-4 bg-white">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 text-gradient leading-[1.25]">
+          Race Weekend Schedule
+        </h2>
+        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-visible max-w-3xl mx-auto">
+          <div class="grid grid-cols-1">
+            <div
+              class="flex bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold text-lg py-4 px-6 items-center">
+              <div class="w-12 flex justify-center"><i class="fa-solid fa-calendar-day text-2xl"></i></div>
+              <div class="flex-1">Day</div>
+              <div class="flex-1">Event</div>
+            </div>
+            <!-- Friday Row -->
+            <div class="flex border-b border-gray-100 items-center px-6 py-5 hover:bg-gray-50 transition">
+              <div class="w-12 flex justify-center"><i class="fa-solid fa-champagne-glasses text text-xl"></i>
+              </div>
+              <div class="flex-1 font-semibold text-gray-800">Friday, Oct 31</div>
+              <div class="flex-1 text-gray-700">Welcome Party <span class="text-xs text-gray-500">(TBA)</span></div>
+            </div>
+            <!-- Saturday Row -->
+            <div class="flex border-b border-gray-100 items-center px-6 py-5 hover:bg-gray-50 transition">
+              <div class="w-12 flex justify-center"><i class="fa-solid fa-dumbbell text text-xl"></i></div>
+              <div class="flex-1 font-semibold text-gray-800">Saturday, Nov 1</div>
+              <div class="flex-1 text-gray-700">Race Bib/Package Pick-up <span class="text-xs text-gray-500">Jamaica
+                  Pegasus</span></div>
+            </div>
+            <!-- Sunday Row (Multi-line for details) -->
+            <div class="flex items-start px-6 py-5 hover:bg-gray-50 transition">
+              <div class="w-12 flex justify-center pt-1"><i class="fa-solid fa-flag-checkered text text-xl"></i></div>
+              <div class="flex-1 font-semibold text-gray-800 pt-1">Sunday, Nov 2</div>
+              <div class="flex-1 text-gray-700 space-y-1">
+                <div><b>5:30 AM</b> – Packet Pickup Opens</div>
+                <div><b>6:30 AM</b> – 10K Race Start</div>
+                <div><b>7:00 AM</b> – 5K Race Start</div>
+                <div><b>8:30 AM</b> – Awards & Costume Contest</div>
+                <div><b>9:30 AM</b> – Pirate’s Reggae Party</div>
+              </div>
+            </div>
+          </div>
+          <div class="px-8 py-6 bg-gray-50 text-center text-gray-700 text-lg rounded-b-3xl">
+            <b>Optional Tours:</b> TBA
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Runner Essentials -->
-    <section class="py-16 border-b border-gray-200">
-      <h2 class="text-2xl font-bold text-gradient mb-6 text-center">Runner Essentials & Prizes</h2>
-      <div class="max-w-2xl mx-auto text-gray-700 space-y-4">
-        <ul class="list-disc list-inside">
-          <li>Bring bib and ID for packet pickup.</li>
-          <li>Chip timing, commemorative medals for all finishers.</li>
-          <li>Prizes by age group, trophies and medals for top finishers.</li>
-          <li>Pirate costume contest – prizes for best dressed!</li>
-          <li>Support a cause: Donate online or pack for a purpose at <a href="https://www.kingstoncityrunja.com" class="text-primary underline">kingstoncityrunja.com</a>.</li>
-        </ul>
+
+    <!-- Runner Essentials & Prizes (feature style) -->
+    <section class="pt-12 pb-16 px-4 bg-white">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 text-gradient leading-[1.25]">
+          Runner Essentials & Prizes
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-8 text-center
+               transition-all duration-200
+               hover:-translate-y-1 hover:shadow-2xl hover:border-[#319427]
+               hover:bg-gradient-to-r hover:from-white hover:to-[#f0f9f2]">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fa-solid fa-id-card text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Bib & ID Required</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Bring your bib and a valid ID for packet pickup—no exceptions!
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-8 text-center
+               transition-all duration-200
+               hover:-translate-y-1 hover:shadow-2xl hover:border-[#F1BA07]
+               hover:bg-gradient-to-r hover:from-white hover:to-[#fffceb]">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fa-solid fa-stopwatch text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Chip Timing & Medals</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Finishers receive a commemorative medal and official time result.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-8 text-center
+               transition-all duration-200
+               hover:-translate-y-1 hover:shadow-2xl hover:border-[#319427]
+               hover:bg-gradient-to-r hover:from-white hover:to-[#f0f9f2]">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fa-solid fa-trophy text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Prizes by Age Group</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Trophies & medals for top finishers in every category.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-8 text-center
+               transition-all duration-200
+               hover:-translate-y-1 hover:shadow-2xl hover:border-[#F1BA07]
+               hover:bg-gradient-to-r hover:from-white hover:to-[#fffceb]">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fa-solid fa-hat-cowboy text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Pirate Costume Contest</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Win prizes for the best-dressed pirate at the event.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-8 text-center
+               transition-all duration-200
+               hover:-translate-y-1 hover:shadow-2xl hover:border-[#319427]
+               hover:bg-gradient-to-r hover:from-white hover:to-[#f0f9f2]">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fa-solid fa-hand-holding-heart text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Donate & Support</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Online giving and charity drives at
+              <a href="https://www.kingstoncityrunja.com"
+                class="text-gradient underline font-semibold">kingstoncityrunja.com</a>.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-8 text-center
+               transition-all duration-200
+               hover:-translate-y-1 hover:shadow-2xl hover:border-[#F1BA07]
+               hover:bg-gradient-to-r hover:from-white hover:to-[#fffceb]">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fa-solid fa-box-open text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Pack for a Purpose</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Bring donations for local charities—see website for details.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+
 
     <!-- Contact & CTA -->
-    <section class="pt-8 pb-24 text-center">
-      <div class="mb-4 text-gray-600">Questions? Contact: <a href="mailto:info@kingstoncityrunja.com" class="text-primary underline">info@kingstoncityrunja.com</a> | <a href="tel:87692636356" class="text-primary underline">876-926-3635-6</a></div>
-      <a href="https://touchstonelink.com/event/pirates-kingston-city-run/" class="inline-block px-12 py-6 bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold text-2xl uppercase rounded-full shadow-xl transform hover:scale-105 transition-all duration-300">
+    <section class="bg-white p-12 mb-8 text-center">
+      <h2 class="text-xl md:text-4xl font-bold text-gradient mb-8">
+        Why Wait?
+      </h2>
+      <div class="mb-4 text-gray-600">
+        Email:
+        <a href="mailto:kingstoncityrun@gmail.com"
+          class="text-gradient underline font-semibold">kingstoncityrun@gmail.com</a>
+        &nbsp;|&nbsp;
+        Call:
+        <a href="tel:87692636356" class="text-gradient underline font-semibold">876-926-3635-6</a>
+      </div>
+      <a href="https://touchstonelink.com/event/pirates-kingston-city-run/"
+        class="inline-block px-14 py-7 bg-[#288f24] text-white font-bold text-2xl uppercase rounded-full shadow-xl transform hover:scale-105 transition-all duration-300 mt-3">
         Register Now
       </a>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="bg-white py-12 px-4 border-t border-gray-200">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-      <div class="flex items-center space-x-4">
-        <img src="assets/images/logo-w.png" alt="Kingston City Run Logo" class="h-12 opacity-80" />
-        <p class="text-gray-600 text-sm">© <span id="currentYear"></span> Kingston City Run. All rights reserved.</p>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 px-4 border-t border-gray-200">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+        <div class="flex items-center space-x-4">
+          <img src="assets/images/logo-w.png" alt="Kingston City Run Logo" class="h-12 opacity-80" />
+          <p class="text-gray-600 text-sm">
+            © <span id="currentYear"></span> Kingston City Run. All rights reserved.
+          </p>
+        </div>
+        <p class="text-gray-500 text-sm">Part of Kingston’s Pirate’s Week Festival</p>
       </div>
-      <p class="text-gray-500 text-sm">Part of Kingston’s Pirate’s Week Festival</p>
-    </div>
-    <script>
-      document.getElementById("currentYear").textContent = new Date().getFullYear();
-    </script>
-  </footer>
+      <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+      </script>
+    </footer>
 
-  <!-- Navbar mobile menu toggle script -->
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const links = document.getElementById('navbar-links');
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('hidden');
-      links.classList.toggle('flex');
-    });
-    document.querySelectorAll('#navbar-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth < 768) {
-          links.classList.add('hidden');
-          links.classList.remove('flex');
-        }
+
+    <!-- Navbar mobile menu toggle script -->
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const links = document.getElementById('navbar-links');
+      toggle.addEventListener('click', () => {
+        links.classList.toggle('hidden');
+        links.classList.toggle('flex');
       });
-    });
-  </script>
+      document.querySelectorAll('#navbar-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 768) {
+            links.classList.add('hidden');
+            links.classList.remove('flex');
+          }
+        });
+      });
+    </script>
 </body>
+
 </html>
