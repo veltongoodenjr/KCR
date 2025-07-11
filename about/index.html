@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About – Kingston City Run 2025</title>
-  <meta name="description" content="Learn more about Kingston City Run – our mission, story, and impact in Kingston, Jamaica." />
+  <meta name="description"
+    content="Learn more about Kingston City Run – our mission, story, and impact in Kingston, Jamaica." />
   <!-- Tailwind for prototyping -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Favicon -->
   <link href="/assets/images/favicon.svg" rel="icon" type="image/x-icon" />
   <style>
-    body { font-family: 'Poppins', Arial, sans-serif; }
-    h1, h2, h3, h4 { font-family: 'Montserrat', 'Poppins', Arial, sans-serif; }
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    }
+
     .text-gradient {
       background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
       -webkit-background-clip: text;
@@ -25,24 +38,27 @@
       background-clip: text;
       text-fill-color: transparent;
     }
+
     .section-card {
       background: #fff;
       border-radius: 1.5rem;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.07);
       padding: 2.5rem 2rem;
       margin-bottom: 2.5rem;
       border: 1px solid #f2f2f2;
       position: relative;
-      transition: 
-        box-shadow 0.2s cubic-bezier(.4,2,.6,1), 
-        transform 0.2s cubic-bezier(.4,2,.6,1);
+      transition:
+        box-shadow 0.2s cubic-bezier(.4, 2, .6, 1),
+        transform 0.2s cubic-bezier(.4, 2, .6, 1);
     }
+
     .section-card:hover {
-      box-shadow: 0 12px 36px 0 rgba(50,90,55,0.18), 0 1.5px 5px 0 rgba(49,148,39,0.07);
+      box-shadow: 0 12px 36px 0 rgba(50, 90, 55, 0.18), 0 1.5px 5px 0 rgba(49, 148, 39, 0.07);
       transform: translateY(-6px) scale(1.025);
       z-index: 10;
       border-color: #e3e3e3;
     }
+
     @media (min-width: 768px) {
       .section-card {
         margin-top: 0;
@@ -50,6 +66,7 @@
     }
   </style>
 </head>
+
 <body class="bg-gray-100 text-gray-900">
 
   <!-- Top Navigation Bar (Sticky) -->
@@ -128,124 +145,311 @@
     </nav>
   </header>
 
-  <!-- About Hero/Intro -->
-  <section class="relative w-full flex flex-col items-center justify-center px-4 py-24"
-    style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-    <div class="max-w-3xl mx-auto text-center space-y-8">
-      <div class="mx-auto flex items-center justify-center mb-8">
-        <div class="rounded-full bg-white shadow-2xl flex items-center justify-center"
-          style="width: 200px; height: 200px;">
-          <img src="/assets/images/logo.svg" alt="Kingston City Run Logo" class="w-44 h-44 object-contain" />
-        </div>
+  <!-- ABOUT HERO -->
+  <section class="pt-20 pb-12 bg-gradient-to-r from-[#319427] to-[#F1BA07]">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="flex justify-center mb-4">
+        <i class="fa-solid fa-circle-info text-white text-7xl"></i>
       </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-2xl">
-        About Kingston City Run
-      </h1>
-      <p class="text-2xl md:text-3xl text-white/90 font-medium">
-        More than a race—Kingston’s run for community, charity, and city pride!
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-normal">About Kingston City Run</h1>
+      <p class="text-xl md:text-2xl text-white/90 mb-4 font-medium">
+        A global running movement, rooted in Kingston’s spirit and dedicated to making a difference.
       </p>
     </div>
   </section>
 
-  <main class="max-w-5xl mx-auto px-4 md:px-8 z-10 relative">
-    <!-- Our Mission (Card) -->
-    <section class="section-card mt-8">
-      <div class="text-center space-y-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-gradient mb-2">Our Mission</h2>
-        <p class="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-          Kingston City Run brings together athletes, families, and friends for a fun, purpose-driven experience—raising
-          funds for the city’s homeless charities and building community spirit.
+  <!-- GLOBAL MOVEMENT SECTION -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto flex flex-col items-center">
+      <div class="w-20 h-20 mb-4 flex items-center justify-center rounded-full"
+        style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+        <i class="fa-solid fa-person-running text-white text-4xl"></i>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-gradient text-center mb-8">
+        A Movement Since 2013
+      </h2>
+      <div
+        class="bg-white rounded-3xl shadow-xl px-8 py-10 w-full md:max-w-4xl transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+        <p class="text-xl md:text-2xl text-gray-800 font-semibold mb-4 text-center">
+          Runners from Jamaica, the Caribbean, UK, Denmark, Japan, Canada, China, USA and beyond have joined us since
+          our start in 2013.
+        </p>
+        <p class="text-lg text-gray-700 mb-4 text-center">
+          The event debuted with a legendary start—Bart Yasso, the “Chief Running Officer” of Runner’s World, took part
+          in our first half marathon. By 2019, we hosted over 5,000 runners!
+        </p>
+        <p class="text-lg text-gray-700 text-center">
+          The route puts Kingston’s culture, landmarks, and energy on display, with ample spots for supporters and
+          unforgettable city views.
         </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Our Story (Card) -->
-    <section class="section-card">
-      <h2 class="text-2xl md:text-3xl font-bold mb-8 text-gradient text-center">Our Story</h2>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-10 text-lg text-gray-800 mb-8">
-        <li class="flex items-center"><i class="fa-solid fa-calendar-check text-primary mr-3 text-2xl"></i> Founded in
-          2013 by JHTA Kingston Chapter</li>
-        <li class="flex items-center"><i class="fa-solid fa-hand-holding-dollar text-primary mr-3 text-2xl"></i> J$21M+
-          raised for local charities</li>
-        <li class="flex items-center"><i class="fa-solid fa-people-group text-primary mr-3 text-2xl"></i> Thousands of
-          participants annually</li>
-        <li class="flex items-center"><i class="fa-solid fa-medal text-primary mr-3 text-2xl"></i> 9 years and counting!
-        </li>
-      </ul>
-      <div class="text-center text-gray-600">
-        <em>Each year, runners, walkers, volunteers, and sponsors make Kingston City Run a citywide celebration with
-          lasting impact.</em>
+  <!-- THE VIBE & FAN ZONES -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-gradient text-center mb-10 leading-[1.25] pb-2 overflow-visible">
+        The Kingston City Run Vibe</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="bg-white rounded-2xl shadow-md p-7 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+
+          <div class="w-14 h-14 mb-3 flex items-center justify-center rounded-full"
+            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+            <i class="fa-solid fa-shirt text-white text-2xl"></i>
+          </div>
+          <span class="font-bold text-lg mb-1">Fashion Zone</span>
+          <span class="text-gray-600 text-sm text-center">Show off your pirate style and creative outfits.</span>
+        </div>
+        <div
+          class="bg-white rounded-2xl shadow-md p-7 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+
+          <div class="w-14 h-14 mb-3 flex items-center justify-center rounded-full"
+            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+            <i class="fa-solid fa-house-chimney text-white text-2xl"></i>
+          </div>
+          <span class="font-bold text-lg mb-1 text-center">Devon House Historic Zone</span>
+          <span class="text-gray-600 text-sm text-center">Experience Jamaican heritage at this iconic landmark.</span>
+        </div>
+        <div
+          class="bg-white rounded-2xl shadow-md p-7 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+
+          <div class="w-14 h-14 mb-3 flex items-center justify-center rounded-full"
+            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+            <i class="fa-solid fa-crown text-white text-2xl"></i>
+          </div>
+          <span class="font-bold text-lg mb-1">Kings House Zone</span>
+          <span class="text-gray-600 text-sm text-center">Majesty and cheers await you at Kings House.</span>
+        </div>
+        <div
+          class="bg-white rounded-2xl shadow-md p-7 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+          <div class="w-14 h-14 mb-3 flex items-center justify-center rounded-full"
+            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+            <i class="fa-solid fa-music text-white text-2xl"></i>
+          </div>
+          <span class="font-bold text-lg mb-1">Reggae Zone</span>
+          <span class="text-gray-600 text-sm text-center">Run to the rhythm! Reggae beats and island vibes.</span>
+        </div>
       </div>
-    </section>
+      <div class="mt-10 text-center text-lg font-semibold text-[#319427]">
+        This year, Kingston City Run celebrates Pirate’s Week—<span class="font-extrabold">Pirate’s Run di City!</span>
+        Prizes for best costumes. Spectators: line the streets and cheer, all against the backdrop of the Blue &amp;
+        John Crow Mountains, a UNESCO World Heritage site!
+      </div>
+      <div class="mt-4 text-center text-gray-700">
+        Kingston is a UNESCO City of Music—the birthplace of Ska, Rocksteady, Dub, Reggae, and Dancehall.
+      </div>
+    </div>
+  </section>
 
-    <!-- Who We Are (Card) -->
-    <section class="section-card">
-      <div class="text-center space-y-5">
-        <h2 class="text-2xl md:text-3xl font-bold text-gradient mb-2">Who We Are</h2>
-        <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-          Kingston City Run is organised by the Jamaica Hotel & Tourist Association (Kingston Chapter), powered by local
-          sponsors, passionate volunteers, and a supportive community.
+  <!-- WHO WE ARE SECTION -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto flex flex-col items-center">
+      <div class="w-20 h-20 mb-4 flex items-center justify-center rounded-full"
+        style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+        <i class="fa-solid fa-people-group text-white text-4xl"></i>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-gradient text-center mb-8">Who We Are</h2>
+      <div
+        class="bg-white rounded-3xl shadow-xl px-8 py-10 w-full md:max-w-4xl transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+        <p class="text-xl md:text-2xl text-gray-800 font-medium text-center mb-6">
+          Kingston City Run was founded in 2013 by <span class="font-bold text-[#319427]">Nicola Madden-Greig</span> and
+          <span class="font-bold text-[#F1BA07]">Christopher Jarrett</span> to help uplift Kingston and support our most
+          vulnerable—through an event that promotes health, wellness, and the city’s best spirit.
+        </p>
+        <p class="text-lg text-gray-700 text-center">
+          Organised by the Jamaica Hotel & Tourist Association (Kingston Chapter), powered by local sponsors, passionate
+          volunteers, and a thriving community.
+        </p>
+        <p class="italic text-[#319427] text-center text-base mt-8">
+          Changing lives, one step at a time.
         </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Impact Snapshot (Card) -->
-    <section class="section-card">
-      <div class="text-center mb-12">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-gradient">Impact at a Glance</h2>
-      </div>
-      <div class="flex flex-col md:flex-row justify-center gap-12 md:gap-20 mt-6">
-        <div class="flex flex-col items-center">
-          <div class="w-20 h-20 rounded-full flex items-center justify-center mb-3"
-            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fa-solid fa-hand-holding-heart text-white text-3xl"></i>
-          </div>
-          <span class="font-bold text-2xl">J$21M+</span>
-          <span class="text-sm text-gray-600">Donated</span>
+  <!-- ORGANISING COMMITTEE -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-gradient text-center mb-10 leading-[1.25] pb-2 overflow-visible">
+        Organising Committee</h2>
+      <!-- Founders Row -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+          <i class="fa-solid fa-user text-gray-800 text-4xl mb-3"></i>
+          <div class="text-xl font-bold mb-1">Nicola Madden-Greig</div>
+          <div class="text-gray-600 font-medium mb-1">Founder &amp; Co-Chair</div>
         </div>
-        <div class="flex flex-col items-center">
-          <div class="w-20 h-20 rounded-full flex items-center justify-center mb-3"
-            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fa-solid fa-building-columns text-white text-3xl"></i>
-          </div>
-          <span class="font-bold text-2xl">5+ Charities</span>
-          <span class="text-sm text-gray-600">Supported</span>
-        </div>
-        <div class="flex flex-col items-center">
-          <div class="w-20 h-20 rounded-full flex items-center justify-center mb-3"
-            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fa-solid fa-calendar-days text-white text-3xl"></i>
-          </div>
-          <span class="font-bold text-2xl">9 Events</span>
-          <span class="text-sm text-gray-600">Running Strong</span>
+       <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+          <i class="fa-solid fa-user text-gray-800 text-4xl mb-3"></i>
+          <div class="text-xl font-bold mb-1">Christopher Jarrett</div>
+          <div class="text-gray-600 font-medium mb-1">Founder &amp; Co-Chair</div>
         </div>
       </div>
-    </section>
+      <!-- Other Committee Members -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div
+          class="bg-white rounded-2xl shadow p-6 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
 
-    <!-- Legacy Moments / Gallery Link (Card) -->
-    <section class="section-card">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-gradient">Legacy Moments</h2>
-        <p class="mb-6 text-gray-600 text-lg">See Kingston City Run highlights over the years:</p>
-        <a href="/gallery"
-          class="inline-block px-10 py-5 bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-all text-lg">
-          View Gallery
-        </a>
+          <i class="fa-solid fa-user text-gray-800 text-2xl mb-2"></i>
+          <div class="font-semibold">Prudence Simpson</div>
+        </div>
+        <div
+          class="bg-white rounded-2xl shadow p-6 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+
+          <i class="fa-solid fa-user text-gray-800 text-2xl mb-2"></i>
+          <div class="font-semibold">Tomori Tomlinson</div>
+        </div>
+        <div
+          class="bg-white rounded-2xl shadow p-6 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+
+          <i class="fa-solid fa-user text-gray-800 text-2xl mb-2"></i>
+          <div class="font-semibold">Maurice Bryan</div>
+        </div>
+        <div
+          class="bg-white rounded-2xl shadow p-6 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+
+          <i class="fa-solid fa-user text-gray-800 text-2xl mb-2"></i>
+          <div class="font-semibold">Aldain Reid</div>
+        </div>
+        <div
+          class="bg-white rounded-2xl shadow p-6 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+
+          <i class="fa-solid fa-user text-gray-800 text-2xl mb-2"></i>
+          <div class="font-semibold">Alan Beckford</div>
+        </div>
+        <div
+          class="bg-white rounded-2xl shadow p-6 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+
+          <i class="fa-solid fa-user text-gray-800 text-2xl mb-2"></i>
+          <div class="font-semibold">Courtney Sylvester</div>
+        </div>
+        <div
+          class="bg-white rounded-2xl shadow p-6 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+
+          <i class="fa-solid fa-user text-gray-800 text-2xl mb-2"></i>
+          <div class="font-semibold">Charles Arumselvan</div>
+        </div>
+        <div
+          class="bg-white rounded-2xl shadow p-6 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+
+          <i class="fa-solid fa-user text-gray-800 text-2xl mb-2"></i>
+          <div class="font-semibold">David Goldson</div>
+        </div>
+        <!-- CENTER LAST ROW: Use empty divs as placeholders -->
+        <div></div>
+        <div
+          class="bg-white rounded-2xl shadow p-6 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+
+          <i class="fa-solid fa-user text-gray-800 text-2xl mb-2"></i>
+          <div class="font-semibold">Tarn Peralto</div>
+        </div>
+        <div
+          class="bg-white rounded-2xl shadow p-6 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+
+          <i class="fa-solid fa-user text-gray-800 text-2xl mb-2"></i>
+          <div class="font-semibold">Celia Steele</div>
+        </div>
+        <div></div>
       </div>
-    </section>
 
-    <!-- Register Now / CTA (Card) -->
-    <section class="section-card text-center">
-      <h2 class="text-2xl md:text-3xl font-bold text-gradient mb-2">Ready to Run?</h2>
-      <p class="mb-6 text-lg text-gray-700 max-w-2xl mx-auto">
-        Be a part of Kingston’s most vibrant running event! Register now to join the movement. Whether you’re running, walking, or cheering, every step supports a great cause.
-      </p>
-      <a href="/register"
-        class="inline-block px-12 py-6 bg-green-700 text-white font-bold text-2xl uppercase rounded-full shadow-xl transform hover:scale-105 transition-all duration-300">
-        Register Now
-      </a>
-    </section>
-  </main>
+  </section>
+
+  <!-- IMPACT AT A GLANCE -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-gradient text-center mb-10 leading-normal">Impact at a Glance</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Card 1 -->
+        <div
+          class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center border-2 border-transparent transition-all duration-200 hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+
+          <div class="w-20 h-20 rounded-full bg-[#319427] flex items-center justify-center mb-4 shadow">
+            <i class="fa-solid fa-donate text-white text-4xl"></i>
+          </div>
+          <div class="text-4xl font-extrabold mb-2 text-gray-900">J$21M+</div>
+          <div class="font-bold text-lg text-gray-700">Donated</div>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center border-2 border-transparent transition-all duration-200 hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+          <div class="w-20 h-20 rounded-full bg-[#F1BA07] flex items-center justify-center mb-4 shadow">
+            <i class="fa-solid fa-hands-helping text-white text-4xl"></i>
+          </div>
+          <div class="text-4xl font-extrabold mb-2 text-gray-900">5+</div>
+          <div class="font-bold text-lg text-gray-700">Charities Supported</div>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center border-2 border-transparent transition-all duration-200 hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+          <div class="w-20 h-20 rounded-full bg-[#319427] flex items-center justify-center mb-4 shadow">
+            <i class="fa-solid fa-running text-white text-4xl"></i>
+          </div>
+          <div class="text-4xl font-extrabold mb-2 text-gray-900">4</div>
+          <div class="font-bold text-lg text-gray-700">Events Running Strong</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUNCATION EXPERIENCES -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-4xl md:text-5xl font-bold text-gradient text-center mb-10">Optional Runcation Experiences</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Kingston City Tours -->
+      <div class="bg-white rounded-2xl shadow p-8 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+        <div class="w-14 h-14 mb-3 flex items-center justify-center rounded-full bg-gray-100">
+          <i class="fa-solid fa-city text-2xl"></i>
+        </div>
+        <div class="font-bold text-lg mb-2">Kingston City Tours</div>
+        <div class="text-gray-600 text-sm text-center">Explore the capital’s history, culture, and hidden gems.</div>
+      </div>
+      <!-- Friday Club Hopping -->
+      <div class="bg-white rounded-2xl shadow p-8 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+        <div class="w-14 h-14 mb-3 flex items-center justify-center rounded-full bg-gray-100">
+          <i class="fa-solid fa-glass-cheers text-2xl"></i>
+        </div>
+        <div class="font-bold text-lg mb-2">Friday Club Hopping</div>
+        <div class="text-gray-600 text-sm text-center">Experience Kingston’s nightlife—music, food, and vibes.</div>
+      </div>
+      <!-- Blue Mountains Adventure -->
+      <div class="bg-white rounded-2xl shadow p-8 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+        <div class="w-14 h-14 mb-3 flex items-center justify-center rounded-full bg-gray-100">
+          <i class="fa-solid fa-mountain text-2xl"></i>
+        </div>
+        <div class="font-bold text-lg mb-2">Blue Mountains Adventure</div>
+        <div class="text-gray-600 text-sm text-center">Journey over 7,000 ft above sea level for stunning views.</div>
+      </div>
+      <!-- Coffee Plantation Tour -->
+      <div class="bg-white rounded-2xl shadow p-8 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+        <div class="w-14 h-14 mb-3 flex items-center justify-center rounded-full bg-gray-100">
+          <i class="fa-solid fa-mug-hot text-2xl"></i>
+        </div>
+        <div class="font-bold text-lg mb-2">Coffee Plantation Tour</div>
+        <div class="text-gray-600 text-sm text-center">Sample world-famous Blue Mountain Coffee on-site.</div>
+      </div>
+      <!-- Beach Escape -->
+      <div class="bg-white rounded-2xl shadow p-8 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+        <div class="w-14 h-14 mb-3 flex items-center justify-center rounded-full bg-gray-100">
+          <i class="fa-solid fa-umbrella-beach text-2xl"></i>
+        </div>
+        <div class="font-bold text-lg mb-2">Beach Escape</div>
+        <div class="text-gray-600 text-sm text-center">Relax and recharge on Jamaica’s stunning beaches.</div>
+      </div>
+      <!-- Ocho Rios Day Trips -->
+      <div class="bg-white rounded-2xl shadow p-8 flex flex-col items-center transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+        <div class="w-14 h-14 mb-3 flex items-center justify-center rounded-full bg-gray-100">
+          <i class="fa-solid fa-water text-2xl"></i>
+        </div>
+        <div class="font-bold text-lg mb-2">Ocho Rios Day Trips</div>
+        <div class="text-gray-600 text-sm text-center">Visit Dunn’s River Falls, Dolphin Cove, or Mystic Ridge.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="bg-white py-12 px-4 border-t border-gray-200 mt-12">
@@ -281,4 +485,5 @@
     });
   </script>
 </body>
+
 </html>

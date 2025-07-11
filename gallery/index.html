@@ -135,7 +135,10 @@
   <!-- Gallery Hero Section -->
   <section class="w-full py-20 px-4 text-center bg-gradient-to-r from-[#319427] to-[#F1BA07]">
     <div class="max-w-3xl mx-auto space-y-8">
-      <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-xl">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-xl flex flex-col items-center gap-4">
+        <span>
+          <i class="fa-solid fa-images text-5xl md:text-6xl mb-4"></i>
+        </span>
         Gallery
       </h1>
       <p class="text-xl md:text-2xl text-white/90">
@@ -143,56 +146,71 @@
       </p>
     </div>
   </section>
-
-  <!-- Responsive Gallery Grid -->
-  <section class="py-20 px-4 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-gradient">Event Photos</h2>
-        <!-- Add filter/sort controls here in the future -->
+<!-- Responsive Gallery Grid -->
+<section class="py-20 px-4 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gradient">Event Photos</h2>
+      <!-- (Future filter/sort controls could go here) -->
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <!-- Image 1 -->
+      <div class="rounded-xl overflow-hidden shadow group transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
+        <img src="assets/images/gallery/1.jpg" alt="Kingston City Run 1"
+          class="gallery-img w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-80" />
       </div>
-      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <!-- Placeholder images, replace src with your real images later -->
-        <div class="rounded-xl overflow-hidden shadow group">
-          <img src="https://placehold.co/600x400?text=Kingston+Run+1" alt="Kingston City Run 1"
-            class="gallery-img w-full h-60" />
-        </div>
-        <div class="rounded-xl overflow-hidden shadow group">
-          <img src="https://placehold.co/600x400?text=Kingston+Run+2" alt="Kingston City Run 2"
-            class="gallery-img w-full h-60" />
-        </div>
-        <div class="rounded-xl overflow-hidden shadow group">
-          <img src="https://placehold.co/600x400?text=Kingston+Run+3" alt="Kingston City Run 3"
-            class="gallery-img w-full h-60" />
-        </div>
-        <div class="rounded-xl overflow-hidden shadow group">
-          <img src="https://placehold.co/600x400?text=Kingston+Run+4" alt="Kingston City Run 4"
-            class="gallery-img w-full h-60" />
-        </div>
-        <div class="rounded-xl overflow-hidden shadow group">
-          <img src="https://placehold.co/600x400?text=Kingston+Run+5" alt="Kingston City Run 5"
-            class="gallery-img w-full h-60" />
-        </div>
-        <div class="rounded-xl overflow-hidden shadow group">
-          <img src="https://placehold.co/600x400?text=Kingston+Run+6" alt="Kingston City Run 6"
-            class="gallery-img w-full h-60" />
-        </div>
-        <div class="rounded-xl overflow-hidden shadow group">
-          <img src="https://placehold.co/600x400?text=Kingston+Run+7" alt="Kingston City Run 7"
-            class="gallery-img w-full h-60" />
-        </div>
-        <div class="rounded-xl overflow-hidden shadow group">
-          <img src="https://placehold.co/600x400?text=Kingston+Run+8" alt="Kingston City Run 8"
-            class="gallery-img w-full h-60" />
-        </div>
-        <!-- Add more images as needed -->
+      <!-- Image 2 -->
+      <div class="rounded-xl overflow-hidden shadow group transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
+        <img src="assets/images/gallery/2.jpg" alt="Kingston City Run 2"
+          class="gallery-img w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-80" />
       </div>
-      <div class="mt-16 text-center">
-        <p class="text-lg text-gray-600">Check back soon as we add more highlights and crowd shots from Kingston City
-          Run 2025!</p>
+      <!-- Image 3 -->
+      <div class="rounded-xl overflow-hidden shadow group transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
+        <img src="assets/images/gallery/3.jpg" alt="Kingston City Run 3"
+          class="gallery-img w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-80" />
+      </div>
+      <!-- Image 4 -->
+      <div class="rounded-xl overflow-hidden shadow group transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
+        <img src="assets/images/gallery/4.jpg" alt="Kingston City Run 4"
+          class="gallery-img w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-80" />
+      </div>
+      <!-- Image 5 -->
+      <div class="rounded-xl overflow-hidden shadow group transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
+        <img src="assets/images/gallery/5.jpg" alt="Kingston City Run 5"
+          class="gallery-img w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-80" />
+      </div>
+      <!-- Image 6 -->
+      <div class="rounded-xl overflow-hidden shadow group transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
+        <img src="assets/images/gallery/6.jpg" alt="Kingston City Run 6"
+          class="gallery-img w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-80" />
+      </div>
+      <!-- Image 7 -->
+      <div class="rounded-xl overflow-hidden shadow group transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
+        <img src="assets/images/gallery/7.jpg" alt="Kingston City Run 7"
+          class="gallery-img w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-80" />
+      </div>
+      <!-- Image 8 -->
+      <div class="rounded-xl overflow-hidden shadow group transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
+        <img src="assets/images/gallery/8.jpg" alt="Kingston City Run 8"
+          class="gallery-img w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-80" />
+      </div>
+      <!-- Image 9 -->
+      <div class="rounded-xl overflow-hidden shadow group transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
+        <img src="assets/images/gallery/9.jpg" alt="Kingston City Run 9"
+          class="gallery-img w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-80" />
+      </div>
+      <!-- Image 10 -->
+      <div class="rounded-xl overflow-hidden shadow group transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
+        <img src="assets/images/gallery/10.jpg" alt="Kingston City Run 10"
+          class="gallery-img w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-80" />
       </div>
     </div>
-  </section>
+    <div class="mt-16 text-center">
+      <p class="text-lg text-gray-600">Check back soon as we add more highlights and crowd shots from Kingston City Run 2025!</p>
+    </div>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="bg-white py-12 px-4 border-t border-gray-200">
@@ -207,6 +225,16 @@
       document.getElementById("currentYear").textContent = new Date().getFullYear();
     </script>
   </footer>
+
+  </section>
+  <div id="lightbox-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+    <div class="relative max-w-3xl w-full p-4">
+      <button id="close-lightbox" class="absolute top-2 right-2 text-white text-3xl focus:outline-none">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img id="lightbox-img" class="w-full h-auto rounded-lg shadow-lg" alt="Lightbox Image" />
+    </div>
+  </div>
 
   <!-- Navbar mobile menu toggle script -->
   <script>
@@ -226,6 +254,51 @@
       });
     });
   </script>
+
+
+  <script>
+    // Dynamically load images 1.jpg to 10.jpg
+    const galleryGrid = document.getElementById('gallery-grid');
+    const template = document.getElementById('gallery-img-template');
+    const imageCount = 10; // Number of images
+    for (let i = 1; i <= imageCount; i++) {
+      const clone = template.content.cloneNode(true);
+      const img = clone.querySelector('img');
+      img.src = `assets/images/gallery/${i}.jpg`;
+      img.alt = `Kingston City Run Photo ${i}`;
+      img.dataset.index = i;
+      // Add lightbox trigger
+      clone.querySelector('div').addEventListener('click', () => openLightbox(i));
+      galleryGrid.appendChild(clone);
+    }
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    function openLightbox(index) {
+      lightboxImg.src = `assets/images/gallery/${index}.jpg`;
+      lightbox.classList.remove('hidden');
+    }
+    document.getElementById('close-lightbox').onclick = () => {
+      lightbox.classList.add('hidden');
+      lightboxImg.src = '';
+    };
+    // Close lightbox on background click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.add('hidden');
+        lightboxImg.src = '';
+      }
+    });
+    // Optional: close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape") {
+        lightbox.classList.add('hidden');
+        lightboxImg.src = '';
+      }
+    });
+  </script>
+
 
 </body>
 
