@@ -83,14 +83,30 @@
           class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
           <i class="fa-solid fa-images"></i> Gallery
         </a>
-        </li>
-        <li>
-          <a href="/register"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+         <li class="relative group">
+          <button class="peer flex items-center gap-2 px-4 py-2 rounded-full font-bold
+           transition hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07]
+           hover:text-white">
             <i class="fa-solid fa-user-plus"></i> Register
-          </a>
+            <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+          </button>
+          <!-- Dropdown menu -->
+          <ul id="register-dropdown" class="absolute left-0 top-full          /* sits flush under the pill, no gap   */
+       w-52 bg-white rounded-xl shadow-lg border z-50
+       opacity-0 scale-95 pointer-events-none
+       transition-all duration-200 ease-out origin-top
+       peer-hover:opacity-100 peer-hover:scale-100 peer-hover:pointer-events-auto
+       hover:opacity-100 hover:scale-100 hover:pointer-events-auto">
+            <li>
+              <a href="/register/local/"
+                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-t-xl transition">Local</a>
+            </li>
+            <li>
+              <a href="/register/international/"
+                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-b-xl transition">International</a>
+            </li>
+          </ul>
         </li>
-        <li>
           <a href="/sponsors"
             class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
             <i class="fa-solid fa-handshake-angle"></i> Sponsors
@@ -308,5 +324,29 @@
     });
   </script>
 </body>
+
+<script>
+  // Mobile-friendly dropdown for the “Register” nav item
+  document.addEventListener('DOMContentLoaded', () => {
+    const registerBtn = document.querySelector('li.relative.group > button');
+    const registerMenu = registerBtn.nextElementSibling;
+
+    // Toggle dropdown on click
+    registerBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      registerMenu.classList.toggle('hidden');
+    });
+
+    // Close dropdown if you tap anywhere else
+    document.addEventListener('click', () => {
+      registerMenu.classList.add('hidden');
+    });
+
+    // Prevent clicks inside the menu from closing it immediately
+    registerMenu.addEventListener('click', e => {
+      e.stopPropagation();
+    });
+  });
+</script>
 
 </html>

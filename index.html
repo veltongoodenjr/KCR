@@ -89,17 +89,35 @@
           <i class="fa-solid fa-images"></i> Gallery
         </a>
         </li>
-        <li>
-          <a href="/register"
-            class="flex items-center gap-2 transition-all duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-            <i class="fa-solid fa-user-plus"></i> Register
-          </a>
         </li>
-        <li>
-          <a href="/sponsors"
-            class="flex items-center gap-2 transition-all duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-            <i class="fa-solid fa-handshake-angle"></i> Sponsors
-          </a>
+        <li class="relative group">
+          <button class="peer flex items-center gap-2 px-4 py-2 rounded-full font-bold
+           transition hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07]
+           hover:text-white">
+            <i class="fa-solid fa-user-plus"></i> Register
+            <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+          </button>
+          <!-- Dropdown menu -->
+          <ul id="register-dropdown" class="absolute left-0 top-full          /* sits flush under the pill, no gap   */
+       w-52 bg-white rounded-xl shadow-lg border z-50
+       opacity-0 scale-95 pointer-events-none
+       transition-all duration-200 ease-out origin-top
+       peer-hover:opacity-100 peer-hover:scale-100 peer-hover:pointer-events-auto
+       hover:opacity-100 hover:scale-100 hover:pointer-events-auto">
+            <li>
+              <a href="/register/local/"
+                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-t-xl transition">Local</a>
+            </li>
+            <li>
+              <a href="/register/international/"
+                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-b-xl transition">International</a>
+            </li>
+          </ul>
+        </li>
+        <a href="/sponsors"
+          class="flex items-center gap-2 transition-all duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+          <i class="fa-solid fa-handshake-angle"></i> Sponsors
+        </a>
         </li>
         <li>
           <a href="/news"
@@ -186,98 +204,102 @@
   </section>
 
   <!-- Features Section -->
-<section class="pt-28 pb-20 px-4 bg-white">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient leading-[1.25] py-2">
-      Why Join the Adventure?
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Feature 1 -->
-      <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+  <section class="pt-28 pb-20 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient leading-[1.25] py-2">
+        Why Join the Adventure?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
         hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
         p-8 md:p-10 text-center">
-        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-          style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-          <i class="fas fa-map-pin text-white text-2xl"></i>
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+            <i class="fas fa-map-pin text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Multiple Race Events</h3>
+          <p>Take on the 10K run or join the accessible 5K Walk/Run/Wheel—open to all ages and abilities.</p>
         </div>
-        <h3 class="text-xl font-bold mb-2">Multiple Race Events</h3>
-        <p>Take on the 10K run or join the accessible 5K Walk/Run/Wheel—open to all ages and abilities.</p>
-      </div>
-      <!-- Feature 2 -->
-      <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+        <!-- Feature 2 -->
+        <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
         hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]
         p-8 md:p-10 text-center">
-        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-          style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-          <i class="fas fa-users text-white text-2xl"></i>
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+            <i class="fas fa-users text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Team & Family Fun</h3>
+          <p>Corporate challenges, family teams, and community groups are all welcome. Celebrate teamwork and community
+            spirit!</p>
         </div>
-        <h3 class="text-xl font-bold mb-2">Team & Family Fun</h3>
-        <p>Corporate challenges, family teams, and community groups are all welcome. Celebrate teamwork and community spirit!</p>
-      </div>
-      <!-- Feature 3 -->
-      <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+        <!-- Feature 3 -->
+        <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
         hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
         p-8 md:p-10 text-center">
-        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-          style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-          <i class="fas fa-heart text-white text-2xl"></i>
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+            <i class="fas fa-heart text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Help Raise for Charity</h3>
+          <p>Proceeds support Kingston’s homeless charities including Open Arms, Marie Atkins Night Shelter, Food for
+            the Poor, and Missionaries of the Poor.</p>
         </div>
-        <h3 class="text-xl font-bold mb-2">Help Raise for Charity</h3>
-        <p>Proceeds support Kingston’s homeless charities including Open Arms, Marie Atkins Night Shelter, Food for the Poor, and Missionaries of the Poor.</p>
-      </div>
-      <!-- Center last two cards in a flex container on desktop -->
-      <div class="hidden lg:flex col-span-3 justify-center gap-8 mt-0">
-        <!-- Feature 4 -->
-        <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+        <!-- Center last two cards in a flex container on desktop -->
+        <div class="hidden lg:flex col-span-3 justify-center gap-8 mt-0">
+          <!-- Feature 4 -->
+          <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
           hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]
           p-8 md:p-10 text-center w-full max-w-sm">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fas fa-calendar text-white text-2xl"></i>
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fas fa-calendar text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Kingston Pirate’s Week</h3>
+            <p>Immerse yourself in the excitement of Kingston Pirate’s Week with parades, music, costumes, and city-wide
+              events.</p>
           </div>
-          <h3 class="text-xl font-bold mb-2">Kingston Pirate’s Week</h3>
-          <p>Immerse yourself in the excitement of Kingston Pirate’s Week with parades, music, costumes, and city-wide events.</p>
-        </div>
-        <!-- Feature 5 -->
-        <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+          <!-- Feature 5 -->
+          <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
           hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
           p-8 md:p-10 text-center w-full max-w-sm">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fas fa-trophy text-white text-2xl"></i>
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fas fa-trophy text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Dress Up & Win Prizes</h3>
+            <p>Unleash your inner pirate—compete in the pirate costume contest for prizes and recognition!</p>
           </div>
-          <h3 class="text-xl font-bold mb-2">Dress Up & Win Prizes</h3>
-          <p>Unleash your inner pirate—compete in the pirate costume contest for prizes and recognition!</p>
         </div>
-      </div>
-      <!-- Show last two cards as normal on mobile/tablet -->
-      <div class="lg:hidden">
-        <!-- Feature 4 -->
-        <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+        <!-- Show last two cards as normal on mobile/tablet -->
+        <div class="lg:hidden">
+          <!-- Feature 4 -->
+          <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
           hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]
           p-8 md:p-10 text-center mt-8">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fas fa-calendar text-white text-2xl"></i>
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fas fa-calendar text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Kingston Pirate’s Week</h3>
+            <p>Immerse yourself in the excitement of Kingston Pirate’s Week with parades, music, costumes, and city-wide
+              events.</p>
           </div>
-          <h3 class="text-xl font-bold mb-2">Kingston Pirate’s Week</h3>
-          <p>Immerse yourself in the excitement of Kingston Pirate’s Week with parades, music, costumes, and city-wide events.</p>
-        </div>
-        <!-- Feature 5 -->
-        <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+          <!-- Feature 5 -->
+          <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
           hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
           p-8 md:p-10 text-center mt-8">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fas fa-trophy text-white text-2xl"></i>
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fas fa-trophy text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Dress Up & Win Prizes</h3>
+            <p>Unleash your inner pirate—compete in the pirate costume contest for prizes and recognition!</p>
           </div>
-          <h3 class="text-xl font-bold mb-2">Dress Up & Win Prizes</h3>
-          <p>Unleash your inner pirate—compete in the pirate costume contest for prizes and recognition!</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Sponsors Section -->
@@ -485,4 +507,28 @@
 
   updateHero(0);
   autoHero();
+</script>
+
+<script>
+  // Mobile-friendly dropdown for the “Register” nav item
+  document.addEventListener('DOMContentLoaded', () => {
+    const registerBtn = document.querySelector('li.relative.group > button');
+    const registerMenu = registerBtn.nextElementSibling;
+
+    // Toggle dropdown on click
+    registerBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      registerMenu.classList.toggle('hidden');
+    });
+
+    // Close dropdown if you tap anywhere else
+    document.addEventListener('click', () => {
+      registerMenu.classList.add('hidden');
+    });
+
+    // Prevent clicks inside the menu from closing it immediately
+    registerMenu.addEventListener('click', e => {
+      e.stopPropagation();
+    });
+  });
 </script>

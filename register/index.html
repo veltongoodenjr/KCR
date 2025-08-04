@@ -86,18 +86,29 @@
           class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
           <i class="fa-solid fa-images"></i> Gallery
         </a>
-        </li>
-        <li>
-          <a href="/register"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold">
+        <li class="relative group">
+          <button
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold group-hover:bg-opacity-80"
+            aria-haspopup="true">
             <i class="fa-solid fa-user-plus"></i> Register
-          </a>
+            <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+          </button>
+          <!-- Dropdown menu -->
+          <ul class="absolute left-0 mt-2 w-52 bg-white rounded-xl shadow-lg border z-50 hidden group-hover:block">
+            <li>
+              <a href="/register/local/"
+                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-t-xl transition">Local</a>
+            </li>
+            <li>
+              <a href="/register/international/"
+                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-b-xl transition">International</a>
+            </li>
+          </ul>
         </li>
-        <li>
-          <a href="/sponsors"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-            <i class="fa-solid fa-handshake-angle"></i> Sponsors
-          </a>
+        <a href="/sponsors"
+          class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+          <i class="fa-solid fa-handshake-angle"></i> Sponsors
+        </a>
         </li>
         <li>
           <a href="/news"
@@ -121,54 +132,44 @@
     </nav>
   </header>
 
-  <!-- Registration Hero -->
-  <section class="relative w-full py-24 px-4 text-center bg-gradient-to-r from-[#319427] to-[#F1BA07]">
-    <div class="max-w-4xl mx-auto space-y-8 flex flex-col items-center">
-      <div class="mb-0 flex justify-center w-full">
-        <i class="fa-solid fa-user-plus text-white text-7xl drop-shadow-lg"></i>
-      </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-xl">
-        Register for Kingston City Run 2025
-      </h1>
-      <p class="text-xl md:text-2xl text-white/90">
-        Be part of the run that makes a difference! <br>
-        Sign up for the 10K, 5K, or Corporate Challenge and help support Kingston’s charities.
-      </p>
+<!-- Registration Hero -->
+<section class="relative w-full py-24 px-4 text-center bg-gradient-to-r from-[#319427] to-[#F1BA07]">
+  <div class="max-w-2xl mx-auto flex flex-col items-center space-y-8">
+    <div class="flex justify-center w-full">
+      <i class="fa-solid fa-user-plus text-white text-7xl drop-shadow-lg"></i>
     </div>
-  </section>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-xl mb-2">
+      Register for Kingston City Run 2025
+    </h1>
+    <p class="text-xl md:text-2xl text-white/90 mb-8">
+      Choose your registration type below.
+    </p>
+    <div class="flex flex-col md:flex-row gap-8 w-full justify-center">
+      <a href="/register/local/"
+         class="flex-1 min-w-[220px] max-w-xs bg-white rounded-2xl shadow-xl p-8 border-2 border-[#319427] hover:scale-105 hover:shadow-2xl transition text-[#319427] font-bold text-2xl flex flex-col items-center">
+        <i class="fa-solid fa-flag-checkered text-4xl mb-3"></i>
+        Local Registration
+        <span class="block mt-3 text-base font-medium text-gray-500">For Jamaican residents & local teams</span>
+      </a>
+      <a href="/register/international/"
+         class="flex-1 min-w-[220px] max-w-xs bg-white rounded-2xl shadow-xl p-8 border-2 border-[#F1BA07] hover:scale-105 hover:shadow-2xl transition text-[#F1BA07] font-bold text-2xl flex flex-col items-center">
+        <i class="fa-solid fa-globe text-4xl mb-3"></i>
+        International Registration
+        <span class="block mt-3 text-base font-medium text-gray-500">For overseas participants</span>
+      </a>
+    </div>
+  </div>
+</section>
 
-  <!-- Ready to Run Section -->
-  <section class="py-20 px-4 bg-white">
-    <div class="max-w-2xl mx-auto text-center space-y-10">
-      <div class="space-y-2">
-        <h2 class="text-3xl md:text-4xl font-bold text-gradient">Ready to Run?</h2>
-        <p class="text-lg text-gray-700">
-          Click below to complete your registration. Early-bird rates apply until September 30.<br>
-          Registration closes October 18, 2025.
-        </p>
-      </div>
-      <!-- Trigger button now opens modal -->
-      <button id="reg-coming-soon"
-        class="inline-block px-12 py-6 bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold text-2xl uppercase rounded-full shadow-2xl hover:scale-105 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center mx-auto">
-        Registration Portal
-        <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-      </button>
-    </div>
-
-    <!-- Modal Markup -->
-    <div id="comingSoonModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-      <div class="bg-white rounded-2xl p-8 max-w-sm mx-auto text-center space-y-6">
-        <h3 class="text-2xl font-bold">Coming Soon!</h3>
-        <p class="text-gray-700">
-          Our registration portal will be live shortly. Stay tuned and thank you for your patience!
-        </p>
-        <button id="closeModal"
-          class="mt-4 px-6 py-3 bg-[#319427] text-white font-semibold rounded-full hover:bg-[#288f24] transition">
-          Close
-        </button>
-      </div>
-    </div>
-  </section>
+<!-- Key Event Details (keep this on the main page for both audiences) -->
+<div class="max-w-2xl mx-auto text-center mt-16 mb-8">
+  <h3 class="text-2xl font-semibold mb-1 text-gradient">Event Details</h3>
+  <ul class="text-gray-700 text-lg space-y-1">
+    <li><strong>Date:</strong> Sunday, November 2, 2025</li>
+    <li><strong>Location:</strong> New Kingston, Kingston, Jamaica</li>
+    <li><strong>Start Times:</strong> 10K – 5:30am | 5K Run – 6:30am | 5K Walk – 6:35am</li>
+  </ul>
+</div>
 
   <!-- FAQ/Info -->
   <section class="py-12 px-4 bg-gray-50">
@@ -236,6 +237,31 @@
       }
     });
   </script>
+
+ <script>
+  // Mobile-friendly dropdown for the “Register” nav item
+  document.addEventListener('DOMContentLoaded', () => {
+    const registerBtn = document.querySelector('li.relative.group > button');
+    const registerMenu = registerBtn.nextElementSibling;
+
+    // Toggle dropdown on click
+    registerBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      registerMenu.classList.toggle('hidden');
+    });
+
+    // Close dropdown if you tap anywhere else
+    document.addEventListener('click', () => {
+      registerMenu.classList.add('hidden');
+    });
+
+    // Prevent clicks inside the menu from closing it immediately
+    registerMenu.addEventListener('click', e => {
+      e.stopPropagation();
+    });
+  });
+</script>
+
 
 </body>
 

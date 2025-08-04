@@ -86,14 +86,25 @@
           class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
           <i class="fa-solid fa-images"></i> Gallery
         </a>
-        </li>
-        <li>
-          <a href="/register"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+        <li class="relative group">
+          <button
+            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold group-hover:bg-opacity-80"
+            aria-haspopup="true">
             <i class="fa-solid fa-user-plus"></i> Register
-          </a>
+            <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+          </button>
+          <!-- Dropdown menu -->
+          <ul class="absolute left-0 mt-2 w-52 bg-white rounded-xl shadow-lg border z-50 hidden group-hover:block">
+            <li>
+              <a href="/register/local/"
+                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-t-xl transition">Local</a>
+            </li>
+            <li>
+              <a href="/register/international/"
+                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-b-xl transition">International</a>
+            </li>
+          </ul>
         </li>
-        <li>
           <a href="/sponsors"
             class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold">
             <i class="fa-solid fa-handshake-angle"></i> Sponsors
