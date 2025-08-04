@@ -186,27 +186,69 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <h3 class="text-xl font-semibold text-[#319427] mb-3">Register Now</h3>
-                <div class="flex flex-col gap-3 md:flex-row md:gap-6">
-                    <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%2010K%20Run"
-                        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full transition text-center">Individual
-                        10K Run</a>
-                    <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%205K%20Walk"
-                        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full transition text-center">Individual
-                        5K Run/Walk/Wheel</a>
-                </div>
-                <div class="flex flex-col gap-3 md:flex-row md:gap-6 mt-3">
-                    <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%2010K%20Run"
-                        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full transition text-center">Group
-                        10K Run</a>
-                    <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%205K%20Walk"
-                        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full transition text-center">Group
-                        5K Run/Walk/Wheel</a>
-                </div>
-                <p class="text-xs text-gray-500 mt-2">For teams of 20+, email <a href="mailto:kingstoncityrun@gmail.com"
-                        class="underline text-[#319427]">kingstoncityrun@gmail.com</a></p>
-            </div>
+<div class="space-y-8">
+  <!-- MAIN TITLE -->
+  <h3 class="text-xl md:text-2xl font-semibold text-[#319427]">Register&nbsp;Now</h3>
+
+  <!-- ──────────── INDIVIDUAL ──────────── -->
+  <div class="space-y-5">
+    <h4 class="text-lg md:text-xl font-bold text">Individual</h4>
+
+    <div class="grid gap-3 md:grid-cols-2 md:gap-6">
+      <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%2010K%20Run"
+         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+        Single&nbsp;10K&nbsp;Run
+      </a>
+      <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%205K%20Run"
+         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+        Single&nbsp;5K&nbsp;Run
+      </a>
+      <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%205K%20Walk"
+         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+        Single&nbsp;5K&nbsp;Walk
+      </a>
+      <a href="https://my.raceresult.com/352803/registration?regname=Donate%20to%20the%20Cause"
+         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+        Single&nbsp;5K&nbsp;Wheelchair
+      </a>
+    </div>
+  </div>
+
+  <!-- ──────────── GROUP ──────────── -->
+  <div class="space-y-5 pt-6 border-t border-gray-300">
+    <h4 class="text-lg md:text-xl font-bold text">Group</h4>
+
+    <div class="grid gap-3 md:grid-cols-2 md:gap-6">
+      <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%2010K%20Run"
+         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+        Group&nbsp;10K&nbsp;Run
+      </a>
+      <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%205K%20Run"
+         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+        Group&nbsp;5K&nbsp;Run
+      </a>
+      <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%205K%20Walk"
+         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+        Group&nbsp;5K&nbsp;Walk
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTNOTE -->
+  <p class="text-xs text-gray-500">
+    Teams of 20&nbsp;+?&nbsp;Email&nbsp;
+    <a href="mailto:kingstoncityrun@gmail.com" class="underline text-[#319427]">
+      kingstoncityrun@gmail.com
+    </a>
+  </p>
+</div>
+
+
+<!-- Re-use the same button classes everywhere -->
+<style>
+  .btn-reg{ @apply flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full transition text-center; }
+</style>
+
         </div>
     </section>
 
