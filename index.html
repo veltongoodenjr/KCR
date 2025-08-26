@@ -41,13 +41,60 @@
       text-fill-color: transparent;
     }
   </style>
+
+  <style id="kcr-animations">
+    /* Quick wiggle burst, then long pause */
+    @keyframes wiggle-burst {
+
+      0%,
+      100% {
+        transform: rotate(0deg);
+      }
+
+      1% {
+        transform: rotate(-3deg);
+      }
+
+      2% {
+        transform: rotate(3deg);
+      }
+
+      3% {
+        transform: rotate(-2deg);
+      }
+
+      4% {
+        transform: rotate(2deg);
+      }
+
+      5% {
+        transform: rotate(0deg);
+      }
+    }
+
+    /* Animate ONLY the icon circle (prevents clash with card hover translate) */
+    .wiggle-burst-20s {
+      animation: wiggle-burst 20s ease-in-out infinite;
+      /* change to 10s if you want more frequent */
+      transform-origin: center;
+      will-change: transform;
+    }
+
+    /* Accessibility: respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .wiggle-burst-20s {
+        animation: none;
+      }
+    }
+  </style>
+
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LGJWXYSNE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-8LGJWXYSNE');
@@ -257,18 +304,23 @@
         </div>
         <!-- Center last two cards in a flex container on desktop -->
         <div class="hidden lg:flex col-span-3 justify-center gap-8 mt-0">
-          <!-- Feature 4 -->
-          <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
-          hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]
-          p-8 md:p-10 text-center w-full max-w-sm">
-            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-              <i class="fas fa-calendar text-white text-2xl"></i>
+          <!-- Feature 4 (Desktop: clickable, wiggles) -->
+          <a href="https://kingstonpiratesweek.com/events/" target="_blank" rel="noopener noreferrer"
+            class="block w-full max-w-sm">
+            <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+              hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r
+              hover:from-[#fffce8] hover:to-[#fffbf1]
+              p-8 md:p-10 text-center h-full">
+              <!-- Wiggle lives on THIS circle only -->
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center wiggle-burst-20s"
+                style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+                <i class="fas fa-calendar text-white text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Kingston Pirate’s Week</h3>
+              <p>Immerse yourself in the excitement of Kingston Pirate’s Week with parades, music, costumes, and
+                city-wide events.</p>
             </div>
-            <h3 class="text-xl font-bold mb-2">Kingston Pirate’s Week</h3>
-            <p>Immerse yourself in the excitement of Kingston Pirate’s Week with parades, music, costumes, and city-wide
-              events.</p>
-          </div>
+          </a>
           <!-- Feature 5 -->
           <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
           hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
@@ -283,18 +335,21 @@
         </div>
         <!-- Show last two cards as normal on mobile/tablet -->
         <div class="lg:hidden">
-          <!-- Feature 4 -->
-          <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
-          hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]
-          p-8 md:p-10 text-center mt-8">
-            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-              <i class="fas fa-calendar text-white text-2xl"></i>
+          <!-- Feature 4 (Mobile: clickable, wiggles) -->
+          <a href="https://kingstonpiratesweek.com/events/" target="_blank" rel="noopener noreferrer" class="block">
+            <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+              hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r
+              hover:from-[#fffce8] hover:to-[#fffbf1]
+              p-8 md:p-10 text-center mt-8">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center wiggle-burst-20s"
+                style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+                <i class="fas fa-calendar text-white text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Kingston Pirate’s Week</h3>
+              <p>Immerse yourself in the excitement of Kingston Pirate’s Week with parades, music, costumes, and
+                city-wide events.</p>
             </div>
-            <h3 class="text-xl font-bold mb-2">Kingston Pirate’s Week</h3>
-            <p>Immerse yourself in the excitement of Kingston Pirate’s Week with parades, music, costumes, and city-wide
-              events.</p>
-          </div>
+          </a>
           <!-- Feature 5 -->
           <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
           hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
