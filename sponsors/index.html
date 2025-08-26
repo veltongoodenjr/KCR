@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Favicon -->
   <link href="/assets/images/favicon.svg" rel="icon" type="image/x-icon" />
-  
+
   <style>
     body {
       font-family: 'Poppins', Arial, sans-serif;
@@ -44,13 +44,14 @@
     }
   </style>
   <style>
-  .dropdown-menu {
-    @apply opacity-0 scale-95 pointer-events-none transition-all duration-200 transform;
-  }
-  .dropdown-menu.open {
-    @apply opacity-100 scale-100 pointer-events-auto;
-  }
-</style>
+    .dropdown-menu {
+      @apply opacity-0 scale-95 pointer-events-none transition-all duration-200 transform;
+    }
+
+    .dropdown-menu.open {
+      @apply opacity-100 scale-100 pointer-events-auto;
+    }
+  </style>
   <style>
     /* Custom styles for the gradient text */
     .text-gradient {
@@ -67,7 +68,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LGJWXYSNE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-8LGJWXYSNE');
@@ -83,41 +84,44 @@
           <img src="/assets/images/favicon.svg" alt="Kingston City Run Favicon" class="h-12 md:h-16" />
         </a>
       </div>
+      <!-- Hamburger button (mobile only) -->
       <button id="menu-toggle" class="md:hidden text-2xl text-gray-800 focus:outline-none" aria-label="Toggle menu">
         <i class="fa-solid fa-bars"></i>
       </button>
+      <!-- Nav Links -->
       <ul id="navbar-links"
         class="flex-col md:flex-row flex space-y-2 md:space-y-0 space-x-0 md:space-x-4 text-gray-700 font-medium items-center absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none z-50 md:flex hidden">
         <li>
           <a href="/"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            class="flex items-center gap-2 transition-all duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
             <i class="fa-solid fa-house"></i> Home
           </a>
         </li>
         <li>
           <a href="/about"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            class="flex items-center gap-2 transition-all duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
             <i class="fa-solid fa-circle-info"></i> About
           </a>
         </li>
         <li>
           <a href="/race-info"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            class="flex items-center gap-2 transition-all duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
             <i class="fa-solid fa-person-running"></i> Race Info
           </a>
         </li>
         <li>
           <a href="/charity"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            class="flex items-center gap-2 transition-all duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
             <i class="fa-solid fa-hand-holding-heart"></i> Charity
           </a>
         </li>
         <a href="/gallery"
-          class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+          class="flex items-center gap-2 transition-all duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
           <i class="fa-solid fa-images"></i> Gallery
         </a>
         </li>
-<li class="relative group">
+        </li>
+        <li class="relative group">
           <button class="peer flex items-center gap-2 px-4 py-2 rounded-full font-bold
            transition hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07]
            hover:text-white">
@@ -141,32 +145,33 @@
             </li>
           </ul>
         </li>
-          <a href="/sponsors"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold">
-            <i class="fa-solid fa-handshake-angle"></i> Sponsors
-          </a>
+        <a href="/sponsors"
+          class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold">
+          <i class="fa-solid fa-handshake-angle"></i> Sponsors
+        </a>
         </li>
         <li>
           <a href="/news"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            class="flex items-center gap-2 transition-all duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
             <i class="fa-solid fa-newspaper"></i> News
           </a>
         </li>
         <li>
           <a href="/faqs"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            class="flex items-center gap-2 transition-all duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
             <i class="fa-solid fa-circle-question"></i> FAQs
           </a>
         </li>
         <li>
           <a href="/contact"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+            class="flex items-center gap-2 transition-all duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
             <i class="fa-solid fa-envelope"></i> Contact
           </a>
         </li>
       </ul>
     </nav>
   </header>
+
 
   <!-- Sponsors Hero Section -->
   <section class="w-full bg-gradient-to-r from-[#319427] to-[#F1BA07] py-20 flex flex-col items-center relative">
