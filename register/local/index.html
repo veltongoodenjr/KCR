@@ -43,48 +43,16 @@
         }
     </style>
 
-<style>
-  /* Quick wiggle burst, then long pause in a 20s cycle */
-  @keyframes kcr-wiggle-burst {
-    0%, 100% { transform: rotate(0deg); }
-    1% { transform: rotate(-3deg); }
-    2% { transform: rotate(3deg); }
-    3% { transform: rotate(-2deg); }
-    4% { transform: rotate(2deg); }
-    5% { transform: rotate(0deg); }
-  }
-
-  /* Apply directly to the clickable element (anchors here) */
-  .cue-wiggle-20s {
-    animation: kcr-wiggle-burst 20s ease-in-out infinite;
-    transform-origin: center;
-    will-change: transform;
-  }
-
-  /* Pause while user is interacting */
-  .cue-wiggle-20s:hover,
-  .cue-wiggle-20s:focus,
-  .cue-wiggle-20s:active {
-    animation-play-state: paused;
-  }
-
-  /* Accessibility: respect reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    .cue-wiggle-20s { animation: none; }
-  }
-</style>
-
-
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LGJWXYSNE"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-8LGJWXYSNE');
+    gtag('config', 'G-8LGJWXYSNE');
 </script>
 
 <body class="bg-white text-gray-900">
@@ -131,34 +99,31 @@
                     class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
                     <i class="fa-solid fa-images"></i> Gallery
                 </a>
-        <li class="relative group">
-          <button class="peer flex items-center gap-2 px-4 py-2 rounded-full font-bold
-           transition hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07]
-           hover:text-white">
-            <i class="fa-solid fa-user-plus"></i> Register
-            <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
-          </button>
-          <!-- Dropdown menu -->
-          <ul id="register-dropdown" class="absolute left-0 top-full          /* sits flush under the pill, no gap   */
-       w-52 bg-white rounded-xl shadow-lg border z-50
-       opacity-0 scale-95 pointer-events-none
-       transition-all duration-200 ease-out origin-top
-       peer-hover:opacity-100 peer-hover:scale-100 peer-hover:pointer-events-auto
-       hover:opacity-100 hover:scale-100 hover:pointer-events-auto">
-            <li>
-              <a href="/register/local/"
-                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-t-xl transition">Local</a>
-            </li>
-            <li>
-              <a href="/register/international/"
-                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-b-xl transition">International</a>
-            </li>
-          </ul>
-        </li>
+                <li class="relative group">
+                    <button
+                        class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold group-hover:bg-opacity-80"
+                        aria-haspopup="true">
+                        <i class="fa-solid fa-user-plus"></i> Register
+                        <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <ul
+                        class="absolute left-0 mt-2 w-52 bg-white rounded-xl shadow-lg border z-50 hidden group-hover:block">
+                        <li>
+                            <a href="/register/local/"
+                                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-t-xl transition">Local</a>
+                        </li>
+                        <li>
+                            <a href="/register/international/"
+                                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-b-xl transition">International</a>
+                        </li>
+                    </ul>
+                </li>
                 <a href="/sponsors"
                     class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
                     <i class="fa-solid fa-handshake-angle"></i> Sponsors
                 </a>
+                </li>
                 <li>
                     <a href="/news"
                         class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
@@ -180,6 +145,7 @@
             </ul>
         </nav>
     </header>
+
 
 
     <!-- ... head and nav unchanged ... -->
@@ -229,68 +195,70 @@
                     </div>
                 </div>
             </div>
-<div class="space-y-8">
-  <!-- MAIN TITLE -->
-  <h3 class="text-xl md:text-2xl font-semibold text-[#319427]">Register&nbsp;Now</h3>
+            <div class="space-y-8">
+                <!-- MAIN TITLE -->
+                <h3 class="text-xl md:text-2xl font-semibold text-[#319427]">Register&nbsp;Now</h3>
 
-  <!-- ──────────── INDIVIDUAL ──────────── -->
-  <div class="space-y-5">
-    <h4 class="text-lg md:text-xl font-bold text">Individual</h4>
+                <!-- ──────────── INDIVIDUAL ──────────── -->
+                <div class="space-y-5">
+                    <h4 class="text-lg md:text-xl font-bold text">Individual</h4>
 
-    <div class="grid gap-3 md:grid-cols-2 md:gap-6">
-      <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%2010K%20Run"
-         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Single&nbsp;10K&nbsp;Run
-      </a>
-      <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%205K%20Run"
-         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Single&nbsp;5K&nbsp;Run
-      </a>
-      <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%205K%20Walk"
-         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Single&nbsp;5K&nbsp;Walk
-      </a>
-      <a href="https://my.raceresult.com/352803/registration?regname=Donate%20to%20the%20Cause"
-         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Single&nbsp;5K&nbsp;Wheelchair
-      </a>
-    </div>
-  </div>
+                    <div class="grid gap-3 md:grid-cols-2 md:gap-6">
+                        <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%2010K%20Run"
+                            class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+                            Single&nbsp;10K&nbsp;Run
+                        </a>
+                        <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%205K%20Run"
+                            class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+                            Single&nbsp;5K&nbsp;Run
+                        </a>
+                        <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%205K%20Walk"
+                            class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+                            Single&nbsp;5K&nbsp;Walk
+                        </a>
+                        <a href="https://my.raceresult.com/352803/registration?regname=Donate%20to%20the%20Cause"
+                            class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+                            Single&nbsp;5K&nbsp;Wheelchair
+                        </a>
+                    </div>
+                </div>
 
-  <!-- ──────────── GROUP ──────────── -->
-  <div class="space-y-5 pt-6 border-t border-gray-300">
-    <h4 class="text-lg md:text-xl font-bold text">Group</h4>
+                <!-- ──────────── GROUP ──────────── -->
+                <div class="space-y-5 pt-6 border-t border-gray-300">
+                    <h4 class="text-lg md:text-xl font-bold text">Group</h4>
 
-    <div class="grid gap-3 md:grid-cols-2 md:gap-6">
-      <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%2010K%20Run"
-         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Group&nbsp;10K&nbsp;Run
-      </a>
-      <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%205K%20Run"
-         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Group&nbsp;5K&nbsp;Run
-      </a>
-      <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%205K%20Walk"
-         class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Group&nbsp;5K&nbsp;Walk
-      </a>
-    </div>
-  </div>
+                    <div class="grid gap-3 md:grid-cols-2 md:gap-6">
+                        <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%2010K%20Run"
+                            class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+                            Group&nbsp;10K&nbsp;Run
+                        </a>
+                        <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%205K%20Run"
+                            class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+                            Group&nbsp;5K&nbsp;Run
+                        </a>
+                        <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%205K%20Walk"
+                            class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
+                            Group&nbsp;5K&nbsp;Walk
+                        </a>
+                    </div>
+                </div>
 
-  <!-- FOOTNOTE -->
-  <p class="text-xs text-gray-500">
-    Teams of 20&nbsp;+?&nbsp;Email&nbsp;
-    <a href="mailto:kingstoncityrun@gmail.com" class="underline text-[#319427]">
-      kingstoncityrun@gmail.com
-    </a>
-  </p>
-</div>
+                <!-- FOOTNOTE -->
+                <p class="text-xs text-gray-500">
+                    Teams of 20&nbsp;+?&nbsp;Email&nbsp;
+                    <a href="mailto:kingstoncityrun@gmail.com" class="underline text-[#319427]">
+                        kingstoncityrun@gmail.com
+                    </a>
+                </p>
+            </div>
 
 
-<!-- Re-use the same button classes everywhere -->
-<style>
-  .btn-reg{ @apply flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full transition text-center; }
-</style>
+            <!-- Re-use the same button classes everywhere -->
+            <style>
+                .btn-reg {
+                    @apply flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full transition text-center;
+                }
+            </style>
 
         </div>
     </section>

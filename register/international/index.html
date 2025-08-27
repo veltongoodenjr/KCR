@@ -47,11 +47,11 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LGJWXYSNE"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-8LGJWXYSNE');
+    gtag('config', 'G-8LGJWXYSNE');
 </script>
 
 <body class="bg-white text-gray-900">
@@ -99,19 +99,15 @@
                     <i class="fa-solid fa-images"></i> Gallery
                 </a>
                 <li class="relative group">
-                    <button class="peer flex items-center gap-2 px-4 py-2 rounded-full font-bold
-           transition hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07]
-           hover:text-white">
+                    <button
+                        class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold group-hover:bg-opacity-80"
+                        aria-haspopup="true">
                         <i class="fa-solid fa-user-plus"></i> Register
                         <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
                     </button>
                     <!-- Dropdown menu -->
-                    <ul id="register-dropdown" class="absolute left-0 top-full          /* sits flush under the pill, no gap   */
-       w-52 bg-white rounded-xl shadow-lg border z-50
-       opacity-0 scale-95 pointer-events-none
-       transition-all duration-200 ease-out origin-top
-       peer-hover:opacity-100 peer-hover:scale-100 peer-hover:pointer-events-auto
-       hover:opacity-100 hover:scale-100 hover:pointer-events-auto">
+                    <ul
+                        class="absolute left-0 mt-2 w-52 bg-white rounded-xl shadow-lg border z-50 hidden group-hover:block">
                         <li>
                             <a href="/register/local/"
                                 class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-t-xl transition">Local</a>
@@ -126,6 +122,7 @@
                     class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
                     <i class="fa-solid fa-handshake-angle"></i> Sponsors
                 </a>
+                </li>
                 <li>
                     <a href="/news"
                         class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
@@ -147,6 +144,7 @@
             </ul>
         </nav>
     </header>
+
 
     <!-- HERO SECTION -->
     <section class="relative w-full py-20 px-4 text-center bg-gradient-to-r from-[#319427] to-[#F1BA07] shadow-lg">
