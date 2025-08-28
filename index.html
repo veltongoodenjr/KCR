@@ -43,7 +43,7 @@
   </style>
 
   <style id="kcr-animations">
-    /* Quick wiggle burst, then long pause */
+    /* quick wiggle burst, then long pause (~20s) */
     @keyframes wiggle-burst {
 
       0%,
@@ -72,19 +72,11 @@
       }
     }
 
-    /* Animate ONLY the icon circle (prevents clash with card hover translate) */
-    .wiggle-burst-20s {
+    /* animate ONLY the icon circle so it doesn't fight the card hover */
+    .wiggle-burst-3s {
       animation: wiggle-burst 20s ease-in-out infinite;
-      /* change to 10s if you want more frequent */
       transform-origin: center;
       will-change: transform;
-    }
-
-    /* Accessibility: respect reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      .wiggle-burst-20s {
-        animation: none;
-      }
     }
   </style>
 
@@ -269,8 +261,8 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Feature 1 -->
         <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
-        hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
-        p-8 md:p-10 text-center">
+      hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
+      p-8 md:p-10 text-center">
           <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
             style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
             <i class="fas fa-map-pin text-white text-2xl"></i>
@@ -278,22 +270,25 @@
           <h3 class="text-xl font-bold mb-2">Multiple Race Events</h3>
           <p>Take on the 10K run or join the accessible 5K Walk/Run/Wheel—open to all ages and abilities.</p>
         </div>
-        <!-- Feature 2 -->
-        <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+
+        <!-- Feature 2 (Kingston Pirate’s Week moved here) -->
+        <a href="https://kingstonpiratesweek.com/events/" target="_blank" rel="noopener noreferrer" class="block">
+          <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
         hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]
         p-8 md:p-10 text-center">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-            style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-            <i class="fas fa-users text-white text-2xl"></i>
+            <img src="/assets/images/kpw%20Logo.png" alt="Kingston Pirate’s Week"
+              class="mx-auto mb-4 w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-lg" loading="lazy"
+              decoding="async">
+            <h3 class="text-xl font-bold mb-2">Kingston Pirate’s Week</h3>
+            <p>Immerse yourself in the excitement of Kingston Pirate’s Week with parades, music, costumes, and city-wide
+              events.</p>
           </div>
-          <h3 class="text-xl font-bold mb-2">Team & Family Fun</h3>
-          <p>Corporate challenges, family teams, and community groups are all welcome. Celebrate teamwork and community
-            spirit!</p>
-        </div>
+        </a>
+
         <!-- Feature 3 -->
         <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
-        hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
-        p-8 md:p-10 text-center">
+      hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
+      p-8 md:p-10 text-center">
           <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
             style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
             <i class="fas fa-heart text-white text-2xl"></i>
@@ -302,29 +297,27 @@
           <p>Proceeds support Kingston’s homeless charities including Open Arms, Marie Atkins Night Shelter, Food for
             the Poor, and Missionaries of the Poor.</p>
         </div>
+
         <!-- Center last two cards in a flex container on desktop -->
         <div class="hidden lg:flex col-span-3 justify-center gap-8 mt-0">
-          <!-- Feature 4 (Desktop: clickable, wiggles) -->
-          <a href="https://kingstonpiratesweek.com/" target="_blank" rel="noopener noreferrer"
-            class="block w-full max-w-sm">
-            <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
-              hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r
-              hover:from-[#fffce8] hover:to-[#fffbf1]
-              p-8 md:p-10 text-center h-full">
-              <!-- Wiggle lives on THIS circle only -->
-              <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center wiggle-burst-20s"
-                style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-                <i class="fas fa-calendar text-white text-2xl"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-2">Kingston Pirate’s Week</h3>
-              <p>Immerse yourself in the excitement of Kingston Pirate’s Week with parades, music, costumes, and
-                city-wide events.</p>
+          <!-- Feature 4 (Team & Family Fun moved down here) -->
+          <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+        hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]
+        p-8 md:p-10 text-center w-full max-w-sm">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fas fa-users text-white text-2xl"></i>
             </div>
-          </a>
+            <h3 class="text-xl font-bold mb-2">Team & Family Fun</h3>
+            <p>Corporate challenges, family teams, and community groups are all welcome. Celebrate teamwork and
+              community
+              spirit!</p>
+          </div>
+
           <!-- Feature 5 -->
           <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
-          hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
-          p-8 md:p-10 text-center w-full max-w-sm">
+        hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
+        p-8 md:p-10 text-center w-full max-w-sm">
             <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
               style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
               <i class="fas fa-trophy text-white text-2xl"></i>
@@ -333,27 +326,27 @@
             <p>Unleash your inner pirate—compete in the pirate costume contest for prizes and recognition!</p>
           </div>
         </div>
+
         <!-- Show last two cards as normal on mobile/tablet -->
         <div class="lg:hidden">
-          <!-- Feature 4 (Mobile: clickable, wiggles) -->
-          <a href="https://kingstonpiratesweek.com/" target="_blank" rel="noopener noreferrer" class="block">
-            <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
-              hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r
-              hover:from-[#fffce8] hover:to-[#fffbf1]
-              p-8 md:p-10 text-center mt-8">
-              <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center wiggle-burst-20s"
-                style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
-                <i class="fas fa-calendar text-white text-2xl"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-2">Kingston Pirate’s Week</h3>
-              <p>Immerse yourself in the excitement of Kingston Pirate’s Week with parades, music, costumes, and
-                city-wide events.</p>
+          <!-- Feature 4 (Mobile: Team & Family Fun moved here) -->
+          <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+        hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]
+        p-8 md:p-10 text-center mt-8">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
+              <i class="fas fa-users text-white text-2xl"></i>
             </div>
-          </a>
+            <h3 class="text-xl font-bold mb-2">Team & Family Fun</h3>
+            <p>Corporate challenges, family teams, and community groups are all welcome. Celebrate teamwork and
+              community
+              spirit!</p>
+          </div>
+
           <!-- Feature 5 -->
           <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
-          hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
-          p-8 md:p-10 text-center mt-8">
+        hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
+        p-8 md:p-10 text-center mt-8">
             <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
               style="background: linear-gradient(90deg, #319427 0%, #F1BA07 100%)">
               <i class="fas fa-trophy text-white text-2xl"></i>
