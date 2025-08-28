@@ -71,7 +71,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LGJWXYSNE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-8LGJWXYSNE');
@@ -120,7 +120,7 @@
           class="flex items-center gap-2 transition-all duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
           <i class="fa-solid fa-images"></i> Gallery
         </a>
-                <li class="relative group">
+        <li class="relative group">
           <button class="peer flex items-center gap-2 px-4 py-2 rounded-full font-bold
            transition hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07]
            hover:text-white">
@@ -295,58 +295,50 @@
     </div>
   </section>
 
-<!-- ORGANISING COMMITTEE (centered lists with gradient squircle headings) -->
-<section class="py-16 bg-gray-50">
-  <div class="max-w-5xl mx-auto">
-    <!-- Main heading in a gradient squircle -->
-    <h2 class="text-4xl md:text-5xl font-bold text-gradient text-center mb-10 leading-[1.25] pb-2">
-      Organising Committee
-    </h2>
+  <!-- ORGANISING COMMITTEE -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto flex flex-col items-center">
+      <!-- Main heading -->
+      <h2 class="text-center mb-12">
+        <span class="inline-block text-4xl md:text-5xl font-bold text-gradient px-2 py-1 leading-snug">
+          Organising Committee
+        </span>
+      </h2>
 
+      <!-- Founders Box -->
+      <div
+        class="bg-white rounded-3xl shadow-xl px-10 py-12 w-full md:max-w-4xl mb-12 transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]">
+        <h3 class="text-2xl md:text-3xl font-bold text-black text-center mb-6">Founders</h3>
+        <ul class="list-disc pl-6 text-gray-800 space-y-3 max-w-xl mx-auto text-lg md:text-xl text-left">
+          <li><span class="font-semibold">Nicola Madden-Greig</span> — Founder &amp; Co-Chair</li>
+          <li><span class="font-semibold">Christopher Jarrett</span> — Founder &amp; Co-Chair</li>
+        </ul>
+      </div>
 
-    <!-- Founders -->
-    <h3 class="text-center mb-5">
-      <span class="inline-block bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold
-                   text-xl md:text-2xl px-5 py-3 rounded-[1.75rem] shadow-md">
-        Founders
-      </span>
-    </h3>
-    <div class="flex justify-center">
-      <ul class="list-disc pl-6 text-gray-800 inline-block text-left space-y-2">
-        <li><span class="font-semibold">Nicola Madden-Greig</span> — Founder &amp; Co-Chair</li>
-        <li><span class="font-semibold">Christopher Jarrett</span> — Founder &amp; Co-Chair</li>
-      </ul>
+      <!-- Committee Members Box -->
+      <div
+        class="bg-white rounded-3xl shadow-xl px-10 py-12 w-full md:max-w-5xl transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07]">
+        <h3 class="text-2xl md:text-3xl font-bold text-black text-center mb-6">Committee Members</h3>
+        <ul
+          class="list-disc pl-6 text-gray-800 inline-block text-left text-lg md:text-xl columns-1 sm:columns-2 lg:columns-3 [column-gap:2.5rem] space-y-2">
+          <li>Prudence Simpson</li>
+          <li>Tomori Tomlinson</li>
+          <li>Maurice Bryan</li>
+          <li>Aldain Reid</li>
+          <li>Alan Beckford</li>
+          <li>Courtney Sylvester</li>
+          <li>Charles Arumselvan</li>
+          <li>David Goldson</li>
+          <li>Tarn Peralto</li>
+          <li>Celia Steele</li>
+          <li>Kate Hendrickson-Chin</li>
+          <li>Rejeanne Campbell</li>
+          <li>Dave Chin-Tong</li>
+          <li>Jackie Knight-Campbell</li>
+        </ul>
+      </div>
     </div>
-
-    <!-- Committee Members -->
-    <h3 class="text-center mt-10 mb-5">
-      <span class="inline-block bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold
-                   text-xl md:text-2xl px-5 py-3 rounded-[1.75rem] shadow-md">
-        Committee Members
-      </span>
-    </h3>
-    <div class="flex justify-center">
-      <ul class="list-disc pl-6 text-gray-800 inline-block text-left columns-1 sm:columns-2 lg:columns-3 [column-gap:2.5rem]">
-        <li>Prudence Simpson</li>
-        <li>Tomori Tomlinson</li>
-        <li>Maurice Bryan</li>
-        <li>Aldain Reid</li>
-        <li>Alan Beckford</li>
-        <li>Courtney Sylvester</li>
-        <li>Charles Arumselvan</li>
-        <li>David Goldson</li>
-        <li>Tarn Peralto</li>
-        <li>Celia Steele</li>
-        <li>Kate Hendrickson-Chin</li>
-        <li>Rejeanne Campbell</li>
-        <li>Dave Chin-Tong</li>
-        <li>Jackie Knight-Campbell</li>
-      </ul>
-    </div>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- IMPACT AT A GLANCE -->
   <section class="py-20 bg-white">
