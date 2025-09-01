@@ -7,7 +7,7 @@
   <title>News & Media | Kingston City Run 2025</title>
   <meta name="description"
     content="Latest news, media coverage, and event highlights from Kingston City Run 2025. Press releases, videos, photos and more." />
-    <base href="/" />
+  <base href="/" />
   <!-- Tailwind for prototyping -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Animate.css for animations -->
@@ -48,7 +48,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LGJWXYSNE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-8LGJWXYSNE');
@@ -124,10 +124,10 @@
             </li>
           </ul>
         </li>
-          <a href="/sponsors"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-            <i class="fa-solid fa-handshake-angle"></i> Sponsors
-          </a>
+        <a href="/sponsors"
+          class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+          <i class="fa-solid fa-handshake-angle"></i> Sponsors
+        </a>
         </li>
         <li>
           <a href="/news"
@@ -167,30 +167,61 @@
     <section class="py-20">
       <!-- News Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-        <!-- News Card Example 1 -->
-        <!-- Coming Soon News Card -->
-        <article class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6 flex flex-col h-full">
-          <!-- Placeholder Graphic -->
-          <div class="w-full h-44 rounded-xl overflow-hidden mb-4 flex items-center justify-center bg-gray-100">
-            <i class="fa-solid fa-hourglass-half text-gray-400 text-6xl"></i>
+
+        <!-- Jamaica Observer: Kingston Pirates Week coming! -->
+        <a href="https://www.jamaicaobserver.com/2025/07/30/kingston-pirates-week-coming/" target="_blank"
+          rel="noopener noreferrer"
+          class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6 flex flex-col h-full group">
+          <!-- Graphic (replaced icon with image) -->
+          <div class="w-full h-44 rounded-xl overflow-hidden mb-4">
+            <img
+              src="assets/images/kpw-observer.jpg"
+              alt="Kingston Pirates Week preview"
+              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy"
+              decoding="async" />
           </div>
+
           <!-- Category Label -->
           <div class="mb-2">
             <span class="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs font-bold uppercase">News</span>
           </div>
+
           <!-- Title -->
-          <h3 class="text-xl font-bold mb-2">More News Coming Soon</h3>
+          <h3 class="text-xl font-bold mb-2">Kingston Pirates Week coming!</h3>
+
           <!-- Teaser -->
+          <p class="text-gray-600 mb-4 flex-grow">
+            Kingston launches a new four-day cultural festival, <em>Kingston Pirates Week</em> (Oct 30–Nov 2, 2025),
+            backed by the Jamaica Tourist Board and partners. Highlights include Riddims &amp; Rum, Port Royal Pirates
+            Festival, and an integrated Kingston City Run: Pirates Run Di City.
+          </p>
+
+          <!-- Footer / Link hint -->
+          <span class="text-[#319427] font-semibold mt-auto inline-flex items-center gap-2">
+            Read on Jamaica Observer <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+          </span>
+        </a>
+
+        <!-- (Optional) Keep a placeholder for additional news -->
+        <article class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6 flex flex-col h-full">
+          <div class="w-full h-44 rounded-xl overflow-hidden mb-4 flex items-center justify-center bg-gray-100">
+            <i class="fa-solid fa-hourglass-half text-gray-400 text-6xl"></i>
+          </div>
+          <div class="mb-2">
+            <span class="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs font-bold uppercase">News</span>
+          </div>
+          <h3 class="text-xl font-bold mb-2">More News Coming Soon</h3>
           <p class="text-gray-600 mb-4 flex-grow">
             Stay tuned for the latest updates, announcements, and insider previews for Kingston City Run 2025.
           </p>
-          <!-- Footer / Placeholder Link -->
           <span class="text-gray-400 font-semibold mt-auto cursor-default">Stay tuned…</span>
         </article>
-        <!-- Add more cards as needed -->
+
+
       </div>
     </section>
   </main>
+
 
   <!-- Footer -->
   <footer class="bg-white py-12 px-4 border-t border-gray-200">

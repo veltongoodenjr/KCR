@@ -295,50 +295,81 @@
     </div>
   </section>
 
-  <!-- ORGANISING COMMITTEE -->
-  <section class="py-16 bg-gray-50">
-    <div class="max-w-5xl mx-auto flex flex-col items-center">
-      <!-- Main heading -->
-      <h2 class="text-center mb-12">
-        <span class="inline-block text-4xl md:text-5xl font-bold text-gradient px-2 py-1 leading-snug">
-          Organising Committee
-        </span>
-      </h2>
+<!-- ORGANISING COMMITTEE -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-5xl mx-auto flex flex-col items-center">
+    <!-- Main heading -->
+    <h2 class="text-center mb-12">
+      <span class="inline-block text-4xl md:text-5xl font-bold text-gradient px-2 py-1 leading-snug">
+        Organising Committee
+      </span>
+    </h2>
 
-      <!-- Founders Box -->
+    <!-- Founders (prominent, side-by-side on md+) -->
+    <div class="w-full md:max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <!-- Nicola -->
       <div
-        class="bg-white rounded-3xl shadow-xl px-10 py-12 w-full md:max-w-4xl mb-12 transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]">
-        <h3 class="text-2xl md:text-3xl font-bold text-black text-center mb-6">Founders</h3>
-        <ul class="list-disc pl-6 text-gray-800 space-y-3 max-w-xl mx-auto text-lg md:text-xl text-left">
-          <li><span class="font-semibold">Nicola Madden-Greig</span> — Founder &amp; Co-Chair</li>
-          <li><span class="font-semibold">Christopher Jarrett</span> — Founder &amp; Co-Chair</li>
-        </ul>
+        class="bg-white rounded-3xl shadow-xl px-10 py-10 transition-all duration-200 border-2 border-transparent
+               hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]">
+        <h3 class="text-2xl md:text-3xl font-bold text-black text-center">Nicola Madden-Greig</h3>
+        <p class="text-center text-gray-700 mt-2 text-lg md:text-xl">Founder &amp; Co-Chair</p>
       </div>
-
-      <!-- Committee Members Box -->
+      <!-- Christopher -->
       <div
-        class="bg-white rounded-3xl shadow-xl px-10 py-12 w-full md:max-w-5xl transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07]">
-        <h3 class="text-2xl md:text-3xl font-bold text-black text-center mb-6">Committee Members</h3>
-        <ul
-          class="list-disc pl-6 text-gray-800 inline-block text-left text-lg md:text-xl columns-1 sm:columns-2 lg:columns-3 [column-gap:2.5rem] space-y-2">
-          <li>Prudence Simpson</li>
-          <li>Tomori Tomlinson</li>
-          <li>Maurice Bryan</li>
-          <li>Aldain Reid</li>
-          <li>Alan Beckford</li>
-          <li>Courtney Sylvester</li>
-          <li>Charles Arumselvan</li>
-          <li>David Goldson</li>
-          <li>Tarn Peralto</li>
-          <li>Celia Steele</li>
-          <li>Kate Hendrickson-Chin</li>
-          <li>Rejeanne Campbell</li>
-          <li>Dave Chin-Tong</li>
-          <li>Jackie Knight-Campbell</li>
-        </ul>
+        class="bg-white rounded-3xl shadow-xl px-10 py-10 transition-all duration-200 border-2 border-transparent
+               hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07]">
+        <h3 class="text-2xl md:text-3xl font-bold text-black text-center">Christopher Jarrett</h3>
+        <p class="text-center text-gray-700 mt-2 text-lg md:text-xl">Founder &amp; Co-Chair</p>
       </div>
     </div>
-  </section>
+
+    <!-- Rejeanne & Alan (same level, side-by-side on md+) -->
+    <div class="w-full md:max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- Rejeanne -->
+      <div
+        class="bg-white rounded-3xl shadow-xl px-10 py-10 transition-all duration-200 border-2 border-transparent
+               hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07]">
+        <h3 class="text-2xl md:text-3xl font-bold text-black text-center">Rejeanne Campbell</h3>
+        <p class="text-center text-gray-700 mt-2 text-lg md:text-xl">Sponsorship Marketing &amp; Administrative Director</p>
+      </div>
+      <!-- Alan -->
+      <div
+        class="bg-white rounded-3xl shadow-xl px-10 py-10 transition-all duration-200 border-2 border-transparent
+               hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]">
+        <h3 class="text-2xl md:text-3xl font-bold text-black text-center">Alan Beckford</h3>
+        <p class="text-center text-gray-700 mt-2 text-lg md:text-xl">Race Director</p>
+      </div>
+    </div>
+
+    <!-- Committee Members Box -->
+    <div
+      class="bg-white rounded-3xl shadow-xl px-10 py-12 w-full md:max-w-5xl mb-12 transition-all duration-200 border-2 border-transparent
+             hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]">
+      <h3 class="text-2xl md:text-3xl font-bold text-black text-center mb-6">Committee Members</h3>
+      <ul
+        class="list-disc pl-6 text-gray-800 inline-block text-left text-lg md:text-xl columns-1 sm:columns-2 lg:columns-3 [column-gap:2.5rem] space-y-2">
+        <li>Prudence Simpson</li>
+        <li>Tomori Tomlinson</li>
+        <li>Maurice Bryan</li>
+        <li>Aldain Reid</li>
+        <li>Alan Beckford</li> <!-- Remove if you prefer no duplication -->
+        <li>Courtney Sylvester</li>
+        <li>Charles Arumselvan</li>
+        <li>David Goldson</li>
+        <li>Tarn Peralto</li>
+        <li>Celia Steele</li>
+        <li>Kate Hendrickson-Chin</li>
+        <li>Dave Chin-Tong</li>
+        <li>Jackie Knight-Campbell</li>
+        <!-- Rejeanne appears prominently above; omit here if you want no duplication -->
+      </ul>
+    </div>
+  </div>
+</section>
+
+  </div>
+</section>
+
 
   <!-- IMPACT AT A GLANCE -->
   <section class="py-20 bg-white">
