@@ -439,21 +439,33 @@
 
       </div> <!-- ← closes the main 3-col grid -->
 
-      <!-- Single final row, centered in a 3-col grid so width matches previous rows -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto mt-8">
-        <div class="hidden md:block"></div> <!-- spacer (col 1) -->
+      <!-- Final row: two centered pills at same width as 3-col cards -->
+      <div class="grid grid-cols-1 md:grid-cols-6 gap-8 items-stretch max-w-7xl mx-auto mt-8">
+        <div class="hidden md:block md:col-span-1"></div>
 
-        <!-- Hawkeye (center column) -->
-        <div class="bg-white rounded-full shadow-lg flex items-center justify-center px-8 py-4 text-lg font-semibold text-gray-700
-                 transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1
-                 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+        <!-- RJRGLEANER -->
+        <div class="md:col-span-2 bg-white rounded-full shadow-lg flex items-center justify-center px-8 py-4
+              text-lg font-semibold text-gray-700 transition-all duration-200 border-2 border-transparent
+              hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07]
+              hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+          <img src="/assets/images/RJRGLEANER Logo.png" alt="RJRGLEANER Communications Group"
+            class="h-20 w-auto mr-2" />
+          RJRGLEANER Communications Group
+        </div>
+
+        <!-- Hawkeye -->
+        <div class="md:col-span-2 bg-white rounded-full shadow-lg flex items-center justify-center px-8 py-4
+              text-lg font-semibold text-gray-700 transition-all duration-200 border-2 border-transparent
+              hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]
+              hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
           <img src="/assets/images/Hawkeye Logo.png" alt="Hawkeye" class="h-20 w-auto mr-2" />
           Hawkeye
         </div>
 
-        <div class="hidden md:block"></div> <!-- spacer (col 3) -->
+        <div class="hidden md:block md:col-span-1"></div>
       </div>
 
+    </div>
   </section>
 
   <!-- Volunteer Spotlight (placeholder, increased padding, white bg) -->
