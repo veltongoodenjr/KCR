@@ -412,28 +412,44 @@
         <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 text-gradient leading-[1.25]">
           Race Weekend Schedule
         </h2>
+
         <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-visible max-w-3xl mx-auto">
           <div class="grid grid-cols-1">
+            <!-- Header row -->
             <div
               class="flex bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold text-lg py-4 px-6 items-center">
               <div class="w-12 flex justify-center"><i class="fa-solid fa-calendar-day text-2xl"></i></div>
               <div class="flex-1">Day</div>
               <div class="flex-1">Event</div>
             </div>
-            <!-- Friday Row -->
+
+            <!-- NEW: Long-window JHTA pickup -->
             <div class="flex border-b border-gray-100 items-center px-6 py-5 hover:bg-gray-50 transition">
-              <div class="w-12 flex justify-center"><i class="fa-solid fa-champagne-glasses text text-xl"></i>
+              <div class="w-12 flex justify-center"><i class="fa-solid fa-id-card text-xl"></i></div>
+              <div class="flex-1 font-semibold text-gray-800">Mon, Oct 6 – Fri, Oct 31</div>
+              <div class="flex-1 text-gray-700">
+                Bib Collection @ JHTA
+                <span class="text-xs text-gray-500"> (Mon–Fri, 9:00 AM – 5:00 PM)</span>
               </div>
+            </div>
+
+            <!-- Friday Row (keep if applicable) -->
+            <div class="flex border-b border-gray-100 items-center px-6 py-5 hover:bg-gray-50 transition">
+              <div class="w-12 flex justify-center"><i class="fa-solid fa-champagne-glasses text text-xl"></i></div>
               <div class="flex-1 font-semibold text-gray-800">Friday, Oct 31</div>
               <div class="flex-1 text-gray-700">Welcome Party <span class="text-xs text-gray-500">(TBA)</span></div>
             </div>
-            <!-- Saturday Row -->
+
+            <!-- Saturday Row: final pickup at Pegasus -->
             <div class="flex border-b border-gray-100 items-center px-6 py-5 hover:bg-gray-50 transition">
               <div class="w-12 flex justify-center"><i class="fa-solid fa-dumbbell text text-xl"></i></div>
               <div class="flex-1 font-semibold text-gray-800">Saturday, Nov 1</div>
-              <div class="flex-1 text-gray-700">Race Bib/Package Pick-up <span class="text-xs text-gray-500">Jamaica
-                  Pegasus</span></div>
+              <div class="flex-1 text-gray-700">
+                Final Race Bib/Package Pick-up
+                <span class="text-xs text-gray-500"> Jamaica Pegasus Hotel</span>
+              </div>
             </div>
+
             <!-- Sunday Row (Multi-line for details) -->
             <div class="flex items-start px-6 py-5 hover:bg-gray-50 transition">
               <div class="w-12 flex justify-center pt-1"><i class="fa-solid fa-flag-checkered text text-xl"></i></div>
@@ -446,12 +462,14 @@
               </div>
             </div>
           </div>
+
           <div class="px-8 py-6 bg-gray-50 text-center text-gray-700 text-lg rounded-b-3xl">
             <b>Optional Tours:</b> TBA
           </div>
         </div>
       </div>
     </section>
+
 
 
     <!-- Runner Essentials & Prizes (feature style) -->
