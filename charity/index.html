@@ -44,7 +44,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LGJWXYSNE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-8LGJWXYSNE');
@@ -93,7 +93,7 @@
           class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
           <i class="fa-solid fa-images"></i> Gallery
         </a>
-         <li class="relative group">
+        <li class="relative group">
           <button class="peer flex items-center gap-2 px-4 py-2 rounded-full font-bold
            transition hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07]
            hover:text-white">
@@ -117,10 +117,10 @@
             </li>
           </ul>
         </li>
-          <a href="/sponsors"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-            <i class="fa-solid fa-handshake-angle"></i> Sponsors
-          </a>
+        <a href="/sponsors"
+          class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+          <i class="fa-solid fa-handshake-angle"></i> Sponsors
+        </a>
         </li>
         <li>
           <a href="/news"
@@ -234,12 +234,16 @@
           </p>
         </div>
 
-        <!-- Donate Card -->
-        <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-10 w-full min-w-0
-         flex flex-col items-center space-y-6
-         transition-all duration-200
-         hover:scale-105 hover:shadow-2xl hover:border-[#F1BA07]
-         hover:bg-gradient-to-r hover:from-white hover:to-[#fffceb]">
+        <!-- Donate Card (clickable, identical look/size) -->
+        <div class="relative bg-white rounded-2xl shadow-lg border-2 border-transparent p-10 w-full min-w-0
+            flex flex-col items-center space-y-6
+            transition-all duration-200
+            hover:scale-105 hover:shadow-2xl hover:border-[#F1BA07]
+            hover:bg-gradient-to-r hover:from-white hover:to-[#fffceb]">
+          <!-- Invisible full-card link overlay -->
+          <a href="https://my.raceresult.com/352803/registration?regname=Donate%20to%20the%20Cause" target="_blank"
+            rel="noopener noreferrer" aria-label="Donate to the Cause" class="absolute inset-0 rounded-2xl"></a>
+
           <i class="fa-solid fa-hand-holding-dollar text-5xl text-secondary"></i>
           <h3 class="font-bold text-lg">Donate</h3>
           <p class="text-gray-600 text-base leading-relaxed">
