@@ -7,7 +7,7 @@
   <title>FAQs | Kingston City Run 2025</title>
   <meta name="description"
     content="Frequently asked questions about Kingston City Run 2025. Details on registration, the route, charity, and more." />
-    <base href="/" />
+  <base href="/" />
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Animate.css -->
@@ -48,7 +48,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LGJWXYSNE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-8LGJWXYSNE');
@@ -56,9 +56,8 @@
 
 <body class="bg-white text-gray-900">
   <!-- Global Postponement Ticker -->
-<section id="kcr-ticker"
-  class="bg-white border-b border-yellow-200 z-[60] sticky top-0 overflow-x-clip" 
-  role="status" aria-live="polite">
+  <section id="kcr-ticker" class="bg-white border-b border-yellow-200 z-[60] sticky top-0 overflow-x-clip" role="status"
+    aria-live="polite">
     <div class="max-w-7xl mx-auto px-4">
       <div class="relative flex items-center gap-3 py-3">
         <!-- Icon -->
@@ -91,23 +90,36 @@
     </div>
   </section>
 
-<style>
-  /* Prevent any page-level horizontal scroll just in case */
-  html, body { overflow-x: hidden; }
+  <style>
+    /* Prevent any page-level horizontal scroll just in case */
+    html,
+    body {
+      overflow-x: hidden;
+    }
 
-  /* Ticker animation (unchanged) */
-  @keyframes kcr-ticker-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  #kcr-ticker-track {
-    display: inline-block;          /* or inline-flex */
-    animation: kcr-ticker-scroll 30s linear infinite;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    #kcr-ticker-track { animation: none; }
-  }
-</style>
+    /* Ticker animation (unchanged) */
+    @keyframes kcr-ticker-scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    #kcr-ticker-track {
+      display: inline-block;
+      /* or inline-flex */
+      animation: kcr-ticker-scroll 30s linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #kcr-ticker-track {
+        animation: none;
+      }
+    }
+  </style>
 
   <script>
     // Hide if previously dismissed (per tab)
@@ -192,10 +204,10 @@
             </li>
           </ul>
         </li>
-          <a href="/sponsors"
-            class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-            <i class="fa-solid fa-handshake-angle"></i> Sponsors
-          </a>
+        <a href="/sponsors"
+          class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
+          <i class="fa-solid fa-handshake-angle"></i> Sponsors
+        </a>
         </li>
         <li>
           <a href="/news"
@@ -245,21 +257,31 @@
             <i class="fa-solid fa-circle-question text-secondary"></i> When is Kingston City Run 2025?
           </h3>
           <p class="text-gray-700">
-            The event has been postponed following Hurricane Melissa. A new date will be announced once updated arrangements have been confirmed.
+            The event has been postponed following Hurricane Melissa. A new date will be announced once updated
+            arrangements have been confirmed.
 
           </p>
         </div>
         <!-- FAQ Card 2 -->
-        <div
-          class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1] p-8 md:p-10">
+        <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+         hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07]
+         hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]
+         p-8 md:p-10">
           <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
             <i class="fa-solid fa-user-plus text-secondary"></i> How do I register?
           </h3>
           <p class="text-gray-700">
-            Click the "Register" link in the menu or visit the <a href="/register"
-              class="text-primary underline">registration page</a> to sign up online.
+            Click the "Register" link in the menu or visit the
+            <a href="/register" class="text-primary underline">registration page</a>
+            to sign up online.
+          </p>
+          <p class="text-sm text-gray-600 mt-3 flex items-start gap-2">
+            <i class="fa-solid fa-triangle-exclamation text-[#F1BA07] mt-[2px]"></i>
+            <span>The event has been postponed due to Hurricane Melissa, and registrations are temporarily on hold until
+              further notice.</span>
           </p>
         </div>
+
         <!-- FAQ Card 3 -->
         <div
           class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4] p-8 md:p-10">
@@ -320,8 +342,7 @@
           </h3>
           <p class="text-gray-700">
             For more info, visit the <a href="/contact" class="text-primary underline">Contact</a> page or email us
-            at <a href="mailto:kingstoncityrun@gmail.com"
-              class="text-primary underline">kingstoncityrun@gmail.com</a>.
+            at <a href="mailto:kingstoncityrun@gmail.com" class="text-primary underline">kingstoncityrun@gmail.com</a>.
           </p>
         </div>
       </div>
