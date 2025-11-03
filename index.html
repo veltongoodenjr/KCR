@@ -93,6 +93,81 @@
 </script>
 
 <body class="bg-white text-gray-900">
+  <!-- Global Postponement Ticker -->
+  <section id="kcr-ticker" class="bg-white border-b border-yellow-200 z-[60] sticky top-0" role="status"
+    aria-live="polite">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="relative flex items-center gap-3 py-3">
+        <!-- Icon -->
+        <i class="fa-solid fa-triangle-exclamation text-[#F1BA07] text-xl shrink-0" aria-hidden="true"></i>
+
+        <!-- Scroll container -->
+        <div class="relative w-full overflow-hidden">
+          <div class="whitespace-nowrap will-change-transform" id="kcr-ticker-track">
+            <span class="inline-block pr-12 font-semibold uppercase tracking-wide text-gradient">Postponed</span>
+            <span class="inline-block pr-12">
+              KCR and all Kingston Pirates Week events are postponed due to Hurricane Melissa.
+              A new date will be announced soon. Thank you for your support and patience.
+            </span>
+
+            <!-- duplicate once for seamless loop (repeat the same 3 spans again) -->
+            <span class="inline-block pr-12 font-semibold uppercase tracking-wide text-gradient">Postponed</span>
+            <span class="inline-block pr-12">
+              KCR and all Kingston Pirates Week events are postponed due to Hurricane Melissa.
+              A new date will be announced soon. Thank you for your support and patience.
+            </span>
+          </div>
+        </div>
+
+        <!-- Dismiss -->
+        <button type="button" id="kcr-ticker-close" class="shrink-0 p-2 rounded-full hover:bg-yellow-50 text-gray-600"
+          aria-label="Dismiss announcement">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Smooth, continuous leftward scroll */
+    @keyframes kcr-ticker-scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    #kcr-ticker-track {
+      display: inline-block;
+      animation: kcr-ticker-scroll 30s linear infinite;
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      #kcr-ticker-track {
+        animation: none;
+      }
+    }
+  </style>
+
+  <script>
+    // Hide if previously dismissed (per tab)
+    (function () {
+      const bar = document.getElementById('kcr-ticker');
+      const closeBtn = document.getElementById('kcr-ticker-close');
+      if (sessionStorage.getItem('kcrTickerDismissed') === '1') {
+        bar.style.display = 'none';
+        return;
+      }
+      closeBtn.addEventListener('click', () => {
+        bar.style.display = 'none';
+        sessionStorage.setItem('kcrTickerDismissed', '1');
+      });
+    })();
+  </script>
 
   <!-- Top Navigation Bar -->
   <header class="bg-white shadow sticky top-0 z-50">
@@ -213,14 +288,15 @@
 
     <!-- Content Overlay -->
     <div class="max-w-6xl mx-auto text-center space-y-8 mt-[-80px] relative z-10">
-      <!-- Large Logo in White Circle -->
+      <!-- Large Logo in White Circle (reduced ~25%) -->
       <div class="mx-auto flex items-center justify-center mb-8">
         <div
-          class="rounded-full bg-white shadow-2xl flex items-center justify-center w-64 h-64 md:w-[320px] md:h-[320px] mt-8 md:mt-0">
+          class="rounded-full bg-white shadow-2xl flex items-center justify-center w-48 h-48 md:w-[240px] md:h-[240px] mt-8 md:mt-0">
           <img src="/assets/images/logo.svg" alt="Kingston City Run 2025 Logo"
-            class="w-56 h-56 md:w-72 md:h-72 object-contain" />
+            class="w-[168px] h-[168px] md:w-[216px] md:h-[216px] object-contain" />
         </div>
       </div>
+
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-2xl mt-8">
         Kingston City Run 2025
       </h1>
@@ -228,7 +304,7 @@
         Pirates Run Di City – Part of Kingston Pirate’s Week
       </h2>
       <p class="text-lg md:text-xl text-white/90 font-medium drop-shadow-sm">
-        Sunday, November 2, 2025 • Emancipation Park, Kingston
+        Emancipation Park, Kingston • New date to be announced
       </p>
       <p class="max-w-3xl mx-auto text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-sm">
         Run, walk, or wheel for a cause! The Kingston City Run, now part of Kingston Pirate’s Week, brings together
@@ -236,22 +312,38 @@
         10K race or the family-friendly 5K Walk/Run/Wheel, and celebrate Jamaica’s pirate history with costume contests,
         entertainment, and more.
       </p>
-      <a href="/register" target="_blank" rel="noopener"
-        class="block mx-auto w-max px-12 py-6 bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold text-2xl uppercase rounded-full shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-        Register Now
+<a href="https://my.raceresult.com/352803/registration?regname=Donate%20to%20the%20Cause" target="_blank" rel="noopener"
+  class="block mx-auto w-max px-12 py-6 bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold text-2xl uppercase rounded-full shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
+  Donate Today!
+</a>
+
       </a>
-      <div class="mt-10 flex flex-col items-center gap-2">
-        <div class="px-6 py-3 bg-white rounded-full shadow text-base md:text-xl font-semibold text-black">
-          Last call: Registration closes October 30, 2025
+      <!-- Full Postponement Notice (Hero) -->
+      <div class="mt-10 max-w-3xl mx-auto">
+        <div class="bg-white/95 text-gray-900 rounded-2xl shadow-lg border border-yellow-200 p-6 md:p-7">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-triangle-exclamation text-[#F1BA07] text-2xl mt-1" aria-hidden="true"></i>
+            <div class="text-left">
+              <h3 class="text-xl font-extrabold text-gray-900 tracking-tight">Postponed</h3>
+              <p class="mt-2 leading-relaxed">
+                Due to the impact of Hurricane Melissa, the Kingston City Run (KCR) and all Kingston Pirates Week
+                activities
+                have been postponed. Our thoughts are with everyone affected by the storm. We wish you safety and a
+                steady
+                recovery across Jamaica.
+              </p>
+              <p class="mt-3 leading-relaxed">
+                A new date for the KCR will be announced soon as we work with our partners to finalise updated plans.
+              </p>
+              <p class="mt-3 leading-relaxed">
+                Thank you for your understanding and continued support as we rally to assist those most in need,
+                especially
+                our beneficiaries who serve the homeless community.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="text-sm md:text-base text-white/90 mt-2">
-        Bib pick-up: <span class="font-semibold">Oct 17</span> @ <span class="font-semibold">JHTA</span> (Mon–Fri,
-        9–5) •
-        <span class="font-semibold">Nov 1</span> @ <span class="font-semibold">Jamaica Pegasus</span>.
-        <a href="/race-info" class="underline font-semibold text-white">Details</a>
-      </div>
-    </div>
   </section>
 
   <!-- Features Section -->
@@ -581,13 +673,22 @@
           Omega Radio
         </div>
 
-      <!-- Trend Media -->
-      <div class="bg-white rounded-full shadow-lg flex items-center justify-center px-8 py-4 text-lg font-semibold
+        <!-- Trend Media -->
+        <div class="bg-white rounded-full shadow-lg flex items-center justify-center px-8 py-4 text-lg font-semibold
                   text-gray-700 transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1
                   hover:border-[#F1BA07] hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
-        <img src="/assets/images/Trend%20Media%20Logo.png" alt="Trend Media" class="h-20 w-auto mr-2" />
-        Trend Media
-      </div>
+          <img src="/assets/images/Trend%20Media%20Logo.png" alt="Trend Media" class="h-20 w-auto mr-2" />
+          Trend Media
+        </div>
+
+        <!-- Caribbean Dreams -->
+        <div class="bg-white rounded-full shadow-lg flex items-center justify-center px-8 py-4 text-lg font-semibold
+            text-gray-700 transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1
+            hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+          <img src="/assets/images/Caribbean Dreams Logo.png" alt="Caribbean Dreams" class="h-20 w-auto mr-2" />
+          Caribbean Dreams
+        </div>
+
 
       </div>
     </div>

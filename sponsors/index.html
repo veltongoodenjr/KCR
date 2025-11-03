@@ -76,6 +76,82 @@
 
 <body class="bg-white text-gray-900">
 
+  <!-- Global Postponement Ticker -->
+  <section id="kcr-ticker" class="bg-white border-b border-yellow-200 z-[60] sticky top-0" role="status"
+    aria-live="polite">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="relative flex items-center gap-3 py-3">
+        <!-- Icon -->
+        <i class="fa-solid fa-triangle-exclamation text-[#F1BA07] text-xl shrink-0" aria-hidden="true"></i>
+
+        <!-- Scroll container -->
+        <div class="relative w-full overflow-hidden">
+          <div class="whitespace-nowrap will-change-transform" id="kcr-ticker-track">
+            <span class="inline-block pr-12 font-semibold uppercase tracking-wide text-gradient">Postponed</span>
+            <span class="inline-block pr-12">
+              KCR and all Kingston Pirates Week events are postponed due to Hurricane Melissa.
+              A new date will be announced soon. Thank you for your support and patience.
+            </span>
+
+            <!-- duplicate once for seamless loop (repeat the same 3 spans again) -->
+            <span class="inline-block pr-12 font-semibold uppercase tracking-wide text-gradient">Postponed</span>
+            <span class="inline-block pr-12">
+              KCR and all Kingston Pirates Week events are postponed due to Hurricane Melissa.
+              A new date will be announced soon. Thank you for your support and patience.
+            </span>
+          </div>
+        </div>
+
+        <!-- Dismiss -->
+        <button type="button" id="kcr-ticker-close" class="shrink-0 p-2 rounded-full hover:bg-yellow-50 text-gray-600"
+          aria-label="Dismiss announcement">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Smooth, continuous leftward scroll */
+    @keyframes kcr-ticker-scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    #kcr-ticker-track {
+      display: inline-block;
+      animation: kcr-ticker-scroll 30s linear infinite;
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      #kcr-ticker-track {
+        animation: none;
+      }
+    }
+  </style>
+
+  <script>
+    // Hide if previously dismissed (per tab)
+    (function () {
+      const bar = document.getElementById('kcr-ticker');
+      const closeBtn = document.getElementById('kcr-ticker-close');
+      if (sessionStorage.getItem('kcrTickerDismissed') === '1') {
+        bar.style.display = 'none';
+        return;
+      }
+      closeBtn.addEventListener('click', () => {
+        bar.style.display = 'none';
+        sessionStorage.setItem('kcrTickerDismissed', '1');
+      });
+    })();
+  </script>
+
   <!-- Top Navigation Bar -->
   <header class="bg-white shadow sticky top-0 z-50">
     <nav class="container mx-auto flex items-center justify-between py-4 px-6 relative">
@@ -383,18 +459,66 @@
         </div>
       </div>
 
-      <!-- Row 9 (single, centered) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-10">
-        <div class="hidden md:block"></div>
+      <!-- Row 9 (centered two-up) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto mt-10">
         <!-- Trend Media -->
-        <div
-          class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4] p-8 md:p-10 flex flex-col items-center h-full">
+        <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+           hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]
+           hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
+           p-8 md:p-10 flex flex-col items-center h-full">
           <img src="/assets/images/Trend Media Logo.png" alt="Trend Media" class="h-40 object-contain" />
           <div class="mt-4 text-gray-800 font-semibold text-center">Trend Media</div>
         </div>
-        <div class="hidden md:block"></div>
+
+        <!-- Caribbean Dreams -->
+        <div class="bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent
+           hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]
+           hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]
+           p-8 md:p-10 flex flex-col items-center h-full">
+          <img src="/assets/images/Caribbean Dreams Logo.png" alt="Caribbean Dreams" class="h-40 object-contain" />
+          <div class="mt-4 text-gray-800 font-semibold text-center">Caribbean Dreams</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Associate Sponsors -->
+    <section class="py-16 border-b border-gray-200 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-gradient text-center">Associate Sponsors</h2>
+        <p class="max-w-3xl mx-auto text-center text-gray-700 mt-4">
+          We thank all of our Associate Sponsors for providing access to their scenic locations for our participants to
+          run through during the Kingston City Run!
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
+          <!-- Devon House -->
+          <div class="bg-white rounded-full shadow-lg flex items-center justify-center px-8 py-4 text-lg font-semibold
+               text-gray-700 transition-all duration-200 border-2 border-transparent
+               hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]
+               hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+            Devon House
+          </div>
+
+          <!-- King's House -->
+          <div class="bg-white rounded-full shadow-lg flex items-center justify-center px-8 py-4 text-lg font-semibold
+               text-gray-700 transition-all duration-200 border-2 border-transparent
+               hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07]
+               hover:bg-gradient-to-r hover:from-[#fffce8] hover:to-[#fffbf1]">
+            King’s House
+          </div>
+
+          <!-- Bob Marley Museum -->
+          <div class="bg-white rounded-full shadow-lg flex items-center justify-center px-8 py-4 text-lg font-semibold
+               text-gray-700 transition-all duration-200 border-2 border-transparent
+               hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]
+               hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4]">
+            Bob Marley Museum
+          </div>
+        </div>
       </div>
     </section>
+
 
     <!-- Past Sponsors -->
     <section class="py-16 border-b border-gray-200 bg-white">
