@@ -65,7 +65,75 @@
 </script>
 
 <body class="bg-white text-gray-900">
+  <!-- Global Postponement Ticker -->
+<section id="kcr-ticker"
+  class="bg-white border-b border-yellow-200 z-[60] sticky top-0 overflow-x-clip" 
+  role="status" aria-live="polite">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="relative flex items-center gap-3 py-3">
+        <!-- Icon -->
+        <i class="fa-solid fa-triangle-exclamation text-[#F1BA07] text-xl shrink-0" aria-hidden="true"></i>
 
+        <!-- Scroll container -->
+        <div class="relative w-full overflow-hidden">
+          <div class="whitespace-nowrap will-change-transform" id="kcr-ticker-track">
+            <span class="inline-block pr-12 font-semibold uppercase tracking-wide text-gradient">Postponed</span>
+            <span class="inline-block pr-12">
+              KCR and all Kingston Pirates Week events are postponed due to Hurricane Melissa.
+              A new date will be announced soon. Thank you for your support and patience.
+            </span>
+
+            <!-- duplicate once for seamless loop (repeat the same 3 spans again) -->
+            <span class="inline-block pr-12 font-semibold uppercase tracking-wide text-gradient">Postponed</span>
+            <span class="inline-block pr-12">
+              KCR and all Kingston Pirates Week events are postponed due to Hurricane Melissa.
+              A new date will be announced soon. Thank you for your support and patience.
+            </span>
+          </div>
+        </div>
+
+        <!-- Dismiss -->
+        <button type="button" id="kcr-ticker-close" class="shrink-0 p-2 rounded-full hover:bg-yellow-50 text-gray-600"
+          aria-label="Dismiss announcement">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+<style>
+  /* Prevent any page-level horizontal scroll just in case */
+  html, body { overflow-x: hidden; }
+
+  /* Ticker animation (unchanged) */
+  @keyframes kcr-ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  #kcr-ticker-track {
+    display: inline-block;          /* or inline-flex */
+    animation: kcr-ticker-scroll 30s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #kcr-ticker-track { animation: none; }
+  }
+</style>
+
+  <script>
+    // Hide if previously dismissed (per tab)
+    (function () {
+      const bar = document.getElementById('kcr-ticker');
+      const closeBtn = document.getElementById('kcr-ticker-close');
+      if (sessionStorage.getItem('kcrTickerDismissed') === '1') {
+        bar.style.display = 'none';
+        return;
+      }
+      closeBtn.addEventListener('click', () => {
+        bar.style.display = 'none';
+        sessionStorage.setItem('kcrTickerDismissed', '1');
+      });
+    })();
+  </script>
   <!-- Top Navigation Bar -->
   <header class="bg-white shadow sticky top-0 z-50">
     <nav class="container mx-auto flex items-center justify-between py-4 px-6 relative">

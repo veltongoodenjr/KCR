@@ -78,7 +78,75 @@
 </script>
 
 <body class="bg-gray-100 text-gray-900">
+  <!-- Global Postponement Ticker -->
+<section id="kcr-ticker"
+  class="bg-white border-b border-yellow-200 z-[60] sticky top-0 overflow-x-clip" 
+  role="status" aria-live="polite">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="relative flex items-center gap-3 py-3">
+        <!-- Icon -->
+        <i class="fa-solid fa-triangle-exclamation text-[#F1BA07] text-xl shrink-0" aria-hidden="true"></i>
 
+        <!-- Scroll container -->
+        <div class="relative w-full overflow-hidden">
+          <div class="whitespace-nowrap will-change-transform" id="kcr-ticker-track">
+            <span class="inline-block pr-12 font-semibold uppercase tracking-wide text-gradient">Postponed</span>
+            <span class="inline-block pr-12">
+              KCR and all Kingston Pirates Week events are postponed due to Hurricane Melissa.
+              A new date will be announced soon. Thank you for your support and patience.
+            </span>
+
+            <!-- duplicate once for seamless loop (repeat the same 3 spans again) -->
+            <span class="inline-block pr-12 font-semibold uppercase tracking-wide text-gradient">Postponed</span>
+            <span class="inline-block pr-12">
+              KCR and all Kingston Pirates Week events are postponed due to Hurricane Melissa.
+              A new date will be announced soon. Thank you for your support and patience.
+            </span>
+          </div>
+        </div>
+
+        <!-- Dismiss -->
+        <button type="button" id="kcr-ticker-close" class="shrink-0 p-2 rounded-full hover:bg-yellow-50 text-gray-600"
+          aria-label="Dismiss announcement">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+<style>
+  /* Prevent any page-level horizontal scroll just in case */
+  html, body { overflow-x: hidden; }
+
+  /* Ticker animation (unchanged) */
+  @keyframes kcr-ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  #kcr-ticker-track {
+    display: inline-block;          /* or inline-flex */
+    animation: kcr-ticker-scroll 30s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #kcr-ticker-track { animation: none; }
+  }
+</style>
+
+  <script>
+    // Hide if previously dismissed (per tab)
+    (function () {
+      const bar = document.getElementById('kcr-ticker');
+      const closeBtn = document.getElementById('kcr-ticker-close');
+      if (sessionStorage.getItem('kcrTickerDismissed') === '1') {
+        bar.style.display = 'none';
+        return;
+      }
+      closeBtn.addEventListener('click', () => {
+        bar.style.display = 'none';
+        sessionStorage.setItem('kcrTickerDismissed', '1');
+      });
+    })();
+  </script>
   <!-- Top Navigation Bar (Sticky) -->
   <header class="bg-white shadow sticky top-0 z-50">
     <nav class="container mx-auto flex items-center justify-between py-4 px-6 relative">
@@ -295,80 +363,76 @@
     </div>
   </section>
 
-<!-- ORGANISING COMMITTEE -->
-<section class="py-16 bg-gray-50">
-  <div class="max-w-5xl mx-auto flex flex-col items-center">
-    <!-- Main heading -->
-    <h2 class="text-center mb-12">
-      <span class="inline-block text-4xl md:text-5xl font-bold text-gradient px-2 py-1 leading-snug">
-        Organising Committee
-      </span>
-    </h2>
+  <!-- ORGANISING COMMITTEE -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto flex flex-col items-center">
+      <!-- Main heading -->
+      <h2 class="text-center mb-12">
+        <span class="inline-block text-4xl md:text-5xl font-bold text-gradient px-2 py-1 leading-snug">
+          Organising Committee
+        </span>
+      </h2>
 
-    <!-- Founders (prominent, side-by-side on md+) -->
-    <div class="w-full md:max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-      <!-- Nicola -->
-      <div
-        class="bg-white rounded-3xl shadow-xl px-10 py-10 transition-all duration-200 border-2 border-transparent
+      <!-- Founders (prominent, side-by-side on md+) -->
+      <div class="w-full md:max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <!-- Nicola -->
+        <div class="bg-white rounded-3xl shadow-xl px-10 py-10 transition-all duration-200 border-2 border-transparent
                hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]">
-        <h3 class="text-2xl md:text-3xl font-bold text-black text-center">Nicola Madden-Greig</h3>
-        <p class="text-center text-gray-700 mt-2 text-lg md:text-xl">Founder &amp; Co-Chair</p>
-      </div>
-      <!-- Christopher -->
-      <div
-        class="bg-white rounded-3xl shadow-xl px-10 py-10 transition-all duration-200 border-2 border-transparent
+          <h3 class="text-2xl md:text-3xl font-bold text-black text-center">Nicola Madden-Greig</h3>
+          <p class="text-center text-gray-700 mt-2 text-lg md:text-xl">Founder &amp; Co-Chair</p>
+        </div>
+        <!-- Christopher -->
+        <div class="bg-white rounded-3xl shadow-xl px-10 py-10 transition-all duration-200 border-2 border-transparent
                hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07]">
-        <h3 class="text-2xl md:text-3xl font-bold text-black text-center">Christopher Jarrett</h3>
-        <p class="text-center text-gray-700 mt-2 text-lg md:text-xl">Founder &amp; Co-Chair</p>
+          <h3 class="text-2xl md:text-3xl font-bold text-black text-center">Christopher Jarrett</h3>
+          <p class="text-center text-gray-700 mt-2 text-lg md:text-xl">Founder &amp; Co-Chair</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Rejeanne & Alan (same level, side-by-side on md+) -->
-    <div class="w-full md:max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-      <!-- Rejeanne -->
-      <div
-        class="bg-white rounded-3xl shadow-xl px-10 py-10 transition-all duration-200 border-2 border-transparent
+      <!-- Rejeanne & Alan (same level, side-by-side on md+) -->
+      <div class="w-full md:max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <!-- Rejeanne -->
+        <div class="bg-white rounded-3xl shadow-xl px-10 py-10 transition-all duration-200 border-2 border-transparent
                hover:shadow-2xl hover:-translate-y-1 hover:border-[#F1BA07]">
-        <h3 class="text-2xl md:text-3xl font-bold text-black text-center">Rejeanne Campbell</h3>
-        <p class="text-center text-gray-700 mt-2 text-lg md:text-xl">Sponsorship Marketing &amp; Administrative Director</p>
-      </div>
-      <!-- Alan -->
-      <div
-        class="bg-white rounded-3xl shadow-xl px-10 py-10 transition-all duration-200 border-2 border-transparent
+          <h3 class="text-2xl md:text-3xl font-bold text-black text-center">Rejeanne Campbell</h3>
+          <p class="text-center text-gray-700 mt-2 text-lg md:text-xl">Sponsorship Marketing &amp; Administrative
+            Director</p>
+        </div>
+        <!-- Alan -->
+        <div class="bg-white rounded-3xl shadow-xl px-10 py-10 transition-all duration-200 border-2 border-transparent
                hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]">
-        <h3 class="text-2xl md:text-3xl font-bold text-black text-center">Alan Beckford</h3>
-        <p class="text-center text-gray-700 mt-2 text-lg md:text-xl">Race Director</p>
+          <h3 class="text-2xl md:text-3xl font-bold text-black text-center">Alan Beckford</h3>
+          <p class="text-center text-gray-700 mt-2 text-lg md:text-xl">Race Director</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Committee Members Box -->
-    <div
-      class="bg-white rounded-3xl shadow-xl px-10 py-12 w-full md:max-w-5xl mb-12 transition-all duration-200 border-2 border-transparent
+      <!-- Committee Members Box -->
+      <div class="bg-white rounded-3xl shadow-xl px-10 py-12 w-full md:max-w-5xl mb-12 transition-all duration-200 border-2 border-transparent
              hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427]">
-      <h3 class="text-2xl md:text-3xl font-bold text-black text-center mb-6">Committee Members</h3>
-      <ul
-        class="list-disc pl-6 text-gray-800 inline-block text-left text-lg md:text-xl columns-1 sm:columns-2 lg:columns-3 [column-gap:2.5rem] space-y-2">
-        <li>Prudence Simpson</li>
-        <li>Tomori Tomlinson</li>
-        <li>Maurice Bryan</li>
-        <li>Aldain Reid</li>
-        <li>Alan Beckford</li> <!-- Remove if you prefer no duplication -->
-        <li>Courtney Sylvester</li>
-        <li>Charles Arumselvan</li>
-        <li>David Goldson</li>
-        <li>Tarn Peralto</li>
-        <li>Celia Steele</li>
-        <li>Kate Hendrickson-Chin</li>
-        <li>Dave Chin-Tong</li>
-        <li>Jackie Knight-Campbell</li>
-        <!-- Rejeanne appears prominently above; omit here if you want no duplication -->
-      </ul>
+        <h3 class="text-2xl md:text-3xl font-bold text-black text-center mb-6">Committee Members</h3>
+        <ul
+          class="list-disc pl-6 text-gray-800 inline-block text-left text-lg md:text-xl columns-1 sm:columns-2 lg:columns-3 [column-gap:2.5rem] space-y-2">
+          <li>Prudence Simpson</li>
+          <li>Tomori Tomlinson</li>
+          <li>Maurice Bryan</li>
+          <li>Aldain Reid</li>
+          <li>Alan Beckford</li> <!-- Remove if you prefer no duplication -->
+          <li>Courtney Sylvester</li>
+          <li>Charles Arumselvan</li>
+          <li>David Goldson</li>
+          <li>Tarn Peralto</li>
+          <li>Celia Steele</li>
+          <li>Kate Hendrickson-Chin</li>
+          <li>Dave Chin-Tong</li>
+          <li>Jackie Knight-Campbell</li>
+          <!-- Rejeanne appears prominently above; omit here if you want no duplication -->
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   </div>
-</section>
+  </section>
 
 
   <!-- IMPACT AT A GLANCE -->
