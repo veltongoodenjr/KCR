@@ -54,75 +54,6 @@
 </script>
 
 <body class="bg-white text-gray-900">
-  <!-- Global Postponement Ticker -->
-<section id="kcr-ticker"
-  class="bg-white border-b border-yellow-200 z-[60] sticky top-0 overflow-x-clip" 
-  role="status" aria-live="polite">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="relative flex items-center gap-3 py-3">
-        <!-- Icon -->
-        <i class="fa-solid fa-triangle-exclamation text-[#F1BA07] text-xl shrink-0" aria-hidden="true"></i>
-
-        <!-- Scroll container -->
-        <div class="relative w-full overflow-hidden">
-          <div class="whitespace-nowrap will-change-transform" id="kcr-ticker-track">
-            <span class="inline-block pr-12 font-semibold uppercase tracking-wide text-gradient">Postponed</span>
-            <span class="inline-block pr-12">
-              KCR and all Kingston Pirates Week events are postponed due to Hurricane Melissa.
-              A new date will be announced soon. Thank you for your support and patience.
-            </span>
-
-            <!-- duplicate once for seamless loop (repeat the same 3 spans again) -->
-            <span class="inline-block pr-12 font-semibold uppercase tracking-wide text-gradient">Postponed</span>
-            <span class="inline-block pr-12">
-              KCR and all Kingston Pirates Week events are postponed due to Hurricane Melissa.
-              A new date will be announced soon. Thank you for your support and patience.
-            </span>
-          </div>
-        </div>
-
-        <!-- Dismiss -->
-        <button type="button" id="kcr-ticker-close" class="shrink-0 p-2 rounded-full hover:bg-yellow-50 text-gray-600"
-          aria-label="Dismiss announcement">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-    </div>
-  </section>
-
-<style>
-  /* Prevent any page-level horizontal scroll just in case */
-  html, body { overflow-x: hidden; }
-
-  /* Ticker animation (unchanged) */
-  @keyframes kcr-ticker-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  #kcr-ticker-track {
-    display: inline-block;          /* or inline-flex */
-    animation: kcr-ticker-scroll 30s linear infinite;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    #kcr-ticker-track { animation: none; }
-  }
-</style>
-
-  <script>
-    // Hide if previously dismissed (per tab)
-    (function () {
-      const bar = document.getElementById('kcr-ticker');
-      const closeBtn = document.getElementById('kcr-ticker-close');
-      if (sessionStorage.getItem('kcrTickerDismissed') === '1') {
-        bar.style.display = 'none';
-        return;
-      }
-      closeBtn.addEventListener('click', () => {
-        bar.style.display = 'none';
-        sessionStorage.setItem('kcrTickerDismissed', '1');
-      });
-    })();
-  </script>
   <!-- Top Navigation Bar -->
   <header class="bg-white shadow sticky top-0 z-50">
     <nav class="container mx-auto flex items-center justify-between py-4 px-6 relative">
@@ -219,9 +150,8 @@
       <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-xl mb-2">
         Register for Kingston City Run 2025
       </h1>
-      <p class="text-xl md:text-2xl text-white/90 mb-8">
-        Choose your registration type below.
-      </p>
+      <p class="text-xl md:text-2xl text-white/90 mb-2">Choose your registration type below.</p>
+      <p class="text-lg text-white/90 font-semibold">Proceeds go to Hurricane Melissa rebuilding and families made homeless.</p>
       <div class="flex flex-col md:flex-row gap-8 w-full justify-center">
         <a href="/register/local/"
           class="flex-1 min-w-[220px] max-w-xs bg-white rounded-2xl shadow-xl p-8 border-2 border-[#319427] hover:scale-105 hover:shadow-2xl transition text-[#319427] font-bold text-2xl flex flex-col items-center">
@@ -239,34 +169,7 @@
     </div>
   </section>
 
-    <section class="py-10 px-4">
-      <!-- Full Postponement Notice (Hero) -->
-      <div class="mt-10 max-w-3xl mx-auto">
-        <div class="bg-white/95 text-gray-900 rounded-2xl shadow-lg border border-yellow-200 p-6 md:p-7">
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-triangle-exclamation text-[#F1BA07] text-2xl mt-1" aria-hidden="true"></i>
-            <div class="text-left">
-              <h3 class="text-xl font-extrabold text-gray-900 tracking-tight">Postponed</h3>
-              <p class="mt-2 leading-relaxed">
-                Due to the impact of Hurricane Melissa, the Kingston City Run (KCR) and all Kingston Pirates Week
-                activities
-                have been postponed. Our thoughts are with everyone affected by the storm. We wish you safety and a
-                steady
-                recovery across Jamaica.
-              </p>
-              <p class="mt-3 leading-relaxed">
-                A new date for the KCR will be announced soon as we work with our partners to finalise updated plans.
-              </p>
-              <p class="mt-3 leading-relaxed">
-                Thank you for your understanding and continued support as we rally to assist those most in need,
-                especially
-                our beneficiaries who serve the homeless community.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
   <!-- FAQ/Info -->
   <section class="py-12 px-4 bg-white">
@@ -312,30 +215,6 @@
   </script>
 
   <script>
-    const btn = document.getElementById('reg-coming-soon');
-    const modal = document.getElementById('comingSoonModal');
-    const close = document.getElementById('closeModal');
-
-    btn.addEventListener('click', () => {
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    });
-
-    close.addEventListener('click', () => {
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-    });
-
-    // Close when clicking outside the modal content
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-      }
-    });
-  </script>
-
-  <script>
     // Mobile-friendly dropdown for the “Register” nav item
     document.addEventListener('DOMContentLoaded', () => {
       const registerBtn = document.querySelector('li.relative.group > button');
@@ -363,3 +242,7 @@
 </body>
 
 </html>
+
+
+
+

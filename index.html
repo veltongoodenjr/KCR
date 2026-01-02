@@ -93,77 +93,6 @@
 </script>
 
 <body class="bg-white text-gray-900">
-  <!-- Global Postponement Ticker -->
-<section id="kcr-ticker"
-  class="bg-white border-b border-yellow-200 z-[60] sticky top-0 overflow-x-clip" 
-  role="status" aria-live="polite">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="relative flex items-center gap-3 py-3">
-        <!-- Icon -->
-        <i class="fa-solid fa-triangle-exclamation text-[#F1BA07] text-xl shrink-0" aria-hidden="true"></i>
-
-        <!-- Scroll container -->
-        <div class="relative w-full overflow-hidden">
-          <div class="whitespace-nowrap will-change-transform" id="kcr-ticker-track">
-            <span class="inline-block pr-12 font-semibold uppercase tracking-wide text-gradient">Postponed</span>
-            <span class="inline-block pr-12">
-              KCR and all Kingston Pirates Week events are postponed due to Hurricane Melissa.
-              A new date will be announced soon. Thank you for your support and patience.
-            </span>
-
-            <!-- duplicate once for seamless loop (repeat the same 3 spans again) -->
-            <span class="inline-block pr-12 font-semibold uppercase tracking-wide text-gradient">Postponed</span>
-            <span class="inline-block pr-12">
-              KCR and all Kingston Pirates Week events are postponed due to Hurricane Melissa.
-              A new date will be announced soon. Thank you for your support and patience.
-            </span>
-          </div>
-        </div>
-
-        <!-- Dismiss -->
-        <button type="button" id="kcr-ticker-close" class="shrink-0 p-2 rounded-full hover:bg-yellow-50 text-gray-600"
-          aria-label="Dismiss announcement">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-    </div>
-  </section>
-
-<style>
-  /* Prevent any page-level horizontal scroll just in case */
-  html, body { overflow-x: hidden; }
-
-  /* Ticker animation (unchanged) */
-  @keyframes kcr-ticker-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  #kcr-ticker-track {
-    display: inline-block;          /* or inline-flex */
-    animation: kcr-ticker-scroll 30s linear infinite;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    #kcr-ticker-track { animation: none; }
-  }
-</style>
-
-  <script>
-    // Hide if previously dismissed (per tab)
-    (function () {
-      const bar = document.getElementById('kcr-ticker');
-      const closeBtn = document.getElementById('kcr-ticker-close');
-      if (sessionStorage.getItem('kcrTickerDismissed') === '1') {
-        bar.style.display = 'none';
-        return;
-      }
-      closeBtn.addEventListener('click', () => {
-        bar.style.display = 'none';
-        sessionStorage.setItem('kcrTickerDismissed', '1');
-      });
-    })();
-  </script>
-
-
   <!-- Top Navigation Bar -->
   <header class="bg-white shadow sticky top-0 z-50">
     <nav class="container mx-auto flex items-center justify-between py-4 px-6 relative">
@@ -299,46 +228,25 @@
         Pirates Run Di City – Part of Kingston Pirate’s Week
       </h2>
       <p class="text-lg md:text-xl text-white/90 font-medium drop-shadow-sm">
-        Emancipation Park, Kingston • New date to be announced
+        Emancipation Park, Kingston &bull; March 15
       </p>
       <p class="max-w-3xl mx-auto text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-sm">
-        Run, walk, or wheel for a cause! The Kingston City Run, now part of Kingston Pirate’s Week, brings together
-        communities and corporations to help raise funds for Kingston’s most vulnerable. Choose between the thrilling
-        10K race or the family-friendly 5K Walk/Run/Wheel, and celebrate Jamaica’s pirate history with costume contests,
-        entertainment, and more.
+        Run, walk, or wheel for a cause! The Kingston City Run, now part of Kingston Pirate�?Ts Week, brings together
+        communities and corporations to help raise funds for Kingston�?Ts most vulnerable. Choose between the thrilling
+        10K race or the family-friendly 5K Walk/Run/Wheel, and celebrate Jamaica�?Ts pirate history with costume contests,
+        entertainment, and more &mdash; all in support of Hurricane Melissa rebuilding for families left homeless.
       </p>
-<a href="https://my.raceresult.com/352803/registration?regname=Donate%20to%20the%20Cause" target="_blank" rel="noopener"
+      <div class="flex justify-center">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 text-white font-semibold tracking-wide shadow-lg backdrop-blur">
+          <i class="fa-solid fa-hand-holding-heart"></i> Running to rebuild the West after Hurricane Melissa
+        </span>
+      </div>
+<a href="/register"
   class="block mx-auto w-max px-12 py-6 bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold text-2xl uppercase rounded-full shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-  Donate Today!
+  Register Now
 </a>
 
       </a>
-      <!-- Full Postponement Notice (Hero) -->
-      <div class="mt-10 max-w-3xl mx-auto">
-        <div class="bg-white/95 text-gray-900 rounded-2xl shadow-lg border border-yellow-200 p-6 md:p-7">
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-triangle-exclamation text-[#F1BA07] text-2xl mt-1" aria-hidden="true"></i>
-            <div class="text-left">
-              <h3 class="text-xl font-extrabold text-gray-900 tracking-tight">Postponed</h3>
-              <p class="mt-2 leading-relaxed">
-                Due to the impact of Hurricane Melissa, the Kingston City Run (KCR) and all Kingston Pirates Week
-                activities
-                have been postponed. Our thoughts are with everyone affected by the storm. We wish you safety and a
-                steady
-                recovery across Jamaica.
-              </p>
-              <p class="mt-3 leading-relaxed">
-                A new date for the KCR will be announced soon as we work with our partners to finalise updated plans.
-              </p>
-              <p class="mt-3 leading-relaxed">
-                Thank you for your understanding and continued support as we rally to assist those most in need,
-                especially
-                our beneficiaries who serve the homeless community.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
   </section>
 
   <!-- Features Section -->
@@ -891,3 +799,15 @@
     });
   });
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
