@@ -2,400 +2,192 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Local Registration | Kingston City Run 2026</title>
-    <meta name="description"
-        content="Register locally for Kingston City Run 2026. Jamaican residents and local teams can join the 10K or 5K.">
-    <base href="/" />
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Favicon -->
-    <link href="/assets/images/favicon.svg" rel="icon" type="image/x-icon" />
-    <style>
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Registration | Kingston City Run 2026</title>
+  <meta name="description"
+    content="Register locally for Kingston City Run 2026. Jamaican residents and local teams can join the 10K or 5K.">
+  <base href="/" />
 
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
-        }
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        .text-gradient {
-            background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-        }
-    </style>
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Favicon -->
+  <link href="/assets/images/favicon.svg" rel="icon" type="image/x-icon" />
+
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    }
+
+    .text-gradient {
+      background: linear-gradient(90deg, #319427 0%, #F1BA07 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  </style>
 </head>
 
-<!-- Google tag (gtag.js) -->
+<!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LGJWXYSNE"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-8LGJWXYSNE');
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-8LGJWXYSNE');
 </script>
 
 <body class="bg-white text-gray-900">
-  <!-- Top Navigation Bar -->
-    <header class="bg-white shadow sticky top-0 z-50">
-        <nav class="container mx-auto flex items-center justify-between py-4 px-6 relative">
-            <div class="flex items-center space-x-2">
-                <a href="/">
-                    <img src="/assets/images/favicon.svg" alt="Kingston City Run Favicon" class="h-12 md:h-16" />
-                </a>
-            </div>
-            <button id="menu-toggle" class="md:hidden text-2xl text-gray-800 focus:outline-none"
-                aria-label="Toggle menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <ul id="navbar-links"
-                class="flex-col md:flex-row flex space-y-2 md:space-y-0 space-x-0 md:space-x-4 text-gray-700 font-medium items-center absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none z-50 md:flex hidden">
-                <li>
-                    <a href="/"
-                        class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-                        <i class="fa-solid fa-house"></i> Home
-                    </a>
-                </li>
-                <li>
-                    <a href="/about"
-                        class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-                        <i class="fa-solid fa-circle-info"></i> About
-                    </a>
-                </li>
-                <li>
-                    <a href="/race-info"
-                        class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-                        <i class="fa-solid fa-person-running"></i> Race Info
-                    </a>
-                </li>
-                <li>
-                    <a href="/charity"
-                        class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-                        <i class="fa-solid fa-hand-holding-heart"></i> Charity
-                    </a>
-                </li>
-                <a href="/gallery"
-                    class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-                    <i class="fa-solid fa-images"></i> Gallery
-                </a>
-                <li class="relative group">
-                    <button
-                        class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold group-hover:bg-opacity-80"
-                        aria-haspopup="true">
-                        <i class="fa-solid fa-user-plus"></i> Register
-                        <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
-                    </button>
-                    <!-- Dropdown menu -->
-                    <ul
-                        class="absolute left-0 mt-2 w-52 bg-white rounded-xl shadow-lg border z-50 hidden group-hover:block">
-                        <li>
-                            <a href="/register/local/"
-                                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-t-xl transition">Local</a>
-                        </li>
-                        <li>
-                            <a href="/register/international/"
-                                class="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white rounded-b-xl transition">International</a>
-                        </li>
-                    </ul>
-                </li>
-                <a href="/sponsors"
-                    class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-                    <i class="fa-solid fa-handshake-angle"></i> Sponsors
-                </a>
-                </li>
-                <li>
-                    <a href="/news"
-                        class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-                        <i class="fa-solid fa-newspaper"></i> News
-                    </a>
-                </li>
-                <li>
-                    <a href="/faqs"
-                        class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-                        <i class="fa-solid fa-circle-question"></i> FAQs
-                    </a>
-                </li>
-                <li>
-                    <a href="/contact"
-                        class="flex items-center gap-2 transition-all duration-200 px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#319427] hover:to-[#F1BA07] hover:text-white hover:shadow-lg">
-                        <i class="fa-solid fa-envelope"></i> Contact
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
 
+  <!-- HEADER -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6 relative">
+      <a href="/">
+        <img src="/assets/images/favicon.svg" alt="Kingston City Run" class="h-12 md:h-16" />
+      </a>
 
+      <button id="menu-toggle" class="md:hidden text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-    <!-- ... head and nav unchanged ... -->
+      <ul id="navbar-links"
+        class="hidden md:flex flex-col md:flex-row md:space-x-4 absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent shadow md:shadow-none items-center z-50">
 
-    <!-- HERO SECTION -->
-    <section class="relative w-full py-20 px-4 text-center bg-gradient-to-r from-[#319427] to-[#F1BA07] shadow-lg">
-        <div class="max-w-2xl mx-auto flex flex-col items-center space-y-4">
-            <i class="fa-solid fa-flag-checkered text-white text-6xl drop-shadow-lg"></i>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-xl">Local Registration</h1>
-            <p class="text-lg md:text-xl text-white/90 max-w-md">
-                For Jamaican residents and local teams.<br>
-                Join the run—make a difference in Kingston!
-            </p>
-            <p class="text-base md:text-lg text-white/90 font-semibold">
-                Every entry helps Hurricane Melissa rebuilding and those left homeless.
-            </p>
+        <li><a href="/" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="/about" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li><a href="/race-info" class="nav-link"><i class="fa-solid fa-person-running"></i> Race Info</a></li>
+        <li><a href="/charity" class="nav-link"><i class="fa-solid fa-hand-holding-heart"></i> Charity</a></li>
+        <li><a href="/gallery" class="nav-link"><i class="fa-solid fa-images"></i> Gallery</a></li>
+
+        <li class="relative group">
+          <button class="nav-link bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white font-bold">
+            <i class="fa-solid fa-user-plus"></i> Register
+            <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+          </button>
+          <ul class="absolute hidden group-hover:block bg-white rounded-xl shadow border mt-2 w-52">
+            <li><a href="/register/local/" class="dropdown-link">Local</a></li>
+            <li><a href="/register/international/" class="dropdown-link">International</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/sponsors" class="nav-link"><i class="fa-solid fa-handshake-angle"></i> Sponsors</a></li>
+        <li><a href="/news" class="nav-link"><i class="fa-solid fa-newspaper"></i> News</a></li>
+        <li><a href="/faqs" class="nav-link"><i class="fa-solid fa-circle-question"></i> FAQs</a></li>
+        <li><a href="/contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="py-20 px-4 text-center bg-gradient-to-r from-[#319427] to-[#F1BA07] shadow-lg">
+    <div class="max-w-2xl mx-auto space-y-4">
+      <i class="fa-solid fa-flag-checkered text-white text-6xl"></i>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white">Local Registration</h1>
+      <p class="text-white/90 text-lg">
+        For Jamaican residents and local teams.<br>
+        Join the run—make a difference in Kingston!
+      </p>
+      <p class="text-white/90 font-semibold">
+        Every entry helps rebuild communities affected by Hurricane Melissa.
+      </p>
+    </div>
+  </section>
+
+  <!-- REGISTRATION -->
+  <section class="py-12 px-4">
+    <div class="max-w-3xl mx-auto bg-gray-50/90 rounded-2xl shadow-md p-10 space-y-10">
+
+      <div>
+        <h2 class="text-2xl font-bold text-[#319427] mb-2">How to Register</h2>
+        <p>Sign up as an individual or group below. Registration is open for the 10K and 5K.</p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-[#319427] mb-1">Entry Fees</h3>
+        <ul class="ml-2">
+          <li>10K: JM $4,500</li>
+          <li>5K Walk/Run/Wheel: JM $3,500</li>
+        </ul>
+      </div>
+
+      <!-- REGISTER NOW -->
+      <div class="space-y-8">
+
+        <!-- STUDENTS -->
+        <div>
+          <h4 class="text-xl font-bold mb-4">Student Competition</h4>
+          <div class="grid md:grid-cols-2 gap-4">
+            <a href="https://my.raceresult.com/352803/registration?regname=Single%20High%20School%20Registration%205K%20Walk" class="reg-btn">School 5K Walk</a>
+            <a href="https://my.raceresult.com/352803/registration?regname=Single%20High%20School%20Registration%205K%20Run" class="reg-btn">School 5K Run</a>
+            <a href="https://my.raceresult.com/352803/registration?regname=Group%20High%20School%20Registration%205K%20Run" class="reg-btn">Group School 5K Run</a>
+            <a href="https://my.raceresult.com/352803/registration?regname=Group%20High%20School%20Registration%205K%20Walk" class="reg-btn">Group School 5K Walk</a>
+          </div>
         </div>
-    </section>
 
-    <!-- INTRO & PRICING SECTION (wider!) -->
-    <section class="py-12 px-4 bg-white">
-        <div class="max-w-3xl mx-auto bg-gray-50/90 rounded-2xl shadow-md p-10 space-y-10">
-            <div>
-                <h2 class="text-2xl font-bold text-[#319427] mb-2">How to Register</h2>
-                <p class="text-gray-800 text-base md:text-lg">
-                    Sign up as an individual or group below. Registration is open for the 10K and 5K (run, walk, or
-                    wheel).
-                </p>
-            </div>
-            <div>
-                <h3 class="text-xl font-semibold text-[#319427] mb-1">Entry Fees <span
-                        class="text-sm text-gray-500 font-normal">(per person)</span></h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <ul class="ml-2 text-gray-800">
-                            <li>10K: JM $4,500</li>
-                            <li>5K Walk/Run/Wheel: JM $3,500</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-
-            <!-- Re-use the same button classes everywhere -->
-            <style>
-                .btn-reg {
-                    @apply flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full transition text-center;
-                }
-            </style>
-
+        <!-- INDIVIDUAL -->
+        <div class="pt-6 border-t">
+          <h4 class="text-xl font-bold mb-4">Individual</h4>
+          <div class="grid md:grid-cols-2 gap-4">
+            <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%2010K%20Run" class="reg-btn">Single 10K Run</a>
+            <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%205K%20Run" class="reg-btn">Single 5K Run</a>
+            <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%205K%20Walk" class="reg-btn">Single 5K Walk</a>
+            <a href="https://my.raceresult.com/352803/registration?regname=Donate%20to%20the%20Cause" class="reg-btn">Single 5K Wheelchair</a>
+          </div>
         </div>
-    </section>
 
-    <div class="space-y-8">
-  <!-- MAIN TITLE -->
-  <h3 class="text-xl md:text-2xl font-semibold text-[#319427]">Register&nbsp;Now</h3>
+        <!-- GROUP -->
+        <div class="pt-6 border-t">
+          <h4 class="text-xl font-bold mb-4">Group</h4>
+          <div class="grid md:grid-cols-2 gap-4">
+            <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%2010K%20Run" class="reg-btn">Group 10K Run</a>
+            <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%205K%20Run" class="reg-btn">Group 5K Run</a>
+            <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%205K%20Walk" class="reg-btn">Group 5K Walk</a>
+          </div>
+        </div>
 
-  <!-- ──────────── STUDENT COMPETITION ──────────── -->
-  <div class="space-y-5">
-    <h4 class="text-lg md:text-xl font-bold">Student Competition</h4>
-
-    <div class="grid gap-3 md:grid-cols-2 md:gap-6">
-      <a href="https://my.raceresult.com/352803/registration?regname=Single%20High%20School%20Registration%205K%20Walk"
-        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        School&nbsp;5K&nbsp;Walk
-      </a>
-
-      <a href="https://my.raceresult.com/352803/registration?regname=Single%20High%20School%20Registration%205K%20Run"
-        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        School&nbsp;5K&nbsp;Run
-      </a>
-
-      <a href="https://my.raceresult.com/352803/registration?regname=Group%20%20High%20School%20Registration%205K%20Run"
-        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Group&nbsp;School&nbsp;5K&nbsp;Run
-      </a>
-
-      <a href="https://my.raceresult.com/352803/registration?regname=Group%20High%20School%20Registration%205K%20Walk"
-        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Group&nbsp;School&nbsp;5K&nbsp;Walk
-      </a>
-    </div>
-  </div>
-
-  <!-- ──────────── INDIVIDUAL ──────────── -->
-  <div class="space-y-5 pt-6 border-t border-gray-300">
-    <h4 class="text-lg md:text-xl font-bold">Individual</h4>
-
-    <div class="grid gap-3 md:grid-cols-2 md:gap-6">
-      <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%2010K%20Run"
-        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Single&nbsp;10K&nbsp;Run
-      </a>
-
-      <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%205K%20Run"
-        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Single&nbsp;5K&nbsp;Run
-      </a>
-
-      <a href="https://my.raceresult.com/352803/registration?regname=Single%20Registration%205K%20Walk"
-        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Single&nbsp;5K&nbsp;Walk
-      </a>
-
-      <a href="https://my.raceresult.com/352803/registration?regname=Donate%20to%20the%20Cause"
-        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Single&nbsp;5K&nbsp;Wheelchair
-      </a>
-    </div>
-  </div>
-
-  <!-- ──────────── GROUP ──────────── -->
-  <div class="space-y-5 pt-6 border-t border-gray-300">
-    <h4 class="text-lg md:text-xl font-bold">Group</h4>
-
-    <div class="grid gap-3 md:grid-cols-2 md:gap-6">
-      <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%2010K%20Run"
-        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Group&nbsp;10K&nbsp;Run
-      </a>
-
-      <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%205K%20Run"
-        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Group&nbsp;5K&nbsp;Run
-      </a>
-
-      <a href="https://my.raceresult.com/352803/registration?regname=Group%20Registration%205K%20Walk"
-        class="flex-1 bg-[#319427] hover:bg-yellow-400 text-white font-bold py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-center">
-        Group&nbsp;5K&nbsp;Walk
-      </a>
-    </div>
-  </div>
-
-  <!-- FOOTNOTE -->
-  <p class="text-xs text-gray-500">
-    Teams of 20&nbsp;+?&nbsp;Email&nbsp;
-    <a href="mailto:kingstoncityrun@gmail.com" class="underline text-[#319427]">
-      kingstoncityrun@gmail.com
-    </a>
-  </p>
-</div>
-
-      <!-- Team Tent Rental Form (Download Section) -->
-<section class="bg-gray-50 py-24 md:py-28 px-4">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-8 text-gradient">
-      Team Tent Rental Form
-    </h2>
-      <div class="flex flex-col items-center text-center gap-4">
-        <i class="fa-regular fa-file-text text-5xl md:text-6xl" style="color:#D93025;"></i>
-        <p class="text-lg md:text-xl text-gray-700">
-          Download and fill out the Kingston City Run <span class="font-semibold">Team Tent Rental Form</span> for event day.
+        <p class="text-xs text-gray-500">
+          Teams of 20+? Email <a href="mailto:kingstoncityrun@gmail.com" class="underline text-[#319427]">kingstoncityrun@gmail.com</a>
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-3 mt-2">
-          <!-- Download (same-origin for best results) -->
-          <a
-            href="/assets/docs/KCR%20Tent%20Rental%20Form%20(Fillable).pdf"
-            download
-            class="inline-flex items-center justify-center px-6 py-3 rounded-full font-bold text-white
-                   bg-gradient-to-r from-[#319427] to-[#F1BA07] shadow
-                   hover:shadow-lg hover:-translate-y-0.5 transition">
-            <i class="fa-solid fa-download mr-2"></i> Download PDF
-          </a>
-
-          <!-- View inline -->
-          <a
-            href="/assets/docs/KCR%20Tent%20Rental%20Form%20(Fillable).pdf"
-            target="_blank" rel="noopener"
-            class="inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold
-                   text-[#319427] ring-2 ring-[#319427]/20 hover:ring-[#319427]/40 hover:bg-gray-50 transition">
-            <i class="fa-solid fa-eye mr-2"></i> View in Browser
-          </a>
-        </div>
-
-        <p class="text-sm text-gray-500 mt-2">
-          Having trouble? Right-click the download button and choose “Save link as…”
-        </p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- FOOTER -->
+  <footer class="py-12 px-4 border-t">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <p class="text-sm">© <span id="currentYear"></span> Kingston City Run</p>
+      <p class="text-sm">Part of Kingston’s Pirate’s Week Festival</p>
+    </div>
+  </footer>
 
-    <!-- FAQ/Info -->
-    <section class="py-12 px-4 bg-white">
-        <div class="max-w-3xl mx-auto text-center space-y-6">
-            <h3 class="text-2xl font-semibold text-gradient mb-2">Need Help?</h3>
-            <p class="text-lg text-gray-700">For registration support, email <a href="mailto:kingstoncityrun@gmail.com"
-                    class="underline hover:text-secondary">kingstoncityrun@gmail.com</a> or see our <a href="/faqs"
-                    class="underline hover:text-secondary">FAQs</a>.</p>
-            <p class="text-sm text-gray-500 mt-2">For team/corporate registration of 20 or more, please contact the
-                Secretariat: <a href="mailto:kingstoncityrun@gmail.com" class="underline">kingstoncityrun@gmail.com</a>
-                or call 876-926-3635-6.</p>
-        </div>
-    </section>
+  <script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    document.getElementById('menu-toggle').onclick = () =>
+      document.getElementById('navbar-links').classList.toggle('hidden');
+  </script>
 
-    <!-- Footer -->
-    <footer class="bg-white py-12 px-4 border-t border-gray-200">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div class="flex items-center space-x-4">
-                <img src="/assets/images/logo-w.png" alt="Kingston City Run Logo" class="h-12 opacity-80" />
-                <p class="text-gray-600 text-sm">© <span id="currentYear"></span> Kingston City Run. All rights
-                    reserved.</p>
-            </div>
-            <p class="text-gray-500 text-sm">Part of Kingston’s Pirate’s Week Festival</p>
-        </div>
-        <script>
-            document.getElementById("currentYear").textContent = new Date().getFullYear();
-        </script>
-    </footer>
-
-    <!-- Mobile menu and dropdown scripts (same as your original) -->
-    <script>
-        const toggle = document.getElementById('menu-toggle');
-        const links = document.getElementById('navbar-links');
-        toggle.addEventListener('click', () => {
-            links.classList.toggle('hidden');
-            links.classList.toggle('flex');
-        });
-        document.querySelectorAll('#navbar-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth < 768) {
-                    links.classList.add('hidden');
-                    links.classList.remove('flex');
-                }
-            });
-        });
-        document.addEventListener('DOMContentLoaded', () => {
-            const registerBtn = document.querySelector('li.relative.group > button');
-            const registerMenu = registerBtn.nextElementSibling;
-            registerBtn.addEventListener('click', e => {
-                e.stopPropagation();
-                registerMenu.classList.toggle('hidden');
-            });
-            document.addEventListener('click', () => {
-                registerMenu.classList.add('hidden');
-            });
-            registerMenu.addEventListener('click', e => {
-                e.stopPropagation();
-            });
-        });
-    </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
