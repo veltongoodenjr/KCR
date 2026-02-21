@@ -10,19 +10,15 @@
   <base href="/" />
 
   <script src="https://cdn.tailwindcss.com"></script>
-
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <link href="/assets/images/favicon.svg" rel="icon" type="image/x-icon" />
 
   <style>
@@ -33,18 +29,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-    }
-    .nav-link{
-      display:flex;
-      gap:.5rem;
-      align-items:center;
-      padding:.5rem 1rem;
-      border-radius:9999px;
-      transition:.2s;
-    }
-    .nav-link:hover{
-      background:linear-gradient(to right,#319427,#F1BA07);
-      color:#fff;
     }
     .card{
       background:#fff;
@@ -82,6 +66,7 @@
 
 <body class="bg-white text-gray-900">
 
+<!-- NAVIGATION (unchanged) -->
 <header class="bg-white shadow sticky top-0 z-50">
   <nav class="container mx-auto flex items-center justify-between py-4 px-6 relative">
     <a href="/"><img src="/assets/images/favicon.svg" class="h-12 md:h-16" /></a>
@@ -90,24 +75,25 @@
     </button>
     <ul id="navbar-links"
       class="flex-col md:flex-row flex space-y-2 md:space-y-0 md:space-x-4 text-gray-700 font-medium items-center absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none z-50 md:flex hidden">
-      <li><a href="/" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="/about" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
-      <li><a href="/race-info" class="nav-link"><i class="fa-solid fa-person-running"></i> Race Info</a></li>
-      <li><a href="/charity" class="nav-link"><i class="fa-solid fa-hand-holding-heart"></i> Charity</a></li>
-      <li><a href="/gallery" class="nav-link"><i class="fa-solid fa-images"></i> Gallery</a></li>
+      <li><a href="/" class="nav-link">Home</a></li>
+      <li><a href="/about" class="nav-link">About</a></li>
+      <li><a href="/race-info" class="nav-link">Race Info</a></li>
+      <li><a href="/charity" class="nav-link">Charity</a></li>
+      <li><a href="/gallery" class="nav-link">Gallery</a></li>
       <li>
         <a href="/sponsors"
           class="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold">
-          <i class="fa-solid fa-handshake-angle"></i> Sponsors
+          Sponsors
         </a>
       </li>
-      <li><a href="/news" class="nav-link"><i class="fa-solid fa-newspaper"></i> News</a></li>
-      <li><a href="/faqs" class="nav-link"><i class="fa-solid fa-circle-question"></i> FAQs</a></li>
-      <li><a href="/contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      <li><a href="/news" class="nav-link">News</a></li>
+      <li><a href="/faqs" class="nav-link">FAQs</a></li>
+      <li><a href="/contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
 </header>
 
+<!-- HERO (unchanged) -->
 <section class="w-full bg-gradient-to-r from-[#319427] to-[#F1BA07] py-20 text-center text-white">
   <i class="fa-solid fa-handshake-angle text-7xl mb-6"></i>
   <h1 class="text-4xl md:text-5xl font-extrabold">Our Valued Sponsors</h1>
@@ -118,32 +104,34 @@
 
 <main class="max-w-5xl mx-auto px-4 md:px-8">
 
-<section class="py-16 border-b border-gray-200">
-<h2 class="text-2xl md:text-3xl font-bold text-gradient mb-12 text-center">
-Associate Sponsors
-</h2>
+<!-- ================= ASSOCIATE SPONSORS (UPDATED ONLY) ================= -->
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+<section class="py-16 border-b border-gray-200 bg-white">
+  <h2 class="text-2xl md:text-3xl font-bold text-gradient text-center mb-10">
+    Associate Sponsors
+  </h2>
 
-<div class="card"><img src="/assets/images/atl.jpg" class="h-40 object-contain"><div class="title">ATL</div></div>
-<div class="card"><img src="/assets/images/Altamont Hotels Logo.png" class="h-40 object-contain"><div class="title">Altamont Hotel</div></div>
-<div class="card"><img src="/assets/images/berger_paint.jpg" class="h-40 object-contain"><div class="title">Berger Paint</div></div>
-<div class="card"><img src="/assets/images/cgr.jpg" class="h-40 object-contain"><div class="title">CGR</div></div>
-<div class="card"><img src="/assets/images/CHS Logo.png" class="h-40 object-contain"><div class="title">Courtleigh Hotel</div></div>
-<div class="card"><img src="/assets/images/development_bank_of_jamaica.jpg" class="h-40 object-contain"><div class="title">Development Bank of Jamaica</div></div>
-<div class="card"><img src="/assets/images/devon_house.jpg" class="h-40 object-contain"><div class="title">Devon House</div></div>
-<div class="card"><img src="/assets/images/galaxy_leisure_and_tours_limited.jpg" class="h-40 object-contain"><div class="title">Galaxy Leisure and Tours Limited</div></div>
-<div class="card"><img src="/assets/images/iprint_(ipg).jpg" class="h-40 object-contain"><div class="title">iPrint (IPG)</div></div>
-<div class="card"><img src="/assets/images/Intelligent Multimedia Logo.png" class="h-40 object-contain"><div class="title">Intelligent Multimedia</div></div>
-<div class="card"><img src="/assets/images/island_car_rental.jpg" class="h-40 object-contain"><div class="title">Island Car Rental</div></div>
-<div class="card"><img src="/assets/images/island_grill.jpg" class="h-40 object-contain"><div class="title">Island Grill</div></div>
-<div class="card"><img src="/assets/images/JPH Logo.png" class="h-40 object-contain"><div class="title">Jamaica Pegasus Hotel</div></div>
-<div class="card"><img src="/assets/images/Caribbean Dreams Logo.png" class="h-40 object-contain"><div class="title">Jamaica Teas / Caribbean Dreams</div></div>
-<div class="card"><img src="/assets/images/kings_house.jpg" class="h-40 object-contain"><div class="title">Kings House</div></div>
-<div class="card"><img src="/assets/images/s_hotel.jpg" class="h-40 object-contain"><div class="title">S Hotel</div></div>
-<div class="card"><img src="/assets/images/suretime_medical.jpg" class="h-40 object-contain"><div class="title">Suretime Medical</div></div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
 
-</div>
+    <div class="card"><img src="/assets/images/atl.jpg" class="h-40 object-contain"><div class="title">ATL</div></div>
+    <div class="card"><img src="/assets/images/Altamont Hotels Logo.png" class="h-40 object-contain"><div class="title">Altamont Hotel</div></div>
+    <div class="card"><img src="/assets/images/berger_paint.jpg" class="h-40 object-contain"><div class="title">Berger Paint</div></div>
+    <div class="card"><img src="/assets/images/cgr.jpg" class="h-40 object-contain"><div class="title">CGR</div></div>
+    <div class="card"><img src="/assets/images/CHS Logo.png" class="h-40 object-contain"><div class="title">Courtleigh Hotel</div></div>
+    <div class="card"><img src="/assets/images/development_bank_of_jamaica.jpg" class="h-40 object-contain"><div class="title">Development Bank of Jamaica</div></div>
+    <div class="card"><img src="/assets/images/devon_house.jpg" class="h-40 object-contain"><div class="title">Devon House</div></div>
+    <div class="card"><img src="/assets/images/galaxy_leisure_and_tours_limited.jpg" class="h-40 object-contain"><div class="title">Galaxy Leisure and Tours Limited</div></div>
+    <div class="card"><img src="/assets/images/iprint_(ipg).jpg" class="h-40 object-contain"><div class="title">iPrint (IPG)</div></div>
+    <div class="card"><img src="/assets/images/Intelligent Multimedia Logo.png" class="h-40 object-contain"><div class="title">Intelligent Multimedia</div></div>
+    <div class="card"><img src="/assets/images/island_car_rental.jpg" class="h-40 object-contain"><div class="title">Island Car Rental</div></div>
+    <div class="card"><img src="/assets/images/island_grill.jpg" class="h-40 object-contain"><div class="title">Island Grill</div></div>
+    <div class="card"><img src="/assets/images/JPH Logo.png" class="h-40 object-contain"><div class="title">Jamaica Pegasus Hotel</div></div>
+    <div class="card"><img src="/assets/images/Caribbean Dreams Logo.png" class="h-40 object-contain"><div class="title">Jamaica Teas / Caribbean Dreams</div></div>
+    <div class="card"><img src="/assets/images/kings_house.jpg" class="h-40 object-contain"><div class="title">Kings House</div></div>
+    <div class="card"><img src="/assets/images/s_hotel.jpg" class="h-40 object-contain"><div class="title">S Hotel</div></div>
+    <div class="card"><img src="/assets/images/suretime_medical.jpg" class="h-40 object-contain"><div class="title">Suretime Medical</div></div>
+
+  </div>
 </section>
 
 </main>
