@@ -9,16 +9,25 @@
     content="Meet the sponsors who power Kingston City Run 2026. Become a partner and support charity in Kingston!" />
   <base href="/" />
 
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animate.css -->
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Favicon -->
   <link href="/assets/images/favicon.svg" rel="icon" type="image/x-icon" />
 
   <style>
@@ -33,11 +42,78 @@
   </style>
 </head>
 
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LGJWXYSNE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8LGJWXYSNE');
+</script>
+
 <body class="bg-white text-gray-900">
 
+<!-- ================= NAVIGATION (RESTORED EXACTLY) ================= -->
+<header class="bg-white shadow sticky top-0 z-50">
+  <nav class="container mx-auto flex items-center justify-between py-4 px-6 relative">
+    <div class="flex items-center space-x-2">
+      <a href="/">
+        <img src="/assets/images/favicon.svg" class="h-12 md:h-16" />
+      </a>
+    </div>
+
+    <button id="menu-toggle" class="md:hidden text-2xl text-gray-800">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul id="navbar-links"
+      class="flex-col md:flex-row flex space-y-2 md:space-y-0 md:space-x-4 text-gray-700 font-medium items-center absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none z-50 md:flex hidden">
+
+      <li><a href="/" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="/about" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+      <li><a href="/race-info" class="nav-link"><i class="fa-solid fa-person-running"></i> Race Info</a></li>
+      <li><a href="/charity" class="nav-link"><i class="fa-solid fa-hand-holding-heart"></i> Charity</a></li>
+      <li><a href="/gallery" class="nav-link"><i class="fa-solid fa-images"></i> Gallery</a></li>
+
+      <li class="relative group">
+        <button class="nav-link font-bold">
+          <i class="fa-solid fa-user-plus"></i> Register
+        </button>
+      </li>
+
+      <li>
+        <a href="/sponsors"
+          class="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#319427] to-[#F1BA07] text-white shadow-lg font-bold">
+          <i class="fa-solid fa-handshake-angle"></i> Sponsors
+        </a>
+      </li>
+
+      <li><a href="/news" class="nav-link"><i class="fa-solid fa-newspaper"></i> News</a></li>
+      <li><a href="/faqs" class="nav-link"><i class="fa-solid fa-circle-question"></i> FAQs</a></li>
+      <li><a href="/contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
+    </ul>
+  </nav>
+</header>
+
+<style>
+.nav-link{
+  display:flex;
+  gap:.5rem;
+  align-items:center;
+  padding:.5rem 1rem;
+  border-radius:9999px;
+  transition:.2s;
+}
+.nav-link:hover{
+  background:linear-gradient(to right,#319427,#F1BA07);
+  color:#fff;
+}
+</style>
+
 <!-- ================= HERO ================= -->
-<section class="w-full bg-gradient-to-r from-[#319427] to-[#F1BA07] py-20 flex flex-col items-center relative">
-  <div class="max-w-3xl w-full mx-auto px-4 md:px-8 text-center space-y-8">
+<section class="w-full bg-gradient-to-r from-[#319427] to-[#F1BA07] py-20 flex flex-col items-center">
+  <div class="max-w-3xl w-full mx-auto px-4 text-center space-y-8">
     <div class="mb-6 flex justify-center">
       <i class="fa-solid fa-handshake-angle text-white text-7xl drop-shadow-lg"></i>
     </div>
@@ -53,157 +129,131 @@
 <main class="max-w-5xl mx-auto px-4 md:px-8">
 
 <!-- ================= 2026 EVENT SPONSORS ================= -->
-<section class="py-16 border-b border-gray-200 bg-white">
-  <h2 class="text-2xl md:text-3xl font-bold text-gradient mb-12 text-center">
-    2026 Event Sponsors
-  </h2>
+<section class="py-16 border-b border-gray-200">
 
-  <!-- ================= PLATINUM ================= -->
-  <h3 class="text-xl md:text-2xl font-bold text-center mb-8">Platinum Sponsors</h3>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16">
+<h2 class="text-2xl md:text-3xl font-bold text-gradient mb-12 text-center">
+2026 Event Sponsors
+</h2>
 
-    <div class="sponsor-card">
-      <img src="/assets/images/JTB Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">Jamaica Tourist Board</div>
-    </div>
+<!-- PLATINUM -->
+<h3 class="text-xl font-bold text-center mb-8">Platinum Sponsors</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16">
 
-    <div class="sponsor-card">
-      <img src="/assets/images/RJRGLEANER Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">
-        RJR/Gleaner (RJR, Fame, Hitz, TVJ)
-      </div>
-    </div>
+  <!-- JTB -->
+  <div class="card"><img src="/assets/images/JTB Logo.png" class="h-40 object-contain"><div class="title">Jamaica Tourist Board</div></div>
 
-    <div class="sponsor-card">
-      <img src="/assets/images/Jamaica Observer Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">
-        Jamaica Observer (Observer, FYAH)
-      </div>
-    </div>
+  <!-- RJR -->
+  <div class="card"><img src="/assets/images/RJRGLEANER Logo.png" class="h-40 object-contain"><div class="title">RJR/Gleaner (RJR, Fame, Hitz, TVJ)</div></div>
 
-    <div class="sponsor-card">
-      <img src="/assets/images/Gustazos Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">Gustazos</div>
-    </div>
+  <!-- Observer -->
+  <div class="card"><img src="/assets/images/Jamaica Observer Logo.png" class="h-40 object-contain"><div class="title">Jamaica Observer (Observer, FYAH)</div></div>
 
-    <div class="sponsor-card">
-      <img src="/assets/images/Trend Media Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">Trend Media</div>
-    </div>
-  </div>
+  <div class="card"><img src="/assets/images/Gustazos Logo.png" class="h-40 object-contain"><div class="title">Gustazos</div></div>
+  <div class="card"><img src="/assets/images/Trend Media Logo.png" class="h-40 object-contain"><div class="title">Trend Media</div></div>
 
-  <!-- ================= SILVER ================= -->
-  <h3 class="text-xl md:text-2xl font-bold text-center mb-8">Silver Sponsors</h3>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16">
+</div>
 
-    <div class="sponsor-card">
-      <img src="/assets/images/Grace Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">GK Foods</div>
-    </div>
+<!-- SILVER -->
+<h3 class="text-xl font-bold text-center mb-8">Silver Sponsors</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16">
 
-    <div class="sponsor-card">
-      <img src="/assets/images/Catherine's Peak Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">Catherine’s Peak</div>
-    </div>
+<div class="card"><img src="/assets/images/Grace Logo.png" class="h-40 object-contain"><div class="title">GK Foods</div></div>
+<div class="card"><img src="/assets/images/Catherine's Peak Logo.png" class="h-40 object-contain"><div class="title">Catherine’s Peak</div></div>
+<div class="card"><img src="/assets/images/Rainforest Logo.png" class="h-40 object-contain"><div class="title">Rainforest Seafood</div></div>
+<div class="card"><img src="/assets/images/Hawkeye Logo.png" class="h-40 object-contain"><div class="title">Hawkeye</div></div>
+<div class="card"><img src="/assets/images/KSAMC Logo.png" class="h-40 object-contain"><div class="title">KSAMC</div></div>
 
-    <div class="sponsor-card">
-      <img src="/assets/images/Rainforest Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">Rainforest Seafood</div>
-    </div>
+</div>
 
-    <div class="sponsor-card">
-      <img src="/assets/images/Hawkeye Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">Hawkeye</div>
-    </div>
+<!-- BRONZE -->
+<h3 class="text-xl font-bold text-center mb-8">Bronze Sponsors</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16">
 
-    <div class="sponsor-card">
-      <img src="/assets/images/KSAMC Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">KSAMC</div>
-    </div>
-  </div>
+<div class="card"><img src="/assets/images/Chas E Ramson Logo.png" class="h-40 object-contain"><div class="title">Chas E. Ramson</div></div>
+<div class="card"><img src="/assets/images/Mother%27s Food Group Logo.png" class="h-40 object-contain"><div class="title">Mother’s Food Group</div></div>
+<div class="card"><img src="/assets/images/McKay Security Logo.png" class="h-40 object-contain"><div class="title">McKay Security</div></div>
+<div class="card"><img src="/assets/images/Mayberry Investments Ltd Logo.png" class="h-40 object-contain"><div class="title">Mayberry Investments</div></div>
+<div class="card"><img src="/assets/images/supreme_ventures.jpg" class="h-40 object-contain"><div class="title">Supreme Ventures</div></div>
 
-  <!-- ================= BRONZE ================= -->
-  <h3 class="text-xl md:text-2xl font-bold text-center mb-8">Bronze Sponsors</h3>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16">
-
-    <div class="sponsor-card">
-      <img src="/assets/images/Chas E Ramson Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">Chas E. Ramson (Blue Diamond)</div>
-    </div>
-
-    <div class="sponsor-card">
-      <img src="/assets/images/Mother%27s Food Group Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">Mother’s Food Group</div>
-    </div>
-
-    <div class="sponsor-card">
-      <img src="/assets/images/McKay Security Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">McKay Security</div>
-    </div>
-
-    <div class="sponsor-card">
-      <img src="/assets/images/Mayberry Investments Ltd Logo.png" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">Mayberry Investments</div>
-    </div>
-
-    <div class="sponsor-card">
-      <img src="/assets/images/supreme_ventures.jpg" class="h-40 object-contain" />
-      <div class="mt-4 font-semibold text-center">Supreme Ventures</div>
-    </div>
-  </div>
+</div>
 
 </section>
 
-<!-- ================= ASSOCIATE SPONSORS ================= -->
-<section class="py-16 border-b border-gray-200 bg-white">
-  <h2 class="text-2xl md:text-3xl font-bold text-gradient text-center mb-10">
-    Associate Sponsors
-  </h2>
+<!-- ASSOCIATE -->
+<section class="py-16 border-b border-gray-200">
+<h2 class="text-2xl md:text-3xl font-bold text-gradient text-center mb-10">Associate Sponsors</h2>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-    <!-- Alphabetical -->
-    <div class="sponsor-card"><img src="/assets/images/atl.jpg" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">ATL</div></div>
-    <div class="sponsor-card"><img src="/assets/images/Altamont Hotels Logo.png" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Altamont Hotel</div></div>
-    <div class="sponsor-card"><img src="/assets/images/berger_paint.jpg" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Berger Paint</div></div>
-    <div class="sponsor-card"><img src="/assets/images/cgr.jpg" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">CGR</div></div>
-    <div class="sponsor-card"><img src="/assets/images/CHS Logo.png" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Courtleigh Hotel</div></div>
-    <div class="sponsor-card"><img src="/assets/images/development_bank_of_jamaica.jpg" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Development Bank of Jamaica</div></div>
-    <div class="sponsor-card"><img src="/assets/images/devon_house.jpg" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Devon House</div></div>
-    <div class="sponsor-card"><img src="/assets/images/galaxy_leisure_and_tours_limited.jpg" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Galaxy Leisure and Tours Limited</div></div>
-    <div class="sponsor-card"><img src="/assets/images/iprint_(ipg).jpg" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">iPrint (IPG)</div></div>
-    <div class="sponsor-card"><img src="/assets/images/Intelligent Multimedia Logo.png" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Intelligent Multimedia</div></div>
-    <div class="sponsor-card"><img src="/assets/images/island_car_rental.jpg" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Island Car Rental</div></div>
-    <div class="sponsor-card"><img src="/assets/images/island_grill.jpg" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Island Grill</div></div>
-    <div class="sponsor-card"><img src="/assets/images/JPH Logo.png" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Jamaica Pegasus Hotel</div></div>
-    <div class="sponsor-card"><img src="/assets/images/Caribbean Dreams Logo.png" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Jamaica Teas / Caribbean Dreams</div></div>
-    <div class="sponsor-card"><img src="/assets/images/kings_house.jpg" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Kings House</div></div>
-    <div class="sponsor-card"><img src="/assets/images/s_hotel.jpg" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">S Hotel</div></div>
-    <div class="sponsor-card"><img src="/assets/images/suretime_medical.jpg" class="h-40 object-contain"><div class="mt-4 font-semibold text-center">Suretime Medical</div></div>
+<div class="card"><img src="/assets/images/Altamont Hotels Logo.png" class="h-40 object-contain"><div class="title">Altamont Hotel</div></div>
+<div class="card"><img src="/assets/images/CHS Logo.png" class="h-40 object-contain"><div class="title">Courtleigh Hotel</div></div>
+<div class="card"><img src="/assets/images/JPH Logo.png" class="h-40 object-contain"><div class="title">Jamaica Pegasus Hotel</div></div>
 
-  </div>
+<div class="card"><img src="/assets/images/devon_house.jpg" class="h-40 object-contain"><div class="title">Devon House</div></div>
+<div class="card"><img src="/assets/images/kings_house.jpg" class="h-40 object-contain"><div class="title">Kings House</div></div>
+
+<div class="card"><img src="/assets/images/Intelligent Multimedia Logo.png" class="h-40 object-contain"><div class="title">Intelligent Multimedia</div></div>
+
+</div>
 </section>
 
-<!-- ================= PAST SPONSORS ================= -->
-<section class="py-16 border-b border-gray-200 bg-white">
-  <h2 class="text-2xl md:text-3xl font-bold text-gradient mb-8 text-center">
-    Past Sponsors
-  </h2>
-  <div class="flex justify-center px-4">
-    <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent p-6 max-w-4xl w-full">
-      <img src="/assets/images/past-sponsors.png" class="w-full object-contain rounded" />
-    </div>
-  </div>
+<!-- PAST -->
+<section class="py-16 border-b border-gray-200">
+<h2 class="text-2xl md:text-3xl font-bold text-gradient mb-8 text-center">Past Sponsors</h2>
+<div class="flex justify-center">
+<div class="bg-white rounded-2xl shadow-lg p-6 max-w-4xl w-full">
+<img src="/assets/images/past-sponsors.png" class="w-full object-contain rounded">
+</div>
+</div>
 </section>
 
 </main>
 
-<!-- ================= REUSABLE CARD STYLE ================= -->
+<!-- FOOTER -->
+<footer class="bg-white py-12 px-4 border-t border-gray-200">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+<div class="flex items-center space-x-4">
+<img src="/assets/images/logo-w.png" class="h-12 opacity-80">
+<p class="text-gray-600 text-sm">© <span id="currentYear"></span> Kingston City Run</p>
+</div>
+</div>
+<script>
+document.getElementById("currentYear").textContent=new Date().getFullYear();
+</script>
+</footer>
+
 <style>
-.sponsor-card {
-  @apply bg-white rounded-2xl shadow-lg transition-all duration-200 border-2 border-transparent hover:shadow-2xl hover:-translate-y-1 hover:border-[#319427] hover:bg-gradient-to-r hover:from-[#f9f9f9] hover:to-[#f7ffe4] p-8 md:p-10 flex flex-col items-center h-full;
+.card{
+background:#fff;
+border-radius:1rem;
+padding:2rem;
+display:flex;
+flex-direction:column;
+align-items:center;
+transition:.2s;
+border:2px solid transparent;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+.card:hover{
+transform:translateY(-4px);
+border-color:#319427;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+.title{
+margin-top:1rem;
+font-weight:600;
+text-align:center;
 }
 </style>
+
+<script>
+const toggle=document.getElementById('menu-toggle');
+const links=document.getElementById('navbar-links');
+toggle.addEventListener('click',()=>{
+links.classList.toggle('hidden');
+links.classList.toggle('flex');
+});
+</script>
 
 </body>
 </html>
