@@ -54,6 +54,20 @@
 </script>
 
 <body class="bg-white text-gray-900">
+  <!-- Registration Deadline Alert -->
+<div id="registration-alert"
+  class="w-full bg-red-600 text-white text-center font-semibold py-3 px-4 text-sm md:text-base relative">
+
+  <span>
+    ⚠️ Registration Extended — Final Date for Registration is 
+    <strong>Thursday, March 12th</strong>.
+  </span>
+
+  <button onclick="document.getElementById('registration-alert').style.display='none'"
+    class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-lg">
+    ✕
+  </button>
+</div>
   <!-- Top Navigation Bar -->
   <header class="bg-white shadow sticky top-0 z-50">
     <nav class="container mx-auto flex items-center justify-between py-4 px-6 relative">
@@ -237,7 +251,52 @@
       });
     });
   </script>
+<!-- Registration Deadline Popup -->
+<div id="registration-popup"
+  class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 hidden">
 
+  <div class="bg-white rounded-2xl shadow-2xl max-w-md mx-6 p-8 text-center relative">
+
+    <button onclick="closePopup()"
+      class="absolute top-3 right-4 text-gray-500 hover:text-black text-xl">
+      &times;
+    </button>
+
+    <h3 class="text-2xl font-bold mb-4 text-gradient">
+      Registration Extended
+    </h3>
+
+    <p class="text-lg text-gray-800 mb-4">
+      Final Date for Registration is
+    </p>
+
+    <p class="text-xl font-bold text-[#319427] mb-6">
+      Thursday, March 12th
+    </p>
+
+    <a href="/register"
+      class="inline-block px-6 py-3 bg-gradient-to-r from-[#319427] to-[#F1BA07]
+      text-white font-bold rounded-full shadow-lg hover:scale-105 transition">
+      Register Now
+    </a>
+
+  </div>
+</div>
+
+<script>
+function closePopup(){
+  document.getElementById("registration-popup").style.display="none";
+  localStorage.setItem("kcrPopupSeen","true");
+}
+
+window.addEventListener("load", function(){
+  if(!localStorage.getItem("kcrPopupSeen")){
+    setTimeout(()=>{
+      document.getElementById("registration-popup").style.display="flex";
+    },1200);
+  }
+});
+</script>
 
 </body>
 
