@@ -54,6 +54,20 @@
 </script>
 
 <body class="bg-white text-gray-900">
+  <!-- Registration Deadline Alert -->
+<div id="registration-alert"
+  class="w-full bg-red-600 text-white text-center font-semibold py-3 px-4 text-sm md:text-base relative">
+
+  <span>
+    ⚠️ Registration Extended — Final Date for Registration is 
+    <strong>Thursday, March 12th</strong>.
+  </span>
+
+  <button onclick="document.getElementById('registration-alert').style.display='none'"
+    class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-lg">
+    ✕
+  </button>
+</div>
   <!-- Top Navigation Bar -->
   <header class="bg-white shadow sticky top-0 z-50">
     <nav class="container mx-auto flex items-center justify-between py-4 px-6 relative">
