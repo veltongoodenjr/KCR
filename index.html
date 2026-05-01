@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kingston City Run 2026 – Pirates Run Di City</title>
   <meta name="description"
-    content="Join Kingston’s iconic charity running event, part of Kingston Pirate’s Week 2026. Run or walk for a cause: choose 10K or 5K, support Kingston’s homeless charities, and celebrate Jamaica’s pirate heritage." />
+    content="Join Kingston’s iconic charity running event, Sunday March 14th 2027. Run or walk for a cause: choose 10K or 5K, support Kingston’s homeless charities." />
   <!-- Tailwind for prototyping -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Animate.css for animations -->
@@ -99,8 +99,8 @@
   class="w-full bg-red-600 text-white text-center font-semibold py-3 px-4 text-sm md:text-base relative">
 
   <span>
-    ⚠️ Registration Extended — Final Date for Registration is 
-    <strong>Thursday, March 12th</strong>.
+    ⚠️ SAVE THE DATE - Early Bird Registration Opening Soon
+    <strong>Sunday, March 14th 2027</strong>.
   </span>
 
   <button onclick="document.getElementById('registration-alert').style.display='none'"
@@ -231,19 +231,19 @@
       <div class="mx-auto flex items-center justify-center mb-8">
         <div
           class="rounded-full bg-white shadow-2xl flex items-center justify-center w-48 h-48 md:w-[240px] md:h-[240px] mt-8 md:mt-0">
-          <img src="/assets/images/logo.svg" alt="Kingston City Run 2026 Logo"
+          <img src="/assets/images/logo.svg" alt="Kingston City Run 2027 Logo"
             class="w-[168px] h-[168px] md:w-[216px] md:h-[216px] object-contain" />
         </div>
       </div>
 
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-2xl mt-8">
-        Kingston City Run 2026
+        Kingston City Run 2027
       </h1>
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white drop-shadow-md">
-        Pirates Run Di City – Part of Kingston Pirate’s Week
+        Save the Date: Sunday, March 14th 2027!
       </h2>
       <p class="text-lg md:text-xl text-white/90 font-medium drop-shadow-sm">
-        Emancipation Park, Kingston &bull; March 15, 2026
+        Early Bird Registration Opening Soon!
       </p>
       <p class="max-w-3xl mx-auto text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-sm">
         Run, walk, or wheel for a cause! The Kingston City Run, now part of Kingston Pirate's Week, brings together
@@ -701,7 +701,8 @@ function closePopup(){
 }
 
 window.addEventListener("load", function(){
-  if(!localStorage.getItem("kcrPopupSeen")){
+ // if(!localStorage.getItem("kcrPopupSeen")){ --set this to turn on popup
+  if(false){
     setTimeout(()=>{
       document.getElementById("registration-popup").style.display="flex";
     },1200);
